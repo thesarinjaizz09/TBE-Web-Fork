@@ -1,74 +1,498 @@
-import * as React from 'react';
+import { useState } from 'react';
+import { Dialog } from '@headlessui/react';
+import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 
-import Layout from '@/components/layout/Layout';
-import ArrowLink from '@/components/links/ArrowLink';
-import ButtonLink from '@/components/links/ButtonLink';
-import UnderlineLink from '@/components/links/UnderlineLink';
-import UnstyledLink from '@/components/links/UnstyledLink';
-import Seo from '@/components/Seo';
+const navigation = [
+  { name: 'Product', href: '#' },
+  { name: 'Features', href: '#' },
+  { name: 'Marketplace', href: '#' },
+  { name: 'Company', href: '#' },
+];
 
-/**
- * SVGR Support
- * Caveat: No React Props Type.
- *
- * You can override the next-env if the type is important to you
- * @see https://stackoverflow.com/questions/68103844/how-to-override-next-js-svg-module-declaration
- */
-import Vercel from '~/svg/Vercel.svg';
+export default function Example() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-// !STARTERCONF -> Select !STARTERCONF and CMD + SHIFT + F
-// Before you begin editing, follow all comments with `STARTERCONF`,
-// to customize the default configuration.
-
-export default function HomePage() {
   return (
-    <Layout>
-      {/* <Seo templateTitle='Home' /> */}
-      <Seo />
-
-      <main>
-        <section className='bg-white'>
-          <div className='layout relative flex min-h-screen flex-col items-center justify-center py-12 text-center'>
-            <Vercel className='text-5xl' />
-            <h1 className='mt-4'>
-              Next.js + Tailwind CSS + TypeScript Starter
-            </h1>
-            <p className='mt-2 text-sm text-gray-800'>
-              A starter for Next.js, Tailwind CSS, and TypeScript with Absolute
-              Import, Seo, Link component, pre-configured with Husky{' '}
-            </p>
-            <p className='mt-2 text-sm text-gray-700'>
-              <ArrowLink href='https://github.com/theodorusclarence/ts-nextjs-tailwind-starter'>
-                See the repository
-              </ArrowLink>
-            </p>
-
-            <ButtonLink className='mt-6' href='/components' variant='light'>
-              See all components
-            </ButtonLink>
-
-            <UnstyledLink
-              href='https://vercel.com/new/git/external?repository-url=https%3A%2F%2Fgithub.com%2Ftheodorusclarence%2Fts-nextjs-tailwind-starter'
-              className='mt-4'
-            >
-              {/* eslint-disable-next-line @next/next/no-img-element */}
+    <div className='bg-white'>
+      <header className='absolute inset-x-0 top-0 z-50'>
+        <nav
+          className='flex items-center justify-between p-6 lg:px-8'
+          aria-label='Global'
+        >
+          <div className='flex lg:flex-1'>
+            <a href='#' className='-m-1.5 p-1.5'>
+              <span className='sr-only'>Your Company</span>
               <img
-                width='92'
-                height='32'
-                src='https://vercel.com/button'
-                alt='Deploy with Vercel'
+                className='h-8 w-auto'
+                src='https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600'
+                alt=''
               />
-            </UnstyledLink>
-
-            <footer className='absolute bottom-2 text-gray-700'>
-              © {new Date().getFullYear()} By{' '}
-              <UnderlineLink href='https://theodorusclarence.com?ref=tsnextstarter'>
-                Theodorus Clarence
-              </UnderlineLink>
-            </footer>
+            </a>
           </div>
-        </section>
-      </main>
-    </Layout>
+          <div className='flex lg:hidden'>
+            <button
+              type='button'
+              className='-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700'
+              onClick={() => setMobileMenuOpen(true)}
+            >
+              <span className='sr-only'>Open main menu</span>
+              <Bars3Icon className='h-6 w-6' aria-hidden='true' />
+            </button>
+          </div>
+          <div className='hidden lg:flex lg:gap-x-12'>
+            {navigation.map((item) => (
+              <a
+                key={item.name}
+                href={item.href}
+                className='text-sm font-semibold leading-6 text-gray-900'
+              >
+                {item.name}
+              </a>
+            ))}
+          </div>
+          <div className='hidden lg:flex lg:flex-1 lg:justify-end'>
+            <a
+              href='#'
+              className='text-sm font-semibold leading-6 text-gray-900'
+            >
+              Log in <span aria-hidden='true'>&rarr;</span>
+            </a>
+          </div>
+        </nav>
+        <Dialog
+          as='div'
+          className='lg:hidden'
+          open={mobileMenuOpen}
+          onClose={setMobileMenuOpen}
+        >
+          <div className='fixed inset-0 z-50' />
+          <Dialog.Panel className='fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10'>
+            <div className='flex items-center justify-between'>
+              <a href='#' className='-m-1.5 p-1.5'>
+                <span className='sr-only'>Your Company</span>
+                <img
+                  className='h-8 w-auto'
+                  src='https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600'
+                  alt=''
+                />
+              </a>
+              <button
+                type='button'
+                className='-m-2.5 rounded-md p-2.5 text-gray-700'
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                <span className='sr-only'>Close menu</span>
+                <XMarkIcon className='h-6 w-6' aria-hidden='true' />
+              </button>
+            </div>
+            <div className='mt-6 flow-root'>
+              <div className='-my-6 divide-y divide-gray-500/10'>
+                <div className='space-y-2 py-6'>
+                  {navigation.map((item) => (
+                    <a
+                      key={item.name}
+                      href={item.href}
+                      className='-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50'
+                    >
+                      {item.name}
+                    </a>
+                  ))}
+                </div>
+                <div className='py-6'>
+                  <a
+                    href='#'
+                    className='-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50'
+                  >
+                    Log in
+                  </a>
+                </div>
+              </div>
+            </div>
+          </Dialog.Panel>
+        </Dialog>
+      </header>
+
+      <div className='relative isolate px-6 pt-14 lg:px-8'>
+        <div className='absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80'>
+          <svg
+            className='relative left-[calc(50%-11rem)] -z-10 h-[21.1875rem] max-w-none -translate-x-1/2 rotate-[30deg] sm:left-[calc(50%-30rem)] sm:h-[42.375rem]'
+            viewBox='0 0 1155 678'
+          >
+            <path
+              fill='url(#45de2b6b-92d5-4d68-a6a0-9b9b2abad533)'
+              fillOpacity='.3'
+              d='M317.219 518.975L203.852 678 0 438.341l317.219 80.634 204.172-286.402c1.307 132.337 45.083 346.658 209.733 145.248C936.936 126.058 882.053-94.234 1031.02 41.331c119.18 108.451 130.68 295.337 121.53 375.223L855 299l21.173 362.054-558.954-142.079z'
+            />
+            <defs>
+              <linearGradient
+                id='45de2b6b-92d5-4d68-a6a0-9b9b2abad533'
+                x1='1155.49'
+                x2='-78.208'
+                y1='.177'
+                y2='474.645'
+                gradientUnits='userSpaceOnUse'
+              >
+                <stop stopColor='#9089FC' />
+                <stop offset={1} stopColor='#FF80B5' />
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+        <div className='mx-auto max-w-2xl py-32 sm:py-48 lg:py-56'>
+          <div className='hidden sm:mb-8 sm:flex sm:justify-center'>
+            <div className='relative rounded-full px-3 py-1 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20'>
+              Announcing our next round of funding.{' '}
+              <a href='#' className='font-semibold text-indigo-600'>
+                <span className='absolute inset-0' aria-hidden='true' />
+                Read more <span aria-hidden='true'>&rarr;</span>
+              </a>
+            </div>
+          </div>
+          <div className='text-center'>
+            <h1 className='text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl'>
+              Data to enrich your online business
+            </h1>
+            <p className='mt-6 text-lg leading-8 text-gray-600'>
+              Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui
+              lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat
+              fugiat aliqua.
+            </p>
+            <div className='mt-10 flex items-center justify-center gap-x-6'>
+              <a
+                href='#'
+                className='rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600'
+              >
+                Get started
+              </a>
+              <a
+                href='#'
+                className='text-sm font-semibold leading-6 text-gray-900'
+              >
+                Learn more <span aria-hidden='true'>→</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div className='absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]'>
+          <svg
+            className='relative left-[calc(50%+3rem)] h-[21.1875rem] max-w-none -translate-x-1/2 sm:left-[calc(50%+36rem)] sm:h-[42.375rem]'
+            viewBox='0 0 1155 678'
+          >
+            <path
+              fill='url(#ecb5b0c9-546c-4772-8c71-4d3f06d544bc)'
+              fillOpacity='.3'
+              d='M317.219 518.975L203.852 678 0 438.341l317.219 80.634 204.172-286.402c1.307 132.337 45.083 346.658 209.733 145.248C936.936 126.058 882.053-94.234 1031.02 41.331c119.18 108.451 130.68 295.337 121.53 375.223L855 299l21.173 362.054-558.954-142.079z'
+            />
+            <defs>
+              <linearGradient
+                id='ecb5b0c9-546c-4772-8c71-4d3f06d544bc'
+                x1='1155.49'
+                x2='-78.208'
+                y1='.177'
+                y2='474.645'
+                gradientUnits='userSpaceOnUse'
+              >
+                <stop stopColor='#9089FC' />
+                <stop offset={1} stopColor='#FF80B5' />
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+      </div>
+
+      {/* our Programs*/}
+      <div className='flex w-full items-center justify-center'>
+        <h4>Our Programs</h4>
+      </div>
+      <div className='flex w-full items-center justify-center '>
+        <div className='lg:px- my-1 w-full px-1 md:w-full lg:my-4 lg:w-1/3'>
+          <div className='block max-w-sm rounded-lg bg-white shadow-lg dark:bg-neutral-700'>
+            <a href='#!'>
+              <img
+                className='rounded-t-lg'
+                src='https://tecdn.b-cdn.net/img/new/standard/nature/184.jpg'
+                alt=''
+              />
+            </a>
+            <div className='p-6'>
+              <h5 className='mb-2 text-xl font-medium leading-tight text-neutral-800 dark:text-neutral-50'>
+                Card title
+              </h5>
+              <p className='mb-4 text-base text-neutral-600 dark:text-neutral-200'>
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+              <button
+                type='button'
+                className='bg-primary  inline-block rounded px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-black shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)]'
+                data-te-ripple-init
+                data-te-ripple-color='light'
+              >
+                Button
+              </button>
+            </div>
+          </div>
+        </div>
+        <div className='my-1 w-full px-1 md:w-full lg:my-4 lg:w-1/3 lg:px-4'>
+          <div className='block max-w-sm rounded-lg bg-white shadow-lg dark:bg-neutral-700'>
+            <a href='#!'>
+              <img
+                className='rounded-t-lg'
+                src='https://tecdn.b-cdn.net/img/new/standard/nature/184.jpg'
+                alt=''
+              />
+            </a>
+            <div className='p-6'>
+              <h5 className='mb-2 text-xl font-medium leading-tight text-neutral-800 dark:text-neutral-50'>
+                Card title
+              </h5>
+              <p className='mb-4 text-base text-neutral-600 dark:text-neutral-200'>
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+              <button
+                type='button'
+                className='bg-primary inline-block rounded px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-black shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)]'
+                data-te-ripple-init
+                data-te-ripple-color='light'
+              >
+                Button
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      {/* Skill we Teach */}
+      <div className='flex w-full flex-col items-center justify-center p-10  '>
+        <h4>Skill We Teach</h4>
+        <div className='flex w-full items-center justify-center'>
+          <div className='lg:px- my-1 w-full px-1 md:w-full lg:my-4 lg:w-1/3'>
+            <div className='block max-w-xs rounded-lg bg-white shadow-lg dark:bg-neutral-700'>
+              <div className='flex w-full items-center justify-around'>
+                <div className='flex flex-col items-center'>
+                  <svg
+                    xmlns='http://www.w3.org/2000/svg'
+                    fill='none'
+                    viewBox='0 0 24 24'
+                    strokeWidth={1.5}
+                    stroke='currentColor'
+                    className='h-6 w-6'
+                  >
+                    <path
+                      strokeLinecap='round'
+                      strokeLinejoin='round'
+                      d='M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342M6.75 15a.75.75 0 100-1.5.75.75 0 000 1.5zm0 0v-3.675A55.378 55.378 0 0112 8.443m-7.007 11.55A5.981 5.981 0 006.75 15.75v-1.5'
+                    />
+                  </svg>
+                  <span>ReactJs</span>
+                </div>
+                <div className='flex flex-col'>
+                  <svg
+                    xmlns='http://www.w3.org/2000/svg'
+                    fill='none'
+                    viewBox='0 0 24 24'
+                    strokeWidth={1.5}
+                    stroke='currentColor'
+                    className='h-6 w-6'
+                  >
+                    <path
+                      strokeLinecap='round'
+                      strokeLinejoin='round'
+                      d='M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342M6.75 15a.75.75 0 100-1.5.75.75 0 000 1.5zm0 0v-3.675A55.378 55.378 0 0112 8.443m-7.007 11.55A5.981 5.981 0 006.75 15.75v-1.5'
+                    />
+                  </svg>
+                  <span>NextJs</span>
+                </div>
+              </div>
+              <div className='p-6'>
+                <h5 className='mb-2 text-center text-sm font-medium leading-tight text-neutral-800 dark:text-neutral-50'>
+                  <span>FrontEnd Engineering</span>
+                </h5>
+              </div>
+            </div>
+          </div>
+          <div className='lg:px- my-1 w-full px-1 md:w-full lg:my-4 lg:w-1/3'>
+            <div className='block max-w-xs rounded-lg bg-white shadow-lg dark:bg-neutral-700'>
+              <div className='flex w-full items-center justify-around'>
+                <div className='flex flex-col items-center'>
+                  <svg
+                    xmlns='http://www.w3.org/2000/svg'
+                    fill='none'
+                    viewBox='0 0 24 24'
+                    strokeWidth={1.5}
+                    stroke='currentColor'
+                    className='h-6 w-6'
+                  >
+                    <path
+                      strokeLinecap='round'
+                      strokeLinejoin='round'
+                      d='M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342M6.75 15a.75.75 0 100-1.5.75.75 0 000 1.5zm0 0v-3.675A55.378 55.378 0 0112 8.443m-7.007 11.55A5.981 5.981 0 006.75 15.75v-1.5'
+                    />
+                  </svg>
+                  <span>ReactJs</span>
+                </div>
+                <div className='flex flex-col'>
+                  <svg
+                    xmlns='http://www.w3.org/2000/svg'
+                    fill='none'
+                    viewBox='0 0 24 24'
+                    strokeWidth={1.5}
+                    stroke='currentColor'
+                    className='h-6 w-6'
+                  >
+                    <path
+                      strokeLinecap='round'
+                      strokeLinejoin='round'
+                      d='M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342M6.75 15a.75.75 0 100-1.5.75.75 0 000 1.5zm0 0v-3.675A55.378 55.378 0 0112 8.443m-7.007 11.55A5.981 5.981 0 006.75 15.75v-1.5'
+                    />
+                  </svg>
+                  <span>NextJs</span>
+                </div>
+              </div>
+              <div className='p-6'>
+                <h5 className='mb-2 text-center text-sm font-medium leading-tight text-neutral-800 dark:text-neutral-50'>
+                  <span>FrontEnd Engineering</span>
+                </h5>
+              </div>
+            </div>
+          </div>
+          <div className='lg:px- my-1 w-full px-1 md:w-full lg:my-4 lg:w-1/3'>
+            <div className='block max-w-xs rounded-lg bg-white shadow-lg dark:bg-neutral-700'>
+              <div className='flex w-full items-center justify-around'>
+                <div className='flex flex-col items-center'>
+                  <svg
+                    xmlns='http://www.w3.org/2000/svg'
+                    fill='none'
+                    viewBox='0 0 24 24'
+                    strokeWidth={1.5}
+                    stroke='currentColor'
+                    className='h-6 w-6'
+                  >
+                    <path
+                      strokeLinecap='round'
+                      strokeLinejoin='round'
+                      d='M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342M6.75 15a.75.75 0 100-1.5.75.75 0 000 1.5zm0 0v-3.675A55.378 55.378 0 0112 8.443m-7.007 11.55A5.981 5.981 0 006.75 15.75v-1.5'
+                    />
+                  </svg>
+                  <span>ReactJs</span>
+                </div>
+                <div className='flex flex-col'>
+                  <svg
+                    xmlns='http://www.w3.org/2000/svg'
+                    fill='none'
+                    viewBox='0 0 24 24'
+                    strokeWidth={1.5}
+                    stroke='currentColor'
+                    className='h-6 w-6'
+                  >
+                    <path
+                      strokeLinecap='round'
+                      strokeLinejoin='round'
+                      d='M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342M6.75 15a.75.75 0 100-1.5.75.75 0 000 1.5zm0 0v-3.675A55.378 55.378 0 0112 8.443m-7.007 11.55A5.981 5.981 0 006.75 15.75v-1.5'
+                    />
+                  </svg>
+                  <span>NextJs</span>
+                </div>
+              </div>
+              <div className='p-6'>
+                <h5 className='mb-2 text-center text-sm font-medium leading-tight text-neutral-800 dark:text-neutral-50'>
+                  <span>FrontEnd Engineering</span>
+                </h5>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className='flex w-full flex-col items-center justify-center p-10  '>
+        <h4>What's Different here</h4>
+        <div className='flex w-full items-center justify-center '>
+          <div className='lg:px- my-1 w-full px-1 md:w-full lg:my-4 lg:w-1/3'>
+            <div className='block max-w-sm rounded-lg bg-white shadow-lg dark:bg-neutral-700'>
+              <a href='#!'>
+                <img
+                  className='rounded-t-lg'
+                  src='https://tecdn.b-cdn.net/img/new/standard/nature/184.jpg'
+                  alt=''
+                />
+              </a>
+              <div className='p-6'>
+                <h5 className='mb-2 text-xl font-medium leading-tight text-neutral-800 dark:text-neutral-50'>
+                  Card title
+                </h5>
+                <p className='mb-4 text-base text-neutral-600 dark:text-neutral-200'>
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </p>
+                <button
+                  type='button'
+                  className='bg-primary  inline-block rounded px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-black shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)]'
+                  data-te-ripple-init
+                  data-te-ripple-color='light'
+                >
+                  Button
+                </button>
+              </div>
+            </div>
+          </div>
+          <div className='my-1 w-full px-1 md:w-full lg:my-4 lg:w-1/3 lg:px-4'>
+            <div className='block max-w-sm rounded-lg bg-white shadow-lg dark:bg-neutral-700'>
+              <a href='#!'>
+                <img
+                  className='rounded-t-lg'
+                  src='https://tecdn.b-cdn.net/img/new/standard/nature/184.jpg'
+                  alt=''
+                />
+              </a>
+              <div className='p-6'>
+                <h5 className='mb-2 text-xl font-medium leading-tight text-neutral-800 dark:text-neutral-50'>
+                  Card title
+                </h5>
+                <p className='mb-4 text-base text-neutral-600 dark:text-neutral-200'>
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </p>
+                <button
+                  type='button'
+                  className='bg-primary inline-block rounded px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-black shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)]'
+                  data-te-ripple-init
+                  data-te-ripple-color='light'
+                >
+                  Button
+                </button>
+              </div>
+            </div>
+          </div>
+          <div className='my-1 w-full px-1 md:w-full lg:my-4 lg:w-1/3 lg:px-4'>
+            <div className='block max-w-sm rounded-lg bg-white shadow-lg dark:bg-neutral-700'>
+              <a href='#!'>
+                <img
+                  className='rounded-t-lg'
+                  src='https://tecdn.b-cdn.net/img/new/standard/nature/184.jpg'
+                  alt=''
+                />
+              </a>
+              <div className='p-6'>
+                <h5 className='mb-2 text-xl font-medium leading-tight text-neutral-800 dark:text-neutral-50'>
+                  Card title
+                </h5>
+                <p className='mb-4 text-base text-neutral-600 dark:text-neutral-200'>
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </p>
+                <button
+                  type='button'
+                  className='bg-primary inline-block rounded px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-black shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)]'
+                  data-te-ripple-init
+                  data-te-ripple-color='light'
+                >
+                  Button
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 }
