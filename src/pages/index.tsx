@@ -3,10 +3,10 @@ import { Dialog } from '@headlessui/react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 
 const navigation = [
-  { name: 'Product', href: '#' },
-  { name: 'Features', href: '#' },
-  { name: 'Marketplace', href: '#' },
-  { name: 'Company', href: '#' },
+  { name: 'Home', href: '#' },
+  { name: 'Workshop', href: '#' },
+  { name: 'Micro-Camp', href: '#' },
+  { name: 'Contact Us', href: '#' },
 ];
 
 export default function Example() {
@@ -21,12 +21,8 @@ export default function Example() {
         >
           <div className='flex lg:flex-1'>
             <a href='#' className='-m-1.5 p-1.5'>
-              <span className='sr-only'>Your Company</span>
-              <img
-                className='h-8 w-auto'
-                src='https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600'
-                alt=''
-              />
+              <span className='sr-only'>The Boring Education</span>
+              <img className='h-8 w-auto' src='../svg/logo.svg' alt='logo' />
             </a>
           </div>
           <div className='flex lg:hidden'>
@@ -55,7 +51,7 @@ export default function Example() {
               href='#'
               className='text-sm font-semibold leading-6 text-gray-900'
             >
-              Log in <span aria-hidden='true'>&rarr;</span>
+              {/* Log in <span aria-hidden='true'>&rarr;</span> */}
             </a>
           </div>
         </nav>
@@ -69,12 +65,8 @@ export default function Example() {
           <Dialog.Panel className='fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10'>
             <div className='flex items-center justify-between'>
               <a href='#' className='-m-1.5 p-1.5'>
-                <span className='sr-only'>Your Company</span>
-                <img
-                  className='h-8 w-auto'
-                  src='https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600'
-                  alt=''
-                />
+                <span className='sr-only'>The Boring Education</span>
+                <img className='h-8 w-auto' src='../svg/logo.svg' alt='logo' />
               </a>
               <button
                 type='button'
@@ -103,7 +95,7 @@ export default function Example() {
                     href='#'
                     className='-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50'
                   >
-                    Log in
+                    {/* Log in */}
                   </a>
                 </div>
               </div>
@@ -139,36 +131,19 @@ export default function Example() {
           </svg>
         </div>
         <div className='mx-auto max-w-2xl py-32 sm:py-48 lg:py-56'>
-          <div className='hidden sm:mb-8 sm:flex sm:justify-center'>
-            <div className='relative rounded-full px-3 py-1 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20'>
-              Announcing our next round of funding.{' '}
-              <a href='#' className='font-semibold text-indigo-600'>
-                <span className='absolute inset-0' aria-hidden='true' />
-                Read more <span aria-hidden='true'>&rarr;</span>
-              </a>
-            </div>
-          </div>
           <div className='text-center'>
             <h1 className='text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl'>
-              Data to enrich your online business
+              Tech Learning for Everyone
             </h1>
             <p className='mt-6 text-lg leading-8 text-gray-600'>
-              Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui
-              lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat
-              fugiat aliqua.
+              Learn Tech Skills & Prepare yourself for the Web3 Era.
             </p>
-            <div className='mt-10 flex items-center justify-center gap-x-6'>
+            <div className='mt-10 flex w-full items-center justify-center gap-x-6'>
               <a
                 href='#'
-                className='rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600'
+                className='w-72 rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600'
               >
-                Get started
-              </a>
-              <a
-                href='#'
-                className='text-sm font-semibold leading-6 text-gray-900'
-              >
-                Learn more <span aria-hidden='true'>→</span>
+                Explore Roadmaps
               </a>
             </div>
           </div>
@@ -210,25 +185,25 @@ export default function Example() {
             <a href='#!'>
               <img
                 className='rounded-t-lg'
-                src='https://tecdn.b-cdn.net/img/new/standard/nature/184.jpg'
-                alt=''
+                src='../svg/microcamp.svg'
+                alt='microcamp'
               />
             </a>
             <div className='p-6'>
               <h5 className='mb-2 text-xl font-medium leading-tight text-neutral-800 dark:text-neutral-50'>
-                Card title
+                The Boring Micro-camp
               </h5>
               <p className='mb-4 text-base text-neutral-600 dark:text-neutral-200'>
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
+                6 Weeks Bootcamp with hands-on project-building and placement
+                assistance.
               </p>
               <button
                 type='button'
-                className='bg-primary  inline-block rounded px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-black shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)]'
+                className='bg-primary inline-block w-full rounded px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-black shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)]'
                 data-te-ripple-init
                 data-te-ripple-color='light'
               >
-                Button
+                Registration Open
               </button>
             </div>
           </div>
@@ -238,25 +213,25 @@ export default function Example() {
             <a href='#!'>
               <img
                 className='rounded-t-lg'
-                src='https://tecdn.b-cdn.net/img/new/standard/nature/184.jpg'
-                alt=''
+                src='../svg/boring_workshop.svg'
+                alt='workshop'
               />
             </a>
             <div className='p-6'>
               <h5 className='mb-2 text-xl font-medium leading-tight text-neutral-800 dark:text-neutral-50'>
-                Card title
+                The Boring Workshop
               </h5>
               <p className='mb-4 text-base text-neutral-600 dark:text-neutral-200'>
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
+                Learn to build In-Demand Tech & Design skills over a weekend,
+                that stays for life!
               </p>
               <button
                 type='button'
-                className='bg-primary inline-block rounded px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-black shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)]'
+                className='bg-primary inline-block w-full rounded px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-black shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)]'
                 data-te-ripple-init
                 data-te-ripple-color='light'
               >
-                Button
+                Registration Open
               </button>
             </div>
           </div>
@@ -284,7 +259,7 @@ export default function Example() {
                       d='M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342M6.75 15a.75.75 0 100-1.5.75.75 0 000 1.5zm0 0v-3.675A55.378 55.378 0 0112 8.443m-7.007 11.55A5.981 5.981 0 006.75 15.75v-1.5'
                     />
                   </svg>
-                  <span>ReactJs</span>
+                  <span>ReactJS</span>
                 </div>
                 <div className='flex flex-col'>
                   <svg
@@ -301,7 +276,7 @@ export default function Example() {
                       d='M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342M6.75 15a.75.75 0 100-1.5.75.75 0 000 1.5zm0 0v-3.675A55.378 55.378 0 0112 8.443m-7.007 11.55A5.981 5.981 0 006.75 15.75v-1.5'
                     />
                   </svg>
-                  <span>NextJs</span>
+                  <span>NextJS</span>
                 </div>
               </div>
               <div className='p-6'>
@@ -329,7 +304,7 @@ export default function Example() {
                       d='M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342M6.75 15a.75.75 0 100-1.5.75.75 0 000 1.5zm0 0v-3.675A55.378 55.378 0 0112 8.443m-7.007 11.55A5.981 5.981 0 006.75 15.75v-1.5'
                     />
                   </svg>
-                  <span>ReactJs</span>
+                  <span>NodeJS</span>
                 </div>
                 <div className='flex flex-col'>
                   <svg
@@ -346,12 +321,12 @@ export default function Example() {
                       d='M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342M6.75 15a.75.75 0 100-1.5.75.75 0 000 1.5zm0 0v-3.675A55.378 55.378 0 0112 8.443m-7.007 11.55A5.981 5.981 0 006.75 15.75v-1.5'
                     />
                   </svg>
-                  <span>NextJs</span>
+                  <span>MongoDB</span>
                 </div>
               </div>
               <div className='p-6'>
                 <h5 className='mb-2 text-center text-sm font-medium leading-tight text-neutral-800 dark:text-neutral-50'>
-                  <span>FrontEnd Engineering</span>
+                  <span>BackEnd Engineering</span>
                 </h5>
               </div>
             </div>
@@ -374,7 +349,7 @@ export default function Example() {
                       d='M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342M6.75 15a.75.75 0 100-1.5.75.75 0 000 1.5zm0 0v-3.675A55.378 55.378 0 0112 8.443m-7.007 11.55A5.981 5.981 0 006.75 15.75v-1.5'
                     />
                   </svg>
-                  <span>ReactJs</span>
+                  <span>Figma</span>
                 </div>
                 <div className='flex flex-col'>
                   <svg
@@ -391,12 +366,12 @@ export default function Example() {
                       d='M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342M6.75 15a.75.75 0 100-1.5.75.75 0 000 1.5zm0 0v-3.675A55.378 55.378 0 0112 8.443m-7.007 11.55A5.981 5.981 0 006.75 15.75v-1.5'
                     />
                   </svg>
-                  <span>NextJs</span>
+                  <span>TypeScript</span>
                 </div>
               </div>
               <div className='p-6'>
                 <h5 className='mb-2 text-center text-sm font-medium leading-tight text-neutral-800 dark:text-neutral-50'>
-                  <span>FrontEnd Engineering</span>
+                  <span>Skills To UpSkill</span>
                 </h5>
               </div>
             </div>
@@ -411,27 +386,19 @@ export default function Example() {
             <div className='block max-w-sm rounded-lg bg-white shadow-lg dark:bg-neutral-700'>
               <a href='#!'>
                 <img
-                  className='rounded-t-lg'
-                  src='https://tecdn.b-cdn.net/img/new/standard/nature/184.jpg'
-                  alt=''
+                  className='d-flex w-full items-center justify-center rounded-t-lg'
+                  src='../svg/mentorship.svg'
+                  alt='mentorship'
                 />
               </a>
               <div className='p-6'>
                 <h5 className='mb-2 text-xl font-medium leading-tight text-neutral-800 dark:text-neutral-50'>
-                  Card title
+                  Mentorship
                 </h5>
                 <p className='mb-4 text-base text-neutral-600 dark:text-neutral-200'>
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
+                  You'll mentored by Industry Experts. From Code Review to 1:1,
+                  You'll be in touch them every week.
                 </p>
-                <button
-                  type='button'
-                  className='bg-primary  inline-block rounded px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-black shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)]'
-                  data-te-ripple-init
-                  data-te-ripple-color='light'
-                >
-                  Button
-                </button>
               </div>
             </div>
           </div>
@@ -439,27 +406,19 @@ export default function Example() {
             <div className='block max-w-sm rounded-lg bg-white shadow-lg dark:bg-neutral-700'>
               <a href='#!'>
                 <img
-                  className='rounded-t-lg'
-                  src='https://tecdn.b-cdn.net/img/new/standard/nature/184.jpg'
-                  alt=''
+                  className='d-flex w-full items-center justify-center rounded-t-lg'
+                  src='../svg/peer_learning.svg'
+                  alt='peer_learning'
                 />
               </a>
               <div className='p-6'>
                 <h5 className='mb-2 text-xl font-medium leading-tight text-neutral-800 dark:text-neutral-50'>
-                  Card title
+                  Peer Learning
                 </h5>
                 <p className='mb-4 text-base text-neutral-600 dark:text-neutral-200'>
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
+                  You learn by practicing and also from your batchmates. Do Pari
+                  programming in our Discord community.
                 </p>
-                <button
-                  type='button'
-                  className='bg-primary inline-block rounded px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-black shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)]'
-                  data-te-ripple-init
-                  data-te-ripple-color='light'
-                >
-                  Button
-                </button>
               </div>
             </div>
           </div>
@@ -467,27 +426,19 @@ export default function Example() {
             <div className='block max-w-sm rounded-lg bg-white shadow-lg dark:bg-neutral-700'>
               <a href='#!'>
                 <img
-                  className='rounded-t-lg'
-                  src='https://tecdn.b-cdn.net/img/new/standard/nature/184.jpg'
-                  alt=''
+                  className='d-flex w-full items-center justify-center rounded-t-lg'
+                  src='../svg/weekend_workshop.svg'
+                  alt='weekend_workshop'
                 />
               </a>
               <div className='p-6'>
                 <h5 className='mb-2 text-xl font-medium leading-tight text-neutral-800 dark:text-neutral-50'>
-                  Card title
+                  Weekend Workshops
                 </h5>
                 <p className='mb-4 text-base text-neutral-600 dark:text-neutral-200'>
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
+                  Learn skill over weekend that spreads your horizon in Tech
+                  Opportunities.
                 </p>
-                <button
-                  type='button'
-                  className='bg-primary inline-block rounded px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-black shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)]'
-                  data-te-ripple-init
-                  data-te-ripple-color='light'
-                >
-                  Button
-                </button>
               </div>
             </div>
           </div>
