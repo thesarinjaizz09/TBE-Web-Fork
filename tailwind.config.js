@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
-const { fontFamily } = require('tailwindcss/defaultTheme');
+const { fontFamily } = require('tailwindcss/defaultTheme')
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -14,6 +14,13 @@ module.exports = {
         white: '#fdfdfd',
         black: '#19191b',
         gray: 'b0b0b0',
+        primary: "#FF5757",
+        secondary: "E0B034",
+        dark: "#040505",
+        success: "#31D0AA",
+        textColorLight: "#19191B",
+        textColorDark: "#FDFDFD",
+        grey: "#B0B0B0"
       },
       keyframes: {
         flicker: {
@@ -43,4 +50,4 @@ module.exports = {
     },
   },
   plugins: [require('@tailwindcss/forms')],
-};
+}

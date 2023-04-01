@@ -213,7 +213,8 @@ const footer_nav = [
     ],
   },
 ];
-export default function Example() {
+
+export default function Home() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const uid = useId();
 
@@ -245,19 +246,11 @@ export default function Example() {
               <a
                 key={item.name}
                 href={item.href}
-                className='text-sm font-semibold leading-6 text-red'
+                className='text-sm leading-6 hover:text-primary'
               >
                 {item.name}
               </a>
             ))}
-          </div>
-          <div className='hidden lg:flex lg:flex-1 lg:justify-end'>
-            <a
-              href='#'
-              className='text-gray-900 text-sm font-semibold leading-6'
-            >
-              {/* Log in <span aria-hidden='true'>&rarr;</span> */}
-            </a>
           </div>
         </nav>
         <Dialog
