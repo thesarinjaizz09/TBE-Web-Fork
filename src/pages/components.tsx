@@ -69,7 +69,7 @@ export default function ComponentsPage() {
             <ol className='mt-8 space-y-6'>
               <li className='space-y-2'>
                 <h2 className='text-lg md:text-xl'>Customize Colors</h2>
-                <p className={clsx('!mt-1 text-sm', textColor)}>
+                <p className={clsx('text-sm !mt-1', textColor)}>
                   You can change primary color to any Tailwind CSS colors. See
                   globals.css to change your color.
                 </p>
@@ -81,9 +81,9 @@ export default function ComponentsPage() {
                     className={clsx(
                       'block max-w-xs rounded',
                       mode === 'dark'
-                        ? 'border border-gray-600 bg-dark'
+                        ? 'border-gray-600 border bg-dark'
                         : 'border-gray-300 bg-white',
-                      'focus:border-primary-400 focus:outline-none focus:ring focus:ring-primary-400'
+                      'focus:border-primary-400 focus:ring-primary-400 focus:outline-none focus:ring'
                     )}
                     onChange={(e) => setColor(e.target.value as Color)}
                   >
@@ -97,42 +97,42 @@ export default function ComponentsPage() {
                     Check list of colors
                   </ButtonLink>
                 </div>
-                <div className='flex flex-wrap gap-2 text-xs font-medium'>
-                  <div className='flex h-10 w-10 items-center justify-center rounded bg-primary-50 text-black'>
+                <div className='text-xs flex flex-wrap gap-2 font-medium'>
+                  <div className='bg-primary-50 text-black flex h-10 w-10 items-center justify-center rounded'>
                     50
                   </div>
-                  <div className='flex h-10 w-10 items-center justify-center rounded bg-primary-100 text-black'>
+                  <div className='bg-primary-100 text-black flex h-10 w-10 items-center justify-center rounded'>
                     100
                   </div>
-                  <div className='flex h-10 w-10 items-center justify-center rounded bg-primary-200 text-black'>
+                  <div className='bg-primary-200 text-black flex h-10 w-10 items-center justify-center rounded'>
                     200
                   </div>
-                  <div className='flex h-10 w-10 items-center justify-center rounded bg-primary-300 text-black'>
+                  <div className='bg-primary-300 text-black flex h-10 w-10 items-center justify-center rounded'>
                     300
                   </div>
-                  <div className='flex h-10 w-10 items-center justify-center rounded bg-primary-400 text-black'>
+                  <div className='bg-primary-400 text-black flex h-10 w-10 items-center justify-center rounded'>
                     400
                   </div>
-                  <div className='flex h-10 w-10 items-center justify-center rounded bg-primary-500 text-black'>
+                  <div className='bg-primary-500 text-black flex h-10 w-10 items-center justify-center rounded'>
                     500
                   </div>
-                  <div className='flex h-10 w-10 items-center justify-center rounded bg-primary-600 text-white'>
+                  <div className='bg-primary-600 text-white flex h-10 w-10 items-center justify-center rounded'>
                     600
                   </div>
-                  <div className='flex h-10 w-10 items-center justify-center rounded bg-primary-700 text-white'>
+                  <div className='bg-primary-700 text-white flex h-10 w-10 items-center justify-center rounded'>
                     700
                   </div>
-                  <div className='flex h-10 w-10 items-center justify-center rounded bg-primary-800 text-white'>
+                  <div className='bg-primary-800 text-white flex h-10 w-10 items-center justify-center rounded'>
                     800
                   </div>
-                  <div className='flex h-10 w-10 items-center justify-center rounded bg-primary-900 text-white'>
+                  <div className='bg-primary-900 text-white flex h-10 w-10 items-center justify-center rounded'>
                     900
                   </div>
                 </div>
               </li>
               <li className='space-y-2'>
                 <h2 className='text-lg md:text-xl'>UnstyledLink</h2>
-                <p className={clsx('!mt-1 text-sm', textColor)}>
+                <p className={clsx('text-sm !mt-1', textColor)}>
                   No style applied, differentiate internal and outside links,
                   give custom cursor for outside links.
                 </p>
@@ -145,7 +145,7 @@ export default function ComponentsPage() {
               </li>
               <li className='space-y-2'>
                 <h2 className='text-lg md:text-xl'>PrimaryLink</h2>
-                <p className={clsx('!mt-1 text-sm', textColor)}>
+                <p className={clsx('text-sm !mt-1', textColor)}>
                   Add styling on top of UnstyledLink, giving a primary color to
                   the link.
                 </p>
@@ -158,7 +158,7 @@ export default function ComponentsPage() {
               </li>
               <li className='space-y-2'>
                 <h2 className='text-lg md:text-xl'>UnderlineLink</h2>
-                <p className={clsx('!mt-1 text-sm', textColor)}>
+                <p className={clsx('text-sm !mt-1', textColor)}>
                   Add styling on top of UnstyledLink, giving a dotted and
                   animated underline.
                 </p>
@@ -171,7 +171,7 @@ export default function ComponentsPage() {
               </li>
               <li className='space-y-2'>
                 <h2 className='text-lg md:text-xl'>ArrowLink</h2>
-                <p className={clsx('!mt-1 text-sm', textColor)}>
+                <p className={clsx('text-sm !mt-1', textColor)}>
                   Useful for indicating navigation, I use this quite a lot, so
                   why not build a component with some whimsy touch?
                 </p>
@@ -199,7 +199,7 @@ export default function ComponentsPage() {
               </li>
               <li className='space-y-2'>
                 <h2 className='text-lg md:text-xl'>ButtonLink</h2>
-                <p className={clsx('!mt-1 text-sm', textColor)}>
+                <p className={clsx('text-sm !mt-1', textColor)}>
                   Button styled link with 3 variants.
                 </p>
                 <div className='flex flex-wrap gap-2'>
@@ -239,7 +239,7 @@ export default function ComponentsPage() {
               </li>
               <li className='space-y-2'>
                 <h2 className='text-lg md:text-xl'>Button</h2>
-                <p className={clsx('!mt-1 text-sm', textColor)}>
+                <p className={clsx('text-sm !mt-1', textColor)}>
                   Ordinary button with style.
                 </p>
                 <div className='flex flex-wrap gap-2'>
@@ -400,7 +400,7 @@ export default function ComponentsPage() {
               </li>
               <li className='space-y-2'>
                 <h2 className='text-lg md:text-xl'>TextButton</h2>
-                <p className={clsx('!mt-1 text-sm', textColor)}>
+                <p className={clsx('text-sm !mt-1', textColor)}>
                   Button with a text style
                 </p>
                 <div className='space-x-2'>
@@ -410,7 +410,7 @@ export default function ComponentsPage() {
               </li>
               <li className='space-y-2'>
                 <h2 className='text-lg md:text-xl'>IconButton</h2>
-                <p className={clsx('!mt-1 text-sm', textColor)}>
+                <p className={clsx('text-sm !mt-1', textColor)}>
                   Button with only icon inside
                 </p>
                 <div className='space-x-2'>
@@ -426,7 +426,7 @@ export default function ComponentsPage() {
               </li>
               <li className='space-y-2'>
                 <h2 className='text-lg md:text-xl'>Custom 404 Page</h2>
-                <p className={clsx('!mt-1 text-sm', textColor)}>
+                <p className={clsx('text-sm !mt-1', textColor)}>
                   Styled 404 page with some animation.
                 </p>
                 <div className='flex flex-wrap gap-2'>
@@ -435,7 +435,7 @@ export default function ComponentsPage() {
               </li>
               <li className='space-y-2'>
                 <h2 className='text-lg md:text-xl'>Next Image</h2>
-                <p className={clsx('!mt-1 text-sm', textColor)}>
+                <p className={clsx('text-sm !mt-1', textColor)}>
                   Next Image with default props and skeleton animation
                 </p>
                 <NextImage
@@ -449,7 +449,7 @@ export default function ComponentsPage() {
               </li>
               <li className='space-y-2'>
                 <h2 className='text-lg md:text-xl'>Skeleton</h2>
-                <p className={clsx('!mt-1 text-sm', textColor)}>
+                <p className={clsx('text-sm !mt-1', textColor)}>
                   Skeleton with shimmer effect
                 </p>
                 <Skeleton className='h-72 w-72' />

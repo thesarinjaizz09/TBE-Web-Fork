@@ -9,9 +9,9 @@ const links = [
 
 export default function Header() {
   return (
-    <header className='sticky top-0 z-50 bg-white'>
+    <header className='bg-white sticky top-0 z-50'>
       <div className='layout flex h-14 items-center justify-between'>
-        <UnstyledLink href='/' className='font-bold hover:text-gray-600'>
+        <UnstyledLink href='/' className='hover:text-gray-600 font-bold'>
           Home
         </UnstyledLink>
         <nav>
