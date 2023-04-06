@@ -1,3 +1,72 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Custom Classes */
+@layer components {
+    /* 1. Gradients */
+    .gradient-1 {
+        @apply bg-gradient-to-b from-[#F6FFBE] to-[#F99156];
+    }
+
+    .gradient-2 {
+        @apply bg-gradient-to-b from-[#2555FF] to-[#9B8BFF];
+    }
+
+    .gradient-3 {
+        @apply bg-gradient-to-b from-[#FFE259] to-[#FFA751];
+    }
+
+    .gradient-4 {
+        @apply bg-gradient-to-b from-[#FF76E1] to-[#D0AA7D];
+    }
+
+    .gradient-5 {
+        @apply bg-gradient-to-b from-[#923CFF] to-[#4E4EFF];
+    }
+
+    .gradient-6 {
+        @apply bg-gradient-to-b from-[#F0F3FF] to-[#FFA4C5];
+    }
+
+    /* 2. Fonts */
+    .heading-1 {
+        @apply header-1 font-black;
+    }
+
+    .heading-2 {
+        @apply header-2 font-bold;
+    }
+
+    .heading-3 {
+        @apply header-3 font-bold;
+    }
+
+    .heading-4 {
+        @apply header-4 font-bold;
+    }
+
+    .heading-5 {
+        @apply header-5 font-bold;
+    }
+
+    .subtitle {
+        @apply subtitle font-normal;
+    }
+
+    .paragraph {
+        @apply paragraph font-normal;
+    }
+
+    .strong-text {
+        @apply strong-text font-semibold;
+    }
+
+    .pre-title {
+        @apply pre-title font-medium;
+    }
+
+    .button-text {
+        @apply button-text font-bold;
+    }
+}

@@ -5,49 +5,69 @@ const { fontFamily } = require('tailwindcss/defaultTheme')
 module.exports = {
   content: ['./src/**/*.{js,jsx,ts,tsx}'],
   theme: {
-    extend: {
-      fontFamily: {
-        primary: ['Inter', ...fontFamily.sans],
-      },
-      colors: {
-        red: '#ff5757',
-        white: '#fdfdfd',
-        black: '#19191b',
-        gray: 'b0b0b0',
-        primary: "#FF5757",
-        secondary: "E0B034",
-        dark: "#040505",
-        success: "#31D0AA",
-        textColorLight: "#19191B",
-        textColorDark: "#FDFDFD",
-        grey: "#B0B0B0"
-      },
-      keyframes: {
-        flicker: {
-          '0%, 19.999%, 22%, 62.999%, 64%, 64.999%, 70%, 100%': {
-            opacity: 0.99,
-            filter:
-              'drop-shadow(0 0 1px rgba(252, 211, 77)) drop-shadow(0 0 15px rgba(245, 158, 11)) drop-shadow(0 0 1px rgba(252, 211, 77))',
-          },
-          '20%, 21.999%, 63%, 63.999%, 65%, 69.999%': {
-            opacity: 0.4,
-            filter: 'none',
-          },
-        },
-        shimmer: {
-          '0%': {
-            backgroundPosition: '-700px 0',
-          },
-          '100%': {
-            backgroundPosition: '700px 0',
-          },
-        },
-      },
-      animation: {
-        flicker: 'flicker 3s linear infinite',
-        shimmer: 'shimmer 1.3s linear infinite',
-      },
+    screens: {
+      sm: '480px',
+      md: '768px',
+      lg: '976px',
+      xl: '1440px',
     },
+    fontFamily: {
+      primary: ['Inter', ...fontFamily.sans],
+    },
+    fontSize: {
+      'header-1': '4rem',
+      'header-2': '2.75rem',
+      'header-3': '2rem',
+      'header-4': '1.5rem',
+      'header-5': '1.25rem',
+      'subtitle': '1.25rem',
+      'paragraph': '1rem',
+      'strong-text': '1rem',
+      'pre-title': '0.875rem',
+      'button-text': '0.875rem',
+    },
+    fontWeight: {
+      thin: '100',
+      extralight: '200',
+      light: '300',
+      normal: '400',
+      medium: '500',
+      semibold: '600',
+      bold: '700',
+      extrabold: '800',
+      black: '900',
+    },
+    colors: {
+      primary: "#FF5757",
+      secondary: "#E0B034",
+      dark: "#040505",
+      success: "#31D0AA",
+      'text- light': "#19191B",
+      'text-dark': "#FDFDFD",
+      grey: "#B0B0B0",
+      'grey-dark': "#848484",
+      accent: "#ECF1F4",
+      'light-bg': "#F8F8F8",
+    },
+    extend: {
+      spacing: {
+        '1': '8px',
+        '2': '16px',
+        '3': '24px',
+        '4': '32px',
+        '5': '40px',
+        '6': '48px',
+        '7': '56px',
+        '8': '64px',
+      },
+      borderRadius: {
+        '1': '5px',
+        '2': '10px',
+      }
+    }
   },
-  plugins: [require('@tailwindcss/forms')],
+  plugins: [
+    require('@tailwindcss/typography'),
+    require('@tailwindcss/forms')
+  ],
 }

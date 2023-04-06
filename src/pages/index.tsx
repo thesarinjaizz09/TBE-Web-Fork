@@ -219,7 +219,7 @@ export default function Home() {
   const uid = useId();
 
   return (
-    <div className='w-full border-2 bg-black'>
+    <div className='bg-black w-full border-2'>
       <header className='absolute inset-x-0 top-0 z-50'>
         <nav
           className='flex items-center justify-between p-6 lg:px-8'
@@ -260,7 +260,7 @@ export default function Home() {
           onClose={setMobileMenuOpen}
         >
           <div className='fixed inset-0 z-50' />
-          <Dialog.Panel className='sm:ring-gray-900/10 fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1'>
+          <Dialog.Panel className='sm:ring-gray-900/10 bg-white fixed inset-y-0 right-0 z-50 w-full overflow-y-auto px-6 py-6 sm:max-w-sm sm:ring-1'>
             <div className='flex items-center justify-between'>
               <a href='#' className='-m-1.5 p-1.5'>
                 <span className='sr-only'>The Boring Education</span>
@@ -306,17 +306,17 @@ export default function Home() {
         <div className='mx-auto max-w-2xl py-32 sm:py-48 lg:py-52'>
           <div className='text-center'>
             <h1 className='text-4xl font-bold tracking-tight  sm:text-6xl '>
-              <p className=' leading-loose text-white'>Tech Learning for</p>
+              <p className=' text-white leading-loose'>Tech Learning for</p>
               <p className='text-red'>Everyone</p>
             </h1>
-            <p className='mt-6 text-base leading-8 text-white'>
+            <p className='text-white mt-6 text-base leading-8'>
               Learn Tech Skills & Prepare yourself for the Web3 Era.
             </p>
             <div className='mt-10 flex w-full items-center justify-center gap-x-6'>
               <a
                 href='#'
-                className='w-72 rounded-md bg-red px-3.5 py-2.5 text-sm
-                 font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600'
+                className='bg-red text-white hover:bg-indigo-500 focus-visible:outline-indigo-600 w-72 rounded-md
+                 px-3.5 py-2.5 text-sm font-semibold shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2'
               >
                 Explore Roadmaps
               </a>
@@ -336,7 +336,7 @@ export default function Home() {
             key={uid}
             className='lg:px- my-1 w-full px-1 md:w-full lg:my-4 lg:w-1/3'
           >
-            <div className='block max-w-sm rounded-lg bg-white shadow-lg dark:bg-neutral-700'>
+            <div className='bg-white dark:bg-neutral-700 block max-w-sm rounded-lg shadow-lg'>
               <a href='#!'>
                 <img
                   className='rounded-t-lg'
@@ -345,13 +345,13 @@ export default function Home() {
                 />
               </a>
               <div className='p-6'>
-                <h5 className='mb-2 text-xl font-medium leading-tight text-black'>
+                <h5 className='text-black mb-2 text-xl font-medium leading-tight'>
                   {program.title}
                 </h5>
-                <p className='mb-4 text-base text-gray'>{program.content}</p>
+                <p className='text-gray mb-4 text-base'>{program.content}</p>
                 <button
                   type='button'
-                  className='hover:bg-primary-600 focus:bg-primary-600 active:bg-primary-700 inline-block w-full rounded bg-red px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)]'
+                  className='hover:bg-primary-600 focus:bg-primary-600 active:bg-primary-700 bg-red text-white inline-block w-full rounded px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)]'
                   data-te-ripple-init
                   data-te-ripple-color='light'
                 >
@@ -375,7 +375,7 @@ export default function Home() {
               key={uid}
               className='lg:px- my-1 w-full px-1 md:w-full lg:my-4 lg:w-1/3'
             >
-              <div className='block max-w-xs rounded-lg bg-white shadow-lg dark:bg-neutral-700'>
+              <div className='bg-white dark:bg-neutral-700 block max-w-xs rounded-lg shadow-lg'>
                 <div className='flex w-full items-center justify-around py-4'>
                   {skill.details.map((detail) => (
                     <div key={uid} className='flex flex-col items-center'>
@@ -390,7 +390,7 @@ export default function Home() {
                   ))}
                 </div>
                 <div className='p-6'>
-                  <h5 className='mb-2 text-center text-sm font-medium leading-tight text-neutral-800 dark:text-neutral-50'>
+                  <h5 className='text-neutral-800 dark:text-neutral-50 mb-2 text-center text-sm font-medium leading-tight'>
                     <span>{skill.title}</span>
                   </h5>
                 </div>
@@ -402,7 +402,7 @@ export default function Home() {
 
       {/*what's different here */}
       <div className='flex w-full flex-col items-center justify-center p-10  '>
-        <h1 className='text-4xl text-white'>
+        <h1 className='text-white text-4xl'>
           What's <span className='text-red'>Different</span> here
         </h1>
         <div className='flex w-full items-center justify-center  '>
@@ -411,7 +411,7 @@ export default function Home() {
               key={uid}
               className='lg:px- my-1 w-full px-1 md:w-full lg:my-4 lg:w-1/3'
             >
-              <div className='block max-w-sm rounded-lg bg-white shadow-lg dark:bg-neutral-700'>
+              <div className='bg-white dark:bg-neutral-700 block max-w-sm rounded-lg shadow-lg'>
                 <a href='#!'>
                   <img
                     className='d-flex w-full items-center justify-center rounded-t-lg'
@@ -420,10 +420,10 @@ export default function Home() {
                   />
                 </a>
                 <div className='p-6'>
-                  <h5 className='mb-2 text-xl font-medium leading-tight text-black'>
+                  <h5 className='text-black mb-2 text-xl font-medium leading-tight'>
                     {item.title}
                   </h5>
-                  <p className='mb-4 text-base text-gray'>{item.content}</p>
+                  <p className='text-gray mb-4 text-base'>{item.content}</p>
                 </div>
               </div>
             </div>
@@ -436,19 +436,19 @@ export default function Home() {
         <div className='mx-auto max-w-2xl py-32 sm:py-48 lg:py-52'>
           <img src='../svg/programmer.svg' alt='' />
           <div className='text-center'>
-            <h1 className='text-4xl font-bold tracking-tight  text-white sm:text-6xl '>
+            <h1 className='text-white text-4xl font-bold  tracking-tight sm:text-6xl '>
               {/* <p className=' leading-loose text-white'>Tech Learning for</p>
               <p className='text-red'>Everyone</p> */}
               Can You be a Programmer?
             </h1>
-            <p className='mt-6 text-lg leading-8 text-white'>
+            <p className='text-white mt-6 text-lg leading-8'>
               Book your session and discuss if programming is for you.
             </p>
             <div className='mt-10 flex w-full items-center justify-center gap-x-6'>
               <a
                 href='#'
-                className='w-72 rounded-md bg-red px-3.5 py-2.5 text-sm
-                 font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600'
+                className='bg-red text-white hover:bg-indigo-500 focus-visible:outline-indigo-600 w-72 rounded-md
+                 px-3.5 py-2.5 text-sm font-semibold shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2'
               >
                 Book FREE Counselling Now
               </a>
@@ -461,13 +461,13 @@ export default function Home() {
 
       <section className='text-gray-600 body-font'>
         <div className='container mx-auto px-5 py-24'>
-          <h1 className='title-font mb-12 text-center text-3xl font-medium text-white'>
-            What our <span className='pr-2 text-red'>students</span>saying
+          <h1 className='title-font text-white mb-12 text-center text-3xl font-medium'>
+            What our <span className='text-red pr-2'>students</span>saying
           </h1>
           <div className='-m-4 flex flex-wrap'>
             {testimonial.map((item) => (
               <div key={uid} className='w-full  p-4 md:w-1/3'>
-                <div className='h-full rounded bg-white p-8'>
+                <div className='bg-white h-full rounded p-8'>
                   <svg
                     xmlns='http://www.w3.org/2000/svg'
                     fill='currentColor'
@@ -498,8 +498,8 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <div className='mx-auto mb-[75px] flex h-auto max-w-[1500px] flex-col border-t-2 border-white'>
-        <div className='flex h-auto w-full flex-col gap-y-[45px] bg-black px-[15px] py-[30px] text-white sm:px-[30px] md:px-[40px] lg:h-[380px] lg:flex-row lg:items-center lg:justify-between lg:px-[50px] lg:py-0 xl:px-[75px]'>
+      <div className='border-white mx-auto mb-[75px] flex h-auto max-w-[1500px] flex-col border-t-2'>
+        <div className='bg-black text-white flex h-auto w-full flex-col gap-y-[45px] px-[15px] py-[30px] sm:px-[30px] md:px-[40px] lg:h-[380px] lg:flex-row lg:items-center lg:justify-between lg:px-[50px] lg:py-0 xl:px-[75px]'>
           <div className='lg:w-4/12'>
             <div className='text-gray-900 mb-[30px] flex items-center justify-center gap-x-[8px]'>
               <img src='../svg/logo.svg' alt='logo-footer' />
@@ -533,7 +533,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className='bg-grey flex h-[100px] w-full flex-col items-center justify-evenly border-t-2 border-white text-white sm:flex-row sm:justify-between sm:px-[30px] md:px-[40px] lg:px-[50px] xl:px-[75px]'>
+        <div className='border-white text-white flex h-[100px] w-full flex-col items-center justify-evenly border-t-2 bg-grey sm:flex-row sm:justify-between sm:px-[30px] md:px-[40px] lg:px-[50px] xl:px-[75px]'>
           <div className='text-gray-600 w-full text-center'>
             © 2023, The Boring Education
           </div>
