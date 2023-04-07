@@ -4,7 +4,6 @@ import Image from 'next/image';
 const ImageContainer = ({
   src,
   alt,
-  fill,
   className,
   loading = 'lazy',
 }: ImageContainerProps) => {
@@ -13,9 +12,9 @@ const ImageContainer = ({
       <Image
         src={src}
         alt={alt}
-        fill={fill ?? true}
+        fill={true}
         loading={loading}
-        className={className}
+        className={className + ' image'}
       />
     </div>
   );

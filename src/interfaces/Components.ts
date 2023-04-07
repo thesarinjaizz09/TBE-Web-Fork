@@ -14,6 +14,9 @@ export interface ImageContainerProps {
   src: string;
   alt: string;
   className: string;
-  fill?: boolean;
   loading?: 'lazy' | 'eager';
+}
+
+export interface LogoProps {
+  className?: string;
 }

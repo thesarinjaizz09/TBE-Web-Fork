@@ -73,4 +73,11 @@
   .button-text {
     @apply text-button-text text-white font-bold tracking-wide;
   }
+
+  .image {
+    object-fit: contain;
+    width: 100% !important;
+    position: relative !important;
+    height: unset !important;
+  }
 }
