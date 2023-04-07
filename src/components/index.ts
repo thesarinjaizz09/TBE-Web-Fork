@@ -7,6 +7,7 @@ import Logo from '@/components/common/images/Logo';
 import Button from '@/components/common/buttons/Button';
 import LinkButton from '@/components/common/buttons/LinkButton';
 import LandingPageHero from '@/components/containers/Page/Landing/Hero';
+import Section from '@/components/layout/Section';
 
 export {
   Header,
@@ -18,4 +19,5 @@ export {
   Button,
   LinkButton,
   LandingPageHero,
+  Section,
 };
