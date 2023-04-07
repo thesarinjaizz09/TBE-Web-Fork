@@ -67,6 +67,16 @@ module.exports = {
         7: '56px',
         8: '64px',
       },
+      padding: {
+        2: '16px',
+        4: '32px',
+        6: '48px',
+        8: '64px',
+        10: '80px',
+        12: '96px',
+        14: '112px',
+        16: '128px',
+      },
       borderRadius: {
         1: '5px',
         2: '10px',
