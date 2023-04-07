@@ -1,6 +1,6 @@
 import { imageMeta } from '@/constant/global';
 import { LogoProps } from '@/interfaces';
-import { Image, Link } from '..';
+import { Image, Link } from '../..';
 
 const Logo = ({ className }: LogoProps) => {
   return (

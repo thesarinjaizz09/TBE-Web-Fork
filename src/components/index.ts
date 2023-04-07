@@ -1,11 +1,11 @@
 import Header from '@/components/layout/Header';
-import LinkText from '@/components/typography/Link';
-import Text from '@/components/typography/Text';
-import ScreenReader from '@/components/typography/ScreenReader';
-import ImageContainer from '@/components/containers/Image';
-import Logo from '@/components/containers/Logo';
-import Button from '@/components/button/Button';
-import LinkButton from '@/components/button/LinkButton';
+import LinkText from '@/components/common/typography/Link';
+import Text from '@/components/common/typography/Text';
+import ScreenReader from '@/components/common/typography/ScreenReader';
+import ImageContainer from '@/components/common/images/Image';
+import Logo from '@/components/common/images/Logo';
+import Button from '@/components/common/buttons/Button';
+import LinkButton from '@/components/common/buttons/LinkButton';
 import LandingPageHero from '@/components/containers/Page/Landing/Hero';
 
 export {

@@ -54,6 +54,7 @@ export default function Home() {
           </div>
         ))}
       </div>
+      <section></section>
       <div className='flex w-full flex-col items-center justify-center p-10  '>
         <h1 className='text-4xl'>
           <span className='text-red'>Skill</span>

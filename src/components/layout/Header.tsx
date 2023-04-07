@@ -2,7 +2,7 @@ import { Dialog } from '@headlessui/react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import { useState } from 'react';
 import { TOP_NAVIGATION } from '@/constant';
-import { Image, Link, Logo, ScreenReader } from '..';
+import { Link, Logo, ScreenReader } from '..';
 
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
