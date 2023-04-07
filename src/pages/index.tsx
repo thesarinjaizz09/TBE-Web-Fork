@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import { useId } from 'react';
 
-import { Header } from '@/components';
+import { Header, Link } from '@/components';
 
 import {
   FOOTER_NAVIGATION,
@@ -17,33 +17,31 @@ export default function Home() {
   return (
     <main className='gradient-bg'>
       <Header />
-
       <section className='px-8 py-16'>
         <div className='flex justify-center'>
           <div className='flex flex-col items-center'>
-            <div className='flex flex-row'>
-              <h1 className='heading-2'>Tech Learning for</h1>
-              <h1 className='heading-2 text-center text-primary'>
-                &nbsp;Everyone
-              </h1>
+            <div className='flex flex-col items-center'>
+              <div className='flex flex-row'>
+                <h1 className='heading-2'>Tech Learning for</h1>
+                <h1 className='heading-2 text-center text-primary'>
+                  &nbsp;Everyone
+                </h1>
+              </div>
+              <p className='paragraph mt-2 text-grey'>
+                Learn Tech Skills & Prepare yourself for the Web3 Era.
+              </p>
             </div>
-            <p className='paragraph py-2 text-grey'>
-              Learn Tech Skills & Prepare yourself for the Web3 Era.
-            </p>
-            <div className='mt-10 flex w-full items-center justify-center gap-x-6'>
-              <a
-                href='#'
-                className='bg-red w-72 rounded-md px-3.5 py-2.5 text-sm
-                 font-semibold  shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600'
-              >
-                Explore Roadmaps
-              </a>
+            <div className='mt-3'>
+              {/* TODO: Add this as component */}
+              <Link href='#'>
+                <button className='button bg-primary px-4 py-2 text-white'>
+                  Explore Roadmaps
+                </button>
+              </Link>
             </div>
           </div>
         </div>
       </section>
-
-      {/* our Programs*/}
       <h1 className='flex w-full items-center justify-center text-4xl'>
         <span className=''>Our</span>
         <span className='text-red'>Programs</span>
@@ -82,7 +80,6 @@ export default function Home() {
           </div>
         ))}
       </div>
-      {/* Skill we Teach */}
       <div className='flex w-full flex-col items-center justify-center p-10  '>
         <h1 className='text-4xl'>
           <span className='text-red'>Skill</span>
@@ -121,8 +118,6 @@ export default function Home() {
           ))}
         </div>
       </div>
-
-      {/*what's different here */}
       <div className='flex w-full flex-col items-center justify-center p-10  '>
         <h1 className='text-4xl '>
           What's <span className='text-red'>Different</span> here
@@ -154,8 +149,6 @@ export default function Home() {
           ))}
         </div>
       </div>
-
-      {/*Can You be a Programmer*/}
       <div className='relative isolate px-6 pt-14 lg:px-8'>
         <div className='mx-auto max-w-2xl py-32 sm:py-48 lg:py-52'>
           <Image src='../svg/programmer.svg' alt='' width={100} height={100} />
@@ -180,9 +173,6 @@ export default function Home() {
           </div>
         </div>
       </div>
-
-      {/* What our students saying */}
-
       <section className='body-font text-gray-600'>
         <div className='container mx-auto px-5 py-24'>
           <h1 className='title-font mb-12 text-center text-3xl font-medium '>
@@ -224,7 +214,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
       <footer className='mx-auto mb-[75px] flex h-auto max-w-[1500px] flex-col border-t-2 border-white'>
         <div className='flex h-auto w-full flex-col gap-y-[45px] bg-black px-[15px] py-[30px]  sm:px-[30px] md:px-[40px] lg:h-[380px] lg:flex-row lg:items-center lg:justify-between lg:px-[50px] lg:py-0 xl:px-[75px]'>
           <div className='lg:w-4/12'>

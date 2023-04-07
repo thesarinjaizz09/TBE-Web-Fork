@@ -74,10 +74,20 @@
     @apply text-button-text text-white font-bold tracking-wide;
   }
 
+  /* Image */
   .image {
     object-fit: contain;
     width: 100% !important;
     position: relative !important;
     height: unset !important;
+  }
+
+  /* Link */
+  .link {
+    @apply text-button-text text-white font-bold tracking-wide;
+  }
+
+  .button {
+    @apply text-button-text text-white font-bold tracking-wide rounded-1;
   }
 }
