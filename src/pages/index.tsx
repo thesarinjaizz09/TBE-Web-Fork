@@ -1,8 +1,6 @@
 import Image from 'next/image';
 import { useId } from 'react';
-
-import { Header, Link } from '@/components';
-
+import { Header, LandingPageHero } from '@/components';
 import {
   FOOTER_NAVIGATION,
   PROGRAMS,
@@ -17,31 +15,7 @@ export default function Home() {
   return (
     <main className='gradient-bg'>
       <Header />
-      <section className='px-8 py-16'>
-        <div className='flex justify-center'>
-          <div className='flex flex-col items-center'>
-            <div className='flex flex-col items-center'>
-              <div className='flex flex-row'>
-                <h1 className='heading-2'>Tech Learning for</h1>
-                <h1 className='heading-2 text-center text-primary'>
-                  &nbsp;Everyone
-                </h1>
-              </div>
-              <p className='paragraph mt-2 text-grey'>
-                Learn Tech Skills & Prepare yourself for the Web3 Era.
-              </p>
-            </div>
-            <div className='mt-3'>
-              {/* TODO: Add this as component */}
-              <Link href='#'>
-                <button className='button bg-primary px-4 py-2 text-white'>
-                  Explore Roadmaps
-                </button>
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
+      <LandingPageHero />
       <h1 className='flex w-full items-center justify-center text-4xl'>
         <span className=''>Our</span>
         <span className='text-red'>Programs</span>

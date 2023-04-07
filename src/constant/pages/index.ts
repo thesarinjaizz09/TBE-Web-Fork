@@ -1,8 +1,8 @@
 const TOP_NAVIGATION = [
-  { name: 'Home', href: '#' },
-  { name: 'Micro-Camp', href: '#' },
-  { name: 'Workshop', href: '#' },
-  { name: 'Contact Us', href: '#' },
+  { name: 'Home', href: '/' },
+  { name: 'Micro-Camps', href: '/micro-camps' },
+  { name: 'Workshops', href: '/workshops' },
+  { name: 'Contact Us', href: '/contact' },
 ];
 
 const PROGRAMS = [

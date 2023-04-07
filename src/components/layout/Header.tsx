@@ -2,7 +2,7 @@ import { Dialog } from '@headlessui/react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import { useState } from 'react';
 import { TOP_NAVIGATION } from '@/constant';
-import { Image, Logo, ScreenReader } from '..';
+import { Image, Link, Logo, ScreenReader } from '..';
 
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -25,13 +25,13 @@ const Header = () => {
         </div>
         <div className='hidden lg:flex lg:gap-x-12'>
           {TOP_NAVIGATION.map((item) => (
-            <a
+            <Link
               key={item.name}
               href={item.href}
-              className='paragraph hover:text-primary'
+              className='paragraph font-normal hover:text-primary'
             >
               {item.name}
-            </a>
+            </Link>
           ))}
         </div>
       </nav>

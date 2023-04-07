@@ -1,3 +1,5 @@
+import { MouseEventHandler } from 'react';
+
 export interface LinkProps {
   children: React.ReactNode;
   className?: string;
@@ -19,4 +21,17 @@ export interface ImageContainerProps {
 
 export interface LogoProps {
   className?: string;
+}
+
+export interface LinkButtonProps {
+  buttonProps: ButtonProps;
+  href: string;
+  className?: string;
+}
+
+export interface ButtonProps {
+  variant: 'PRIMARY' | 'OUTLINE';
+  className?: string;
+  text: string;
+  onClick?: MouseEventHandler<HTMLButtonElement> | undefined;
 }
