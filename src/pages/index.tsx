@@ -1,7 +1,7 @@
 import { useState, useId } from 'react';
 import { Dialog } from '@headlessui/react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
-
+import { Header } from '../components/Group';
 const navigation = [
   { name: 'Home', href: '#' },
   { name: 'Workshop', href: '#' },
@@ -219,6 +219,7 @@ export default function Example() {
 
   return (
     <div className='w-full border-2 bg-black'>
+      <Header className='absolute inset-x-0 top-0 z-50' />
       <header className='absolute inset-x-0 top-0 z-50'>
         <nav
           className='flex items-center justify-between p-6 lg:px-8'

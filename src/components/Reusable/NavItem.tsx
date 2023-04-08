@@ -2,20 +2,20 @@ import Link from 'next/link';
 
 interface NavItemProps {
   href: string;
-  text: string;
+  label: string;
   className: string;
   useSkeleton: boolean;
 }
 
 export const NavItem = ({
   href,
-  text,
+  label,
   className,
   useSkeleton = false,
 }: NavItemProps) => {
   return (
     <Link href={href} className={className}>
-      <a>{text}</a>
+      {label}
     </Link>
   );
 };
