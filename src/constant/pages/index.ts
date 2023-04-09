@@ -78,7 +78,7 @@ const USP = [
   {
     title: `Mentorship`,
     content: `You'll mentored by Industry Experts. From Code Review to 1:1, You'll be in touch them every week.`,
-    image: `mentorship.svg`,
+    image: `peer_learning.svg`,
     imageAltText: `mentorship`,
   },
   {
@@ -90,7 +90,7 @@ const USP = [
   {
     title: `Weekend Workshop`,
     content: `Learn skill over weekend that spreads your horizon in Tech Opportunities.`,
-    image: `mentorship.svg`,
+    image: `peer_learning.svg`,
     imageAltText: `weekend workshop`,
   },
   {

@@ -37,7 +37,7 @@ export default function Home() {
                 {skill.details.map((detail) => (
                   <div key={uid} className='flex w-44 flex-col items-center'>
                     <Image
-                      className='h-16 w-16 rounded-t-lg'
+                      className='h-8 w-8 rounded-t-lg'
                       src={`../svg/${detail.image}`}
                       alt={detail.imageAltText}
                     />
@@ -73,71 +73,25 @@ export default function Home() {
           </Text>
         </div>
 
-        <div className='flex w-full items-center justify-center  '>
+        <div className='flex w-full items-stretch justify-center   '>
           {USP.map((item) => (
-            // <div
-            //   key={uid}
-            //   className='lg:px- my-1 w-full px-1 md:w-full lg:my-4 lg:w-1/3'
-            // >
-            //   <div className='block max-w-sm rounded-lg bg-white shadow-lg dark:bg-neutral-700'>
-            //     <a href='#!'>
-            //       <Image
-            //         className='d-flex w-full items-center justify-center rounded-t-lg'
-            //         src={`../svg/${item.image}`}
-            //         alt={item.imageAltText}
-            //       />
-            //     </a>
-            //     <div className='p-6'>
-            //       <h5 className='mb-2 text-xl font-medium leading-tight text-black'>
-            //         {item.title}
-            //       </h5>
-            //       <p className='text-gray mb-4 text-base'>{item.content}</p>
-            //     </div>
-            //   </div>
-            // </div>
+            <div key={uid} className='flex-1 p-4 '>
+              <div className='block h-full overflow-hidden rounded-lg border-2  bg-gray-950'>
+                <div className='p-4 '>
+                  <Image
+                    className=' rounded-t-lg '
+                    src={`../svg/${item.image}`}
+                    alt={item.imageAltText}
+                  />
+                  <Text level='h4' className='heading-4 py-4 '>
+                    {item.title}
+                  </Text>
 
-            <div
-              key={uid}
-              className='flex w-full flex-col p-3 sm:w-1/2 md:w-1/3'
-            >
-              <div className='col-span-1 flex flex-col border-2 bg-white p-4'>
-                <Image
-                  className='d-flex  items-center justify-center rounded-t-lg border-2 border-red-600  '
-                  src={`../svg/${item.image}`}
-                  alt={item.imageAltText}
-                />
-                <div className='mb-4 flex flex-wrap'>
-                  <span className='mr-2'>Link 1</span>
-                  <span className='mr-2'>Link 2</span>
-                </div>
-                <p className='text-md text-justify'>Some Description</p>
-                <div className='mt-auto flex flex-wrap pt-3 text-xs'>
-                  <p className='mb-2 mr-2'>Tag #1</p>
-                  <p className='mb-2 mr-2'>Tag #2</p>
+                  <Text level='p' className='paragraph text-justify'>
+                    {item.content}
+                  </Text>
                 </div>
               </div>
-              {/* <div className='flex flex-1 flex-col overflow-hidden rounded-lg bg-white shadow-lg'>
-                <Image
-                  className='d-flex  items-center justify-center rounded-t-lg border-2 border-red-600  '
-                  src={`../svg/${item.image}`}
-                  alt={item.imageAltText}
-                />
-
-                <div className='flex flex-1 flex-col p-4'>
-                  <h3 className='mb-4 text-2xl'>My heading</h3>
-                  <div className='text-grey-darker mb-4 flex-1 text-sm'>
-                    <p>
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.{' '}
-                    </p>
-                  </div>
-                  <a
-                    href='#'
-                    className='border-grey-light hover:text-red border-t pt-2 text-xs uppercase tracking-wide text-grey no-underline'
-                  >
-                    Twitter
-                  </a>
-                </div>
-              </div> */}
             </div>
           ))}
         </div>
@@ -167,56 +121,61 @@ export default function Home() {
         </div>
       </div>
       <section className='body-font text-gray-600'>
-        <div className='container mx-auto px-5 py-24'>
-          <h1 className='title-font mb-12 text-center text-3xl font-medium '>
-            What our <span className='text-red pr-2'>students</span>saying
-          </h1>
+        <div className='container  mx-auto px-5 py-24'>
+          <div className='flex justify-center pb-4  '>
+            <Text level='h3' className='heading-3 '>
+              What's Our
+            </Text>
+            <Text level='h3' className='heading-3 px-2 text-primary'>
+              Students
+            </Text>
+            <Text level='h3' className='heading-3 '>
+              Saying
+            </Text>
+          </div>
           <div className='-m-4 flex flex-wrap'>
             {TESTIMONIALS.map((item) => (
-              <div key={uid} className='w-full  p-4 md:w-1/3'>
-                <div className='h-full rounded bg-white p-8'>
-                  <svg
-                    xmlns='http://www.w3.org/2000/svg'
-                    fill='currentColor'
-                    className='mb-4 block h-5 w-5 text-gray-400'
-                    viewBox='0 0 975.036 975.036'
-                  >
-                    <path d='M925.036 57.197h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.399 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l36 76c11.6 24.399 40.3 35.1 65.1 24.399 66.2-28.6 122.101-64.8 167.7-108.8 55.601-53.7 93.7-114.3 114.3-181.9 20.601-67.6 30.9-159.8 30.9-276.8v-239c0-27.599-22.401-50-50-50zM106.036 913.497c65.4-28.5 121-64.699 166.9-108.6 56.1-53.7 94.4-114.1 115-181.2 20.6-67.1 30.899-159.6 30.899-277.5v-239c0-27.6-22.399-50-50-50h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.4 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l35.9 75.8c11.601 24.399 40.501 35.2 65.301 24.399z'></path>
-                  </svg>
-                  <p className='mb-6 leading-relaxed'>{item.content}</p>
-                  <a className='inline-flex items-center'>
+              <div key={uid} className='flex-1 p-4 '>
+                <div className='block h-full overflow-hidden rounded-lg border-2  bg-gray-950'>
+                  <div className='p-4 '>
                     <Image
-                      alt={item.imageAltText}
+                      className=' w-8 rounded-t-lg'
                       src={`../svg/${item.image}`}
-                      className='h-12 w-12 flex-shrink-0 rounded-full object-cover object-center'
+                      alt={item.imageAltText}
                     />
-                    <span className='flex flex-grow flex-col pl-4'>
-                      <span className='title-font font-medium text-gray-900'>
-                        {item.title}
-                      </span>
-                      <span className='text-sm text-gray-500'>
-                        UI DEVELOPER
-                      </span>
-                    </span>
-                  </a>
+                    <Text level='h4' className='heading-4 py-4 '>
+                      {item.title}
+                    </Text>
+
+                    <Text
+                      level='p'
+                      className='paragraph text-justify text-grey-dark'
+                    >
+                      {item.content}
+                    </Text>
+                  </div>
                 </div>
               </div>
             ))}
           </div>
         </div>
       </section>
-      <footer className='mx-auto mb-[75px] flex h-auto max-w-[1500px] flex-col border-t-2 border-white'>
+      <footer className='mx-auto  flex h-auto w-full  flex-col border-t-2 border-white'>
         <div className='flex h-auto w-full flex-col gap-y-[45px] bg-black px-[15px] py-[30px]  sm:px-[30px] md:px-[40px] lg:h-[380px] lg:flex-row lg:items-center lg:justify-between lg:px-[50px] lg:py-0 xl:px-[75px]'>
           <div className='lg:w-4/12'>
             <div className='mb-[30px] flex items-center justify-center gap-x-[8px] text-gray-900'>
-              <Image src='../svg/logo.svg' alt='logo-footer' />
-              <span className=''>The Boring</span>
-              <span className='text-red'>Education</span>
+              <Image src='../svg/logo.svg' alt='logo-footer' className='w-8' />
+              <Text level='p' className='paragraph'>
+                The Boring
+              </Text>
+              <Text level='p' className='paragraph text-primary'>
+                Education
+              </Text>
             </div>
 
-            <div className='text-center text-gray-600'>
+            <Text level='p' className='paragraph text-center text-gray-600'>
               Learn Tech Skills & Prepare yourself for a Tech Job.
-            </div>
+            </Text>
           </div>
 
           <div className='flex flex-wrap justify-center gap-x-[90px] gap-y-[60px] sm:justify-between sm:gap-x-0 lg:w-7/12 lg:flex-nowrap'>
