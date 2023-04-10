@@ -7,11 +7,11 @@ const LandingPageHero = () => {
         <div className='flex flex-col items-center'>
           <div className='flex flex-col items-center'>
             <div className='flex flex-row'>
-              <Text level='h1' className='heading-2'>
-                Tech Learning for
-              </Text>
-              <Text level='h1' className='heading-2 text-center text-primary'>
-                &nbsp;Everyone
+              <Text level='h1' className='heading-2 flex'>
+                Tech Learning for{' '}
+                <Text level='h1' className='heading-2 text-center text-primary'>
+                  &nbsp;Everyone
+                </Text>
               </Text>
             </div>
             <Text level='p' className='paragraph mt-2 text-grey'>

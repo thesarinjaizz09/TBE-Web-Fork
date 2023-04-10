@@ -1,7 +1,12 @@
 import React from 'react';
 
-const Section = ({ children }: { children: React.ReactNode }) => {
-  return <section className='px-8 py-12'>{children}</section>;
+interface SectionProps {
+  children: React.ReactNode;
+  className?: string;
+}
+
+const Section = ({ children, className = 'px-8 py-12' }: SectionProps) => {
+  return <section className={className}>{children}</section>;
 };
 
 export default Section;

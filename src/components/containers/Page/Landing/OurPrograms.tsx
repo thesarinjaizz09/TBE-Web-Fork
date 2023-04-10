@@ -10,7 +10,7 @@ const OurPrograms = () => {
             Our
           </Text>
           <Text level='h4' className='heading-4 text-primary'>
-            &nbsp;Everyone
+            &nbsp;Programs
           </Text>
         </div>
         <div className='flex items-center justify-center gap-4 pt-5'>
