@@ -22,7 +22,7 @@ const MicroCampLanding = () => {
                     Front-end{' '}
                   </Text>
                   <Text level='span' className='heading-2 text-dark'>
-                    Micro-camp
+                    Master
                   </Text>
                 </Text>
               </div>
