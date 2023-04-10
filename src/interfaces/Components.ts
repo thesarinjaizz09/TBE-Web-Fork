@@ -43,3 +43,7 @@ export interface ProgramCardProps {
   content: string;
   buttonText: string;
 }
+
+export interface PageLayoutProps {
+  children: React.ReactNode;
+}
