@@ -137,41 +137,44 @@ const TESTIMONIALS = [
 
 const FOOTER_NAVIGATION = [
   {
-    title: `Product`,
+    title: `Our Products`,
+    isShow: true,
     url_content: [
       {
-        link_text: `Overview`,
+        link_text: `Be A Frontend Master`,
         href: `#`,
       },
       {
-        link_text: `Overview`,
+        link_text: `Be A Backend Master`,
         href: `#`,
       },
       {
-        link_text: `Overview`,
+        link_text: `The Boring Workshop`,
         href: `#`,
       },
     ],
   },
   {
     title: `Company`,
+    isShow: true,
     url_content: [
       {
-        link_text: `Overview`,
+        link_text: `About US`,
         href: `#`,
       },
       {
-        link_text: `Overview`,
+        link_text: `Contact Us`,
         href: `#`,
       },
       {
-        link_text: `Overview`,
+        link_text: `Refund Policy`,
         href: `#`,
       },
     ],
   },
   {
     title: `Resources`,
+    isShow: false,
     url_content: [
       {
         link_text: `Overview`,
@@ -188,24 +191,22 @@ const FOOTER_NAVIGATION = [
     ],
   },
   {
-    title: `Social`,
+    title: `Connect With Us`,
+    isShow: true,
     url_content: [
       {
-        link_text: `Overview`,
+        link_text: `Discord`,
         href: `#`,
       },
       {
-        link_text: `Overview`,
-        href: `#`,
-      },
-      {
-        link_text: `Overview`,
-        href: `#`,
+        link_text: `Instagram`,
+        href: `https://www.instagram.com/theboringeducation/`,
       },
     ],
   },
   {
     title: `Legal`,
+    isShow: false,
     url_content: [
       {
         link_text: `Overview`,
