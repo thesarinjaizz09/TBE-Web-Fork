@@ -1,8 +1,21 @@
+import { programs } from '../global';
+import { routes } from '../routes';
+
 const TOP_NAVIGATION = [
-  { name: 'Home', href: '/' },
-  { name: 'Micro-Camps', href: '/micro-camps' },
-  { name: 'Workshops', href: '/workshops' },
-  { name: 'Contact Us', href: '/contact' },
+  { name: 'Home', href: routes.home },
+  {
+    name: programs.juniorInWebEngineering.label,
+    href: routes.microCampLanding(programs.juniorInWebEngineering.slug),
+  },
+  {
+    name: programs.beFrontendMaster.label,
+    href: routes.microCampLanding(programs.beFrontendMaster.slug),
+  },
+  {
+    name: programs.beBackendMaster.label,
+    href: routes.microCampLanding(programs.beBackendMaster.slug),
+  },
+  { name: 'Contact us', href: routes.contactUs },
 ];
 
 const PROGRAMS = [

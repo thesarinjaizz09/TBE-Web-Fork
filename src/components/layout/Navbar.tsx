@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { TOP_NAVIGATION } from '@/constant';
 import { Link, Logo, ScreenReader } from '..';
 
-const Header = () => {
+const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
@@ -75,4 +75,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default Navbar;

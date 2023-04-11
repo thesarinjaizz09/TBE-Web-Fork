@@ -1,4 +1,4 @@
-import Header from '@/components/layout/Header';
+import Navbar from '@/components/layout/Navbar';
 import LinkText from '@/components/common/typography/Link';
 import Text from '@/components/common/typography/Text';
 import ScreenReader from '@/components/common/typography/ScreenReader';
@@ -10,9 +10,10 @@ import LandingPageHero from '@/components/containers/Page/Landing/Hero';
 import Section from '@/components/layout/Section';
 import OurPrograms from '@/components/containers/Page/Landing/OurPrograms';
 import ProgramCard from '@/components/containers/Cards/Program';
+import PageLayout from '@/components/layout/Page';
 
 export {
-  Header,
+  Navbar,
   LinkText as Link,
   Text,
   ImageContainer as Image,
@@ -24,4 +25,5 @@ export {
   Section,
   OurPrograms,
   ProgramCard,
+  PageLayout,
 };

@@ -1,19 +1,12 @@
 import { useId } from 'react';
-import {
-  Header,
-  Image,
-  LandingPageHero,
-  OurPrograms,
-  Text,
-} from '@/components';
+import { Image, LandingPageHero, OurPrograms, Text } from '@/components';
 import { FOOTER_NAVIGATION, SKILLS, TESTIMONIALS, USP } from '@/constant';
 
-export default function Home() {
+const Home = () => {
   const uid = useId();
 
   return (
-    <main className='gradient-bg'>
-      <Header />
+    <section className='gradient-bg'>
       <LandingPageHero />
       <OurPrograms />
 
@@ -205,6 +198,8 @@ export default function Home() {
           </div>
         </div>
       </footer>
-    </main>
+    </section>
   );
-}
+};
+
+export default Home;
