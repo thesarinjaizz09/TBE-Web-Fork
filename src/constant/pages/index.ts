@@ -87,6 +87,54 @@ const SKILLS = [
   },
 ];
 
+const SKILLS_MICROCAMP = [
+  {
+    id: v4(),
+    title: `FrontEnd Engineering`,
+    details: [
+      {
+        id: v4(),
+        name: `ReactJS`,
+        image: `reactjs.svg`,
+        imageAltText: `ReactJS`,
+      },
+      { id: v4(), name: `NextJs`, image: `nextjs.svg`, imageAltText: `NextJS` },
+      { id: v4(), name: `Redux`, image: `redux.svg`, imageAltText: `Redux` },
+    ],
+  },
+  {
+    id: v4(),
+    title: `Deployment`,
+    details: [
+      {
+        id: v4(),
+        name: `Netlify`,
+        image: `netlify.svg`,
+        imageAltText: `Netlify`,
+      },
+      {
+        id: v4(),
+        name: `Vercel`,
+        image: `vercel.svg`,
+        imageAltText: `Vercel`,
+      },
+    ],
+  },
+  {
+    id: v4(),
+    title: `Extra Skills`,
+    details: [
+      { id: v4(), name: `Figma`, image: `figma.svg`, imageAltText: `Figma` },
+      {
+        id: v4(),
+        name: `TypeScript`,
+        image: `typescript.svg`,
+        imageAltText: `Typescript`,
+      },
+    ],
+  },
+];
+
 const USP = [
   {
     id: v4(),
@@ -231,12 +279,52 @@ const FRONTEND_MICROCAMP_CURRICULUM = [
   },
 ];
 
+const WHAT_WE_DO_FOR_YOU = [
+  {
+    id: v4(),
+    title: `Live Mock Interview`,
+    content: `Prepare for real world interviews by attending Mock Interviews hosted by Industry Experts.`,
+    image: `live_mock_interview.svg`,
+    imageAltText: `Live Mock Interview`,
+  },
+  {
+    id: v4(),
+    title: `Resume Building`,
+    content: `We build your resume that gets you shortlisted for the interviews.`,
+    image: `resume_building.svg`,
+    imageAltText: `Resume Building`,
+  },
+  {
+    id: v4(),
+    title: `Linkedin Optimization`,
+    content: `We guide your way of using LinkedIn to get interview calls and pitch yourself in front of HRs.`,
+    image: `linkedin_optimization.svg`,
+    imageAltText: `Linkedin Optimization`,
+  },
+  {
+    id: v4(),
+    title: `Job Profile Building`,
+    content: `A good job profile is needed for a good, and we make sure that you’ve one.`,
+    image: `job_profile_building.svg`,
+    imageAltText: `Job Profile Building`,
+  },
+  {
+    id: v4(),
+    title: `Some "Boring" Skills`,
+    content: `On Weekend workshops with “The Boring Workshop”, You’ll get hands-on experience in Tech topics.`,
+    image: `some_boring_skills.svg`,
+    imageAltText: `Some Boring Skills`,
+  },
+];
+
 export {
   FOOTER_NAVIGATION,
   PROGRAMS,
   SKILLS,
+  SKILLS_MICROCAMP,
   TESTIMONIALS,
   TOP_NAVIGATION,
   USP,
   FRONTEND_MICROCAMP_CURRICULUM,
+  WHAT_WE_DO_FOR_YOU,
 };
