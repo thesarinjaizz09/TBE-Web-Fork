@@ -66,13 +66,13 @@ const MicroCampLanding = () => {
           <div className='grid grid-cols-3 gap-3 pt-4'>
             {FRONTEND_MICROCAMP_CURRICULUM.map((item) => (
               <button
-                className='rounded-lg  bg-blue-600 px-4 py-2 text-blue-100 duration-300 hover:bg-blue-500'
+                className='rounded-lg  bg-blue-600 px-4 py-4 text-blue-100 duration-300 hover:bg-blue-500'
                 key={item.id}
               >
-                <Text level='h3' className='heading-3'>
+                <Text level='h2' className='heading-2'>
                   {item.title}
                 </Text>
-                <Text level='p' className='paragraph'>
+                <Text level='p' className='paragraph text-2xl'>
                   {item.content}
                 </Text>
               </button>

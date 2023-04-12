@@ -227,7 +227,7 @@ const FRONTEND_MICROCAMP_CURRICULUM = [
   {
     id: v4(),
     title: 'Be Job Ready',
-    content: 'Project & Resume to JOb, All in one',
+    content: 'Project & Resume to Job, All in one',
   },
 ];
 
