@@ -201,33 +201,33 @@ const FOOTER_NAVIGATION = [
 const FRONTEND_MICROCAMP_CURRICULUM = [
   {
     id: v4(),
-    title: '8 Weeks',
-    content: 'Duration',
+    title: `8 Weeks`,
+    content: `Duration`,
   },
   {
     id: v4(),
-    title: '1:1 Mentorship',
-    content: 'Weekly Session with Mentors',
+    title: `1:1 Mentorship`,
+    content: `Weekly Session with Mentors`,
   },
   {
     id: v4(),
-    title: 'Only Projects',
-    content: 'Learn by Building',
+    title: `Only Projects`,
+    content: `Learn by Building`,
   },
   {
     id: v4(),
-    title: 'Code Review',
-    content: 'Weekly code reviews by mentors',
+    title: `Code Review`,
+    content: `Weekly code reviews by mentors`,
   },
   {
     id: v4(),
-    title: 'Tech Workshops',
-    content: 'Workshops on Tech every weekend',
+    title: `Tech Workshops`,
+    content: `Workshops on Tech every weekend`,
   },
   {
     id: v4(),
-    title: 'Be Job Ready',
-    content: 'Project & Resume to Job, All in one',
+    title: `Be Job Ready`,
+    content: `Project & Resume to Job, All in one`,
   },
 ];
 
