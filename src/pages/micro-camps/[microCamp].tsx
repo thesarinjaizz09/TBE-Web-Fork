@@ -1,9 +1,17 @@
 import { LinkButton, Section, Text } from '@/components';
+import { useRouter } from 'next/router'
+import { useEffect } from 'react'
 
 const MicroCampLanding = () => {
+  const { push } = useRouter();
+
+  useEffect(() => {
+     push('https://docs.google.com/forms/d/e/1FAIpQLSejDBJvhWMWeKZFkWY2PxuUa_LZYsstDvJljrn0Tbm2_2Kd7Q/viewform?usp=sf_link');
+  }, []);
+
   return (
     <Section className='px-8 py-4'>
-      <div className='gradient-6 rounded-2'>
+      {/* <div className='gradient-6 rounded-2'>
         <div className='flex flex-col p-8'>
           <div className='flex justify-center'>
             <Text level='p' className='strong-text text-dark'>
@@ -45,7 +53,7 @@ const MicroCampLanding = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
     </Section>
   );
 };
