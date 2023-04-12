@@ -1,4 +1,3 @@
-import { useId } from 'react';
 import {
   Image,
   LandingPageHero,
@@ -9,8 +8,6 @@ import {
 import { FOOTER_NAVIGATION, SKILLS, TESTIMONIALS, USP } from '@/constant';
 
 const Home = () => {
-  const uid = useId();
-
   return (
     <section className='gradient-bg'>
       <LandingPageHero />
@@ -29,12 +26,15 @@ const Home = () => {
         <div className='flex w-full items-center justify-around px-72 pt-8 '>
           {SKILLS.map((skill) => (
             <div
-              key={uid}
+              key={skill.id}
               className='block max-w-xs rounded-lg border shadow-lg dark:bg-neutral-700'
             >
               <div className='flex w-full items-center justify-around py-4'>
                 {skill.details.map((detail) => (
-                  <div key={uid} className='flex w-44 flex-col items-center'>
+                  <div
+                    key={detail.id}
+                    className='flex w-44 flex-col items-center'
+                  >
                     <Image
                       className='w-16 rounded-t-lg'
                       src={`../svg/${detail.image}`}
@@ -74,7 +74,7 @@ const Home = () => {
 
         <div className='flex w-full items-stretch justify-center   '>
           {USP.map((item) => (
-            <div key={uid} className='flex-1 p-4 '>
+            <div key={item.id} className='flex-1 p-4 '>
               <div className='block h-full overflow-hidden rounded-lg border-2  bg-gray-950'>
                 <div className='p-4 '>
                   <Image
@@ -139,7 +139,7 @@ const Home = () => {
           </div>
           <div className='-m-4 flex flex-wrap'>
             {TESTIMONIALS.map((item) => (
-              <div key={uid} className='flex-1 p-4 '>
+              <div key={item.id} className='flex-1 p-4 '>
                 <div className='block h-full overflow-hidden rounded-lg border-2  bg-gray-950'>
                   <div className='p-4 '>
                     <Image
@@ -186,13 +186,13 @@ const Home = () => {
             {FOOTER_NAVIGATION.map(
               (item) =>
                 item.isShow && (
-                  <div key={uid} className='text-center sm:text-left'>
+                  <div key={item.id} className='text-center sm:text-left'>
                     <div className='mb-[18px] select-none text-sm font-bold text-gray-400'>
                       {item.title}
                     </div>
                     {item.url_content.map((nav) => (
                       <ul
-                        key={uid}
+                        key={nav.id}
                         className='flex flex-col gap-[10px] text-gray-600'
                       >
                         <a className='hover:underline' href={nav.href}>

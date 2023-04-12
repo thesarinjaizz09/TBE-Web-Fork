@@ -18,7 +18,7 @@ const OurPrograms = () => {
             const { image, imageAltText, title, content, buttonText } = program;
             return (
               <ProgramCard
-                key={title}
+                key={program.id}
                 image={image}
                 imageAltText={imageAltText}
                 title={title}
