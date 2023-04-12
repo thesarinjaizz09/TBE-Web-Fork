@@ -1,6 +1,9 @@
+import { SKILLSProps } from '@/interfaces';
 import { programs } from '../global';
 import { routes } from '../routes';
 import { v4 } from 'uuid';
+
+const SVG_BASE_PATH = '/svg';
 
 const TOP_NAVIGATION = [
   { id: v4(), name: 'Home', href: routes.home },
@@ -25,7 +28,7 @@ const TOP_NAVIGATION = [
 const PROGRAMS = [
   {
     id: v4(),
-    image: 'boring_workshop.svg',
+    image: `${SVG_BASE_PATH}/boring_workshop.svg`,
     imageAltText: '',
     title: 'The Boring Micro-Camp',
     content:
@@ -35,7 +38,7 @@ const PROGRAMS = [
   },
   {
     id: v4(),
-    image: 'boring_workshop.svg',
+    image: `${SVG_BASE_PATH}/boring_workshop.svg`,
     imageAltText: 'workshop',
     title: 'The Boring Workshop',
     content:
@@ -45,7 +48,7 @@ const PROGRAMS = [
   },
 ];
 
-const SKILLS = [
+const SKILLS: SKILLSProps[] = [
   {
     id: v4(),
     title: `FrontEnd Engineering`,
@@ -53,21 +56,31 @@ const SKILLS = [
       {
         id: v4(),
         name: `ReactJS`,
-        image: `reactjs.svg`,
+        image: `${SVG_BASE_PATH}/reactjs.svg`,
         imageAltText: `ReactJS`,
       },
-      { id: v4(), name: `NextJs`, image: `nextjs.svg`, imageAltText: `NextJS` },
+      {
+        id: v4(),
+        name: `NextJs`,
+        image: `${SVG_BASE_PATH}/nextjs.svg`,
+        imageAltText: `NextJS`,
+      },
     ],
   },
   {
     id: v4(),
     title: `BackEnd Engineering`,
     details: [
-      { id: v4(), name: `NodeJS`, image: `nodejs.svg`, imageAltText: `NodeJS` },
+      {
+        id: v4(),
+        name: `NodeJS`,
+        image: `${SVG_BASE_PATH}/nodejs.svg`,
+        imageAltText: `NodeJS`,
+      },
       {
         id: v4(),
         name: `MongoDB`,
-        image: `mongodb.svg`,
+        image: `${SVG_BASE_PATH}/mongodb.svg`,
         imageAltText: `MongoDB`,
       },
     ],
@@ -76,18 +89,23 @@ const SKILLS = [
     id: v4(),
     title: `Extra Skills`,
     details: [
-      { id: v4(), name: `Figma`, image: `figma.svg`, imageAltText: `Figma` },
+      {
+        id: v4(),
+        name: `Figma`,
+        image: `${SVG_BASE_PATH}/figma.svg`,
+        imageAltText: `Figma`,
+      },
       {
         id: v4(),
         name: `TypeScript`,
-        image: `typescript.svg`,
+        image: `${SVG_BASE_PATH}/typescript.svg`,
         imageAltText: `Typescript`,
       },
     ],
   },
 ];
 
-const SKILLS_MICROCAMP = [
+const SKILLS_MICROCAMP: SKILLSProps[] = [
   {
     id: v4(),
     title: `FrontEnd Engineering`,
@@ -95,11 +113,21 @@ const SKILLS_MICROCAMP = [
       {
         id: v4(),
         name: `ReactJS`,
-        image: `reactjs.svg`,
+        image: `${SVG_BASE_PATH}/reactjs.svg`,
         imageAltText: `ReactJS`,
       },
-      { id: v4(), name: `NextJs`, image: `nextjs.svg`, imageAltText: `NextJS` },
-      { id: v4(), name: `Redux`, image: `redux.svg`, imageAltText: `Redux` },
+      {
+        id: v4(),
+        name: `NextJs`,
+        image: `${SVG_BASE_PATH}/nextjs.svg`,
+        imageAltText: `NextJS`,
+      },
+      {
+        id: v4(),
+        name: `Redux`,
+        image: `${SVG_BASE_PATH}/redux.svg`,
+        imageAltText: `Redux`,
+      },
     ],
   },
   {
@@ -109,13 +137,13 @@ const SKILLS_MICROCAMP = [
       {
         id: v4(),
         name: `Netlify`,
-        image: `netlify.svg`,
+        image: `${SVG_BASE_PATH}/netlify.svg`,
         imageAltText: `Netlify`,
       },
       {
         id: v4(),
         name: `Vercel`,
-        image: `vercel.svg`,
+        image: `${SVG_BASE_PATH}/vercel.svg`,
         imageAltText: `Vercel`,
       },
     ],
@@ -124,11 +152,16 @@ const SKILLS_MICROCAMP = [
     id: v4(),
     title: `Extra Skills`,
     details: [
-      { id: v4(), name: `Figma`, image: `figma.svg`, imageAltText: `Figma` },
+      {
+        id: v4(),
+        name: `Figma`,
+        image: `${SVG_BASE_PATH}/figma.svg`,
+        imageAltText: `Figma`,
+      },
       {
         id: v4(),
         name: `TypeScript`,
-        image: `typescript.svg`,
+        image: `${SVG_BASE_PATH}/typescript.svg`,
         imageAltText: `Typescript`,
       },
     ],
@@ -140,28 +173,28 @@ const USP = [
     id: v4(),
     title: `Mentorship`,
     content: `You'll mentored by Industry Experts. From Code Review to 1:1, You'll be in touch them every week.`,
-    image: `peer_learning.svg`,
+    image: `${SVG_BASE_PATH}/peer_learning.svg`,
     imageAltText: `mentorship`,
   },
   {
     id: v4(),
     title: `Peer Learning`,
     content: `You learn by practicing and also from your batchmates. Do Pair programming in our Discord community.`,
-    image: `peer_learning.svg`,
+    image: `${SVG_BASE_PATH}/peer_learning.svg`,
     imageAltText: `peer learning`,
   },
   {
     id: v4(),
     title: `Weekend Workshop`,
     content: `Learn skill over weekend that spreads your horizon in Tech Opportunities.`,
-    image: `peer_learning.svg`,
+    image: `${SVG_BASE_PATH}/peer_learning.svg`,
     imageAltText: `weekend workshop`,
   },
   {
     id: v4(),
     title: `Doubt Clearing Sessions`,
     content: `Clear all your doubts over weekend and discuss any issue you’re facing.`,
-    image: `peer_learning.svg`,
+    image: `${SVG_BASE_PATH}/peer_learning.svg`,
     imageAltText: `weekend workshop`,
   },
 ];
@@ -171,21 +204,21 @@ const TESTIMONIALS = [
     id: v4(),
     title: `John Doe`,
     content: `Boring workshop helps me a lot to learn UI designing in a very easy and intellectual manner and the most important thing is that each and every concept is explained easily. in workshop they explain very complex things easily.`,
-    image: `profile_image.svg`,
+    image: `${SVG_BASE_PATH}/profile_image.svg`,
     imageAltText: `profile image`,
   },
   {
     id: v4(),
     title: `John Doe`,
     content: `Boring workshop helps me a lot to learn UI designing in a very easy and intellectual manner and the most important thing is that each and every concept is explained easily. in workshop they explain very complex things easily.`,
-    image: `profile_image.svg`,
+    image: `${SVG_BASE_PATH}/profile_image.svg`,
     imageAltText: `profile image`,
   },
   {
     id: v4(),
     title: `John Doe`,
     content: `Boring workshop helps me a lot to learn UI designing in a very easy and intellectual manner and the most important thing is that each and every concept is explained easily. in workshop they explain very complex things easily.`,
-    image: `profile_image.svg`,
+    image: `${SVG_BASE_PATH}/profile_image.svg`,
     imageAltText: `profile image`,
   },
 ];
@@ -284,35 +317,35 @@ const WHAT_WE_DO_FOR_YOU = [
     id: v4(),
     title: `Live Mock Interview`,
     content: `Prepare for real world interviews by attending Mock Interviews hosted by Industry Experts.`,
-    image: `live_mock_interview.svg`,
+    image: `${SVG_BASE_PATH}/live_mock_interview.svg`,
     imageAltText: `Live Mock Interview`,
   },
   {
     id: v4(),
     title: `Resume Building`,
     content: `We build your resume that gets you shortlisted for the interviews.`,
-    image: `resume_building.svg`,
+    image: `${SVG_BASE_PATH}/resume_building.svg`,
     imageAltText: `Resume Building`,
   },
   {
     id: v4(),
     title: `Linkedin Optimization`,
     content: `We guide your way of using LinkedIn to get interview calls and pitch yourself in front of HRs.`,
-    image: `linkedin_optimization.svg`,
+    image: `${SVG_BASE_PATH}/linkedin_optimization.svg`,
     imageAltText: `Linkedin Optimization`,
   },
   {
     id: v4(),
     title: `Job Profile Building`,
     content: `A good job profile is needed for a good, and we make sure that you’ve one.`,
-    image: `job_profile_building.svg`,
+    image: `${SVG_BASE_PATH}/job_profile_building.svg`,
     imageAltText: `Job Profile Building`,
   },
   {
     id: v4(),
     title: `Some "Boring" Skills`,
     content: `On Weekend workshops with “The Boring Workshop”, You’ll get hands-on experience in Tech topics.`,
-    image: `some_boring_skills.svg`,
+    image: `${SVG_BASE_PATH}/some_boring_skills.svg`,
     imageAltText: `Some Boring Skills`,
   },
 ];

@@ -6,7 +6,7 @@
 @layer components {
   /* 1. Gradients */
   .gradient-1 {
-    @apply bg-gradient-to-b from-[#F6FFBE] to-[#F99156];
+    @apply bg-gradient-to-r from-[#F6FFBE] to-[#F99156];
   }
 
   .gradient-2 {

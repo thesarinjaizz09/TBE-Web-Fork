@@ -3,28 +3,28 @@ import { LinkButton, Section, Text } from '@/components';
 const LandingPageHero = () => {
   return (
     <Section>
-      <div className='flex justify-center pb-44 pt-32'>
+      <div className='flex justify-center py-8'>
         <div className='flex flex-col items-center'>
           <div className='flex flex-col items-center '>
             <div className='flex flex-row'>
-              <Text level='h1' className='heading-1'>
+              <Text level='h2' className='heading-2'>
                 Tech Learning for
               </Text>
-              <Text level='h1' className='heading-1 text-center text-primary'>
+              <Text level='h2' className='heading-2 text-center text-primary'>
                 &nbsp;Everyone
               </Text>
             </div>
-            <Text level='h4' className='heading-4  mt-2 text-grey'>
-              Learn Tech Skills & Prepare yourself for the Web3 Era.
+            <Text level='p' className='paragraph  mt-2 text-grey'>
+              Learn Tech Skills & Prepare yourself for a Tech Job.
             </Text>
           </div>
-          <div className='mt-3'>
+          <div className='mt-4'>
             <LinkButton
               href='#'
               buttonProps={{
                 variant: 'PRIMARY',
                 text: 'Explore Roadmaps',
-                className: 'h-24 w-72 text-lg',
+                className: '',
               }}
             />
           </div>

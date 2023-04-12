@@ -4,61 +4,17 @@ import {
   OurPrograms,
   Text,
   LinkButton,
+  Skills,
 } from '@/components';
-import { FOOTER_NAVIGATION, SKILLS, TESTIMONIALS, USP } from '@/constant';
+import { FOOTER_NAVIGATION, TESTIMONIALS, USP } from '@/constant';
+import React from 'react';
 
 const Home = () => {
   return (
-    <section className='gradient-bg'>
+    <React.Fragment>
       <LandingPageHero />
       <OurPrograms />
-
-      <div className='flex w-full flex-col items-center justify-center p-10  '>
-        <div className='flex justify-center'>
-          <Text level='h3' className='heading-3'>
-            Skill
-          </Text>
-          <Text level='h3' className='heading-3 pl-2 text-primary'>
-            We Teach
-          </Text>
-        </div>
-
-        <div className='flex w-full items-center justify-around px-72 pt-8 '>
-          {SKILLS.map((skill) => (
-            <div
-              key={skill.id}
-              className='block max-w-xs rounded-lg border shadow-lg dark:bg-neutral-700'
-            >
-              <div className='flex w-full items-center justify-around py-4'>
-                {skill.details.map((detail) => (
-                  <div
-                    key={detail.id}
-                    className='flex w-44 flex-col items-center'
-                  >
-                    <Image
-                      className='w-16 rounded-t-lg'
-                      src={`../svg/${detail.image}`}
-                      alt={detail.imageAltText}
-                    />
-
-                    <Text level='p' className='paragraph text-white'>
-                      {detail.name}
-                    </Text>
-                  </div>
-                ))}
-              </div>
-              <div className='p-6'>
-                <Text
-                  level='h5'
-                  className='heading-5 mb-2 text-center  leading-tight  text-white dark:text-neutral-50'
-                >
-                  {skill.title}
-                </Text>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
+      <Skills />
       <div className='flex w-full flex-col items-center justify-center p-10  '>
         <div className='flex justify-center'>
           <Text level='h3' className='heading-3'>
@@ -75,7 +31,7 @@ const Home = () => {
         <div className='flex w-full items-stretch justify-center   '>
           {USP.map((item) => (
             <div key={item.id} className='flex-1 p-4 '>
-              <div className='block h-full overflow-hidden rounded-lg border-2  bg-gray-950'>
+              <div className='bg-gray-950 block h-full overflow-hidden rounded-lg  border-2'>
                 <div className='p-4 '>
                   <Image
                     className=' rounded-t-lg '
@@ -97,7 +53,7 @@ const Home = () => {
       </div>
       <section>
         <div className='flex h-screen  flex-col justify-center  p-24'>
-          <div className='relative mx-auto flex max-w-xs flex-col items-center space-y-3 rounded-xl bg-gray-950 p-44 shadow-lg md:max-w-full md:flex-row md:space-x-5 md:space-y-0'>
+          <div className='bg-gray-950 relative mx-auto flex max-w-xs flex-col items-center space-y-3 rounded-xl p-44 shadow-lg md:max-w-full md:flex-row md:space-x-5 md:space-y-0'>
             <div className='grid w-full place-items-center rounded-lg  md:w-1/3'>
               <Image
                 src='../svg/laptop.svg'
@@ -140,7 +96,7 @@ const Home = () => {
           <div className='-m-4 flex flex-wrap'>
             {TESTIMONIALS.map((item) => (
               <div key={item.id} className='flex-1 p-4 '>
-                <div className='block h-full overflow-hidden rounded-lg border-2  bg-gray-950'>
+                <div className='bg-gray-950 block h-full overflow-hidden rounded-lg  border-2'>
                   <div className='p-4 '>
                     <Image
                       className=' w-16 rounded-t-lg'
@@ -212,7 +168,7 @@ const Home = () => {
           </Text>
         </div>
       </footer>
-    </section>
+    </React.Fragment>
   );
 };
 

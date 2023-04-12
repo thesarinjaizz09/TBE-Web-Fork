@@ -1,4 +1,5 @@
 import { MouseEventHandler } from 'react';
+import { SKILLProps } from '.';
 
 export interface LinkProps {
   children: React.ReactNode;
@@ -46,4 +47,23 @@ export interface ProgramCardProps {
 
 export interface PageLayoutProps {
   children: React.ReactNode;
+}
+
+export interface SectionHeaderProps {
+  heading: string;
+  focusText: string;
+}
+
+export interface CardSectionContainerProps {
+  children: React.ReactNode;
+}
+
+export interface CardGradientContainerProps {
+  children: React.ReactNode;
+  className?: string;
+}
+
+export interface SkillCardProps {
+  skilledDetails: SKILLProps[];
+  title: string;
 }

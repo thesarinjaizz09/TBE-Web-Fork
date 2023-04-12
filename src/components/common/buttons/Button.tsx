@@ -1,6 +1,6 @@
 import { ButtonProps } from '@/interfaces';
 
-const Button = ({ variant, className, text, onClick }: ButtonProps) => {
+const Button = ({ variant, className = '', text, onClick }: ButtonProps) => {
   let additionalClasses = ' button bg-light px-4 py-2 text-white';
   if (variant === 'PRIMARY')
     additionalClasses =
