@@ -36,7 +36,7 @@ const Home = () => {
                 {skill.details.map((detail) => (
                   <div key={uid} className='flex w-44 flex-col items-center'>
                     <Image
-                      className='w-12 rounded-t-lg'
+                      className='w-16 rounded-t-lg'
                       src={`../svg/${detail.image}`}
                       alt={detail.imageAltText}
                     />
@@ -143,7 +143,7 @@ const Home = () => {
                 <div className='block h-full overflow-hidden rounded-lg border-2  bg-gray-950'>
                   <div className='p-4 '>
                     <Image
-                      className=' w-24 rounded-t-lg'
+                      className=' w-16 rounded-t-lg'
                       src={`../svg/${item.image}`}
                       alt={item.imageAltText}
                     />
@@ -168,7 +168,7 @@ const Home = () => {
         <div className='flex h-auto w-full flex-col gap-y-[45px] bg-black px-[15px] py-[30px]  sm:px-[30px] md:px-[40px] lg:h-[380px] lg:flex-row lg:items-center lg:justify-between lg:px-[50px] lg:py-0 xl:px-[75px]'>
           <div className='lg:w-4/12'>
             <div className='mb-[30px] flex items-center justify-center gap-x-[8px] text-gray-900'>
-              <Image src='../svg/logo.svg' alt='logo-footer' className='w-24' />
+              <Image src='../svg/logo.svg' alt='logo-footer' className='w-16' />
               <Text level='p' className='paragraph'>
                 The Boring
               </Text>
