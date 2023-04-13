@@ -1,4 +1,4 @@
-import { Image, Text } from '@/components';
+import { CardGradientContainer, Image, Text } from '@/components';
 import { TestimonialCardProps } from '@/interfaces';
 
 const TestimonialCard = ({
@@ -8,23 +8,15 @@ const TestimonialCard = ({
   content,
 }: TestimonialCardProps) => {
   return (
-    <div className='flex-1'>
-      <div className='bg-gray-950 block h-full overflow-hidden rounded-lg  border-2'>
-        <div className='p-4 '>
-          <Image
-            className=' w-16 rounded-t-lg'
-            src={`${image}`}
-            alt={imageAltText}
-          />
-          <Text level='h4' className='heading-4 py-4 '>
-            {title}
-          </Text>
-          <Text level='p' className='paragraph text-justify text-grey-dark'>
-            {content}
-          </Text>
-        </div>
-      </div>
-    </div>
+    <CardGradientContainer variant={1} className='max-w-sm'>
+      <Image className='w-24' src={`${image}`} alt={imageAltText} />
+      <Text level='h5' className='heading-5 pt-4'>
+        {title}
+      </Text>
+      <Text level='p' className='strong-text pt-1 text-grey-dark'>
+        {content}
+      </Text>
+    </CardGradientContainer>
   );
 };
 
