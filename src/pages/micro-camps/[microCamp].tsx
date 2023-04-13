@@ -13,9 +13,9 @@ const MicroCampLanding = () => {
   const { push } = useRouter();
 
   useEffect(() => {
-    // push(
-    //   'https://docs.google.com/forms/d/e/1FAIpQLSejDBJvhWMWeKZFkWY2PxuUa_LZYsstDvJljrn0Tbm2_2Kd7Q/viewform?usp=sf_link'
-    // );
+    push(
+      'https://docs.google.com/forms/d/e/1FAIpQLSejDBJvhWMWeKZFkWY2PxuUa_LZYsstDvJljrn0Tbm2_2Kd7Q/viewform?usp=sf_link'
+    );
   }, []);
 
   return (
