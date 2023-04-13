@@ -9,7 +9,7 @@ const TestimonialCard = ({
 }: TestimonialCardProps) => {
   return (
     <CardGradientContainer variant={1} className='max-w-sm'>
-      <Image className='w-20' src={`${image}`} alt={imageAltText} />
+      <Image className='w-24' src={`${image}`} alt={imageAltText} />
       <Text level='h5' className='heading-5 pt-4'>
         {title}
       </Text>
