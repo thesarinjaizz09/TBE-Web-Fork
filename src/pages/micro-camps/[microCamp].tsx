@@ -1,10 +1,4 @@
-import {
-  LinkButton,
-  Section,
-  Text,
-  Image,
-  SkillsMicroCamp,
-} from '@/components';
+import { LinkButton, Section, Text, Image, Skills } from '@/components';
 import { useRouter } from 'next/router';
 import { useEffect } from 'react';
 
@@ -124,7 +118,7 @@ const MicroCampLanding = () => {
           </div>
         </div>
       </Section>
-      <SkillsMicroCamp />
+      <Skills />
       <Section>
         <div className='flex w-full flex-col items-center justify-center px-10  '>
           <div className='flex flex-col items-center justify-center'>
