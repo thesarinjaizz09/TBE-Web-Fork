@@ -1,4 +1,8 @@
-import { SKILLSProps, WeGuideDifferentlyCardProps } from '@/interfaces';
+import {
+  SKILLSProps,
+  TestimonialCardProps,
+  WeGuideDifferentlyCardProps,
+} from '@/interfaces';
 import { programs } from '../global';
 import { routes } from '../routes';
 import { v4 } from 'uuid';
@@ -199,7 +203,7 @@ const USP: WeGuideDifferentlyCardProps[] = [
   },
 ];
 
-const TESTIMONIALS = [
+const TESTIMONIALS: TestimonialCardProps[] = [
   {
     id: v4(),
     title: `John Doe`,

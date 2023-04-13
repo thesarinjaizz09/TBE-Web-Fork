@@ -8,20 +8,21 @@ import Button from '@/components/common/buttons/Button';
 import LinkButton from '@/components/common/buttons/LinkButton';
 import LandingPageHero from '@/components/containers/Page/Landing/Hero';
 import Section from '@/components/layout/Section';
-import OurPrograms from '@/components/containers/Page/Landing/OurPrograms';
-import ProgramCard from '@/components/containers/Cards/Program';
+import OurPrograms from '@/components/containers/Cards/OurPrograms';
+import ProgramCard from '@/components/containers/Cards/Items/ProgramCard';
 import PageLayout from '@/components/layout/Page';
 import SectionHeaderContainer from '@/components/containers/Page/common/SectionHeaderContainer';
 import CardSectionContainer from '@/components/containers/Page/common/CardSectionContainer';
 import CardGradientContainer from '@/components/containers/Page/common/CardGradientContainer';
 import SkillCardItem from '@/components/containers/Cards/Items/SkillCardItem';
-import SkillCard from '@/components/containers/Cards/SkillCard';
-import Skills from '@/components/containers/Page/Landing/Skills';
-import SkillsMicroCamp from '@/components/containers/Page/Landing/SkillsMicroCamp';
-import WeGuideDifferentlyCard from '@/components/containers/Cards/WeGuideDifferentlyCard';
-import WeGuideDifferently from '@/components/containers/Page/Landing/WeGuideDifferently';
+import SkillCard from '@/components/containers/Cards/Items/SkillCard';
+import Skills from '@/components/containers/Cards/Skills';
+import WeGuideDifferentlyCard from '@/components/containers/Cards/Items/WeGuideDifferentlyCard';
+import WeGuideDifferently from '@/components/containers/Cards/WeGuideDifferently';
 import FlexContainer from '@/components/containers/Page/common/FlexContainer';
 import CanYouBeAProgrammer from '@/components/containers/Page/Landing/CanYouBeAProgrammer';
+import TestimonialCard from '@/components/containers/Cards/Items/TestimonialCard';
+import Testimonials from '@/components/containers/Cards/Testimonials';
 
 export {
   Navbar,
@@ -43,9 +44,10 @@ export {
   SkillCardItem,
   SkillCard,
   Skills,
-  SkillsMicroCamp,
   WeGuideDifferentlyCard,
   WeGuideDifferently,
   FlexContainer,
   CanYouBeAProgrammer,
+  TestimonialCard,
+  Testimonials,
 };

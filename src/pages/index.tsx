@@ -10,6 +10,8 @@ import {
   CardSectionContainer,
   WeGuideDifferently,
   CanYouBeAProgrammer,
+  FlexContainer,
+  Testimonials,
 } from '@/components';
 import { FOOTER_NAVIGATION, TESTIMONIALS, USP } from '@/constant';
 import { WeGuideDifferentlyCardProps } from '@/interfaces';
@@ -23,46 +25,7 @@ const Home = () => {
       <Skills />
       <WeGuideDifferently />
       <CanYouBeAProgrammer />
-      <section className='body-font text-gray-600'>
-        <div className='container  mx-auto px-5 py-24'>
-          <div className='flex justify-center pb-4  '>
-            <Text level='h3' className='heading-3 '>
-              What's Our
-            </Text>
-            <Text level='h3' className='heading-3 px-2 text-primary'>
-              Students
-            </Text>
-            <Text level='h3' className='heading-3 '>
-              Saying
-            </Text>
-          </div>
-          <div className='-m-4 flex flex-wrap'>
-            {TESTIMONIALS.map((item) => (
-              <div key={item.id} className='flex-1 p-4 '>
-                <div className='bg-gray-950 block h-full overflow-hidden rounded-lg  border-2'>
-                  <div className='p-4 '>
-                    <Image
-                      className=' w-16 rounded-t-lg'
-                      src={`${item.image}`}
-                      alt={item.imageAltText}
-                    />
-                    <Text level='h4' className='heading-4 py-4 '>
-                      {item.title}
-                    </Text>
-
-                    <Text
-                      level='p'
-                      className='paragraph text-justify text-grey-dark'
-                    >
-                      {item.content}
-                    </Text>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <Testimonials />
       <footer className='mx-auto  flex h-auto w-full  flex-col border-t-2 border-white'>
         <div className='flex h-auto w-full flex-col gap-y-[45px] bg-black px-[15px] py-[30px]  sm:px-[30px] md:px-[40px] lg:h-[380px] lg:flex-row lg:items-center lg:justify-between lg:px-[50px] lg:py-0 xl:px-[75px]'>
           <div className='lg:w-4/12'>

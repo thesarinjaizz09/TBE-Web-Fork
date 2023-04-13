@@ -87,3 +87,11 @@ export interface FlexContainerProps {
   className?: string;
   direction?: 'row' | 'col';
 }
+
+export interface TestimonialCardProps {
+  id?: string;
+  image: string;
+  imageAltText: string;
+  title: string;
+  content: string;
+}
