@@ -1,10 +1,15 @@
+import { FlexContainer } from '@/components';
 import { CardSectionContainerProps } from '@/interfaces';
 
 const CardSectionContainer = ({ children }: CardSectionContainerProps) => {
   return (
-    <div className='flex items-center justify-center gap-4 pt-6'>
+    <FlexContainer
+      itemCenter={true}
+      justifyCenter={true}
+      className='w-full gap-4 pt-4'
+    >
       {children}
-    </div>
+    </FlexContainer>
   );
 };
 

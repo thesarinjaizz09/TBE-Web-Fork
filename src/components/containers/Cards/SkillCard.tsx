@@ -1,10 +1,15 @@
-import { CardGradientContainer, SkillCardItem, Text } from '@/components';
+import {
+  CardGradientContainer,
+  FlexContainer,
+  SkillCardItem,
+  Text,
+} from '@/components';
 import { SkillCardProps } from '@/interfaces';
 
 const SkillCard = ({ title, skilledDetails }: SkillCardProps) => {
   return (
     <CardGradientContainer className='flex-1'>
-      <div className='flex w-full items-center justify-evenly gap-4'>
+      <FlexContainer itemCenter={true} className='w-full justify-evenly gap-4'>
         {skilledDetails.map((skilledDetail) => {
           const { id, name, image, imageAltText } = skilledDetail;
           return (
@@ -16,7 +21,7 @@ const SkillCard = ({ title, skilledDetails }: SkillCardProps) => {
             />
           );
         })}
-      </div>
+      </FlexContainer>
       <div className='pt-4'>
         <Text level='h5' className='heading-5 text-center'>
           {title}

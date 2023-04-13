@@ -1,4 +1,4 @@
-import { SKILLSProps } from '@/interfaces';
+import { SKILLSProps, WeGuideDifferentlyCardProps } from '@/interfaces';
 import { programs } from '../global';
 import { routes } from '../routes';
 import { v4 } from 'uuid';
@@ -51,7 +51,7 @@ const PROGRAMS = [
 const SKILLS: SKILLSProps[] = [
   {
     id: v4(),
-    title: `FrontEnd Engineering`,
+    title: `Front-end Engineering`,
     details: [
       {
         id: v4(),
@@ -69,7 +69,7 @@ const SKILLS: SKILLSProps[] = [
   },
   {
     id: v4(),
-    title: `BackEnd Engineering`,
+    title: `Back-end Engineering`,
     details: [
       {
         id: v4(),
@@ -168,7 +168,7 @@ const SKILLS_MICROCAMP: SKILLSProps[] = [
   },
 ];
 
-const USP = [
+const USP: WeGuideDifferentlyCardProps[] = [
   {
     id: v4(),
     title: `Mentorship`,

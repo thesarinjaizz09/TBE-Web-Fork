@@ -1,16 +1,20 @@
-import { Text } from '@/components';
+import { FlexContainer, Text } from '@/components';
 import { SectionHeaderProps } from '@/interfaces';
 
-const SectionHeaderContainer = ({ heading, focusText }: SectionHeaderProps) => {
+const SectionHeaderContainer = ({
+  heading,
+  focusText,
+  headingLevel = 4,
+}: SectionHeaderProps) => {
   return (
-    <div className='flex w-full justify-center'>
-      <Text level='h4' className='heading-4'>
+    <FlexContainer justifyCenter={true} className='w-full'>
+      <Text level={`h${headingLevel}`} className={`heading-${headingLevel}`}>
         {heading}
+        <Text level='span' className={`heading-${headingLevel} text-primary`}>
+          &nbsp;{focusText}
+        </Text>
       </Text>
-      <Text level='h4' className='heading-4 text-primary'>
-        &nbsp;{focusText}
-      </Text>
-    </div>
+    </FlexContainer>
   );
 };
 

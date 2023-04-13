@@ -1,23 +1,26 @@
-import { LinkButton, Section, Text } from '@/components';
+import {
+  FlexContainer,
+  LinkButton,
+  Section,
+  SectionHeaderContainer,
+  Text,
+} from '@/components';
 
 const LandingPageHero = () => {
   return (
     <Section>
-      <div className='flex justify-center py-8'>
-        <div className='flex flex-col items-center'>
-          <div className='flex flex-col items-center '>
-            <div className='flex flex-row'>
-              <Text level='h2' className='heading-2'>
-                Tech Learning for
-              </Text>
-              <Text level='h2' className='heading-2 text-center text-primary'>
-                &nbsp;Everyone
-              </Text>
-            </div>
-            <Text level='p' className='paragraph  mt-2 text-grey'>
+      <FlexContainer justifyCenter={true} className='py-6' direction='col'>
+        <FlexContainer direction='col'>
+          <FlexContainer direction='col'>
+            <SectionHeaderContainer
+              headingLevel={2}
+              heading='Tech Learning for'
+              focusText='Everyone'
+            />
+            <Text level='p' className='paragraph mt-2 text-grey'>
               Learn Tech Skills & Prepare yourself for a Tech Job.
             </Text>
-          </div>
+          </FlexContainer>
           <div className='mt-4'>
             <LinkButton
               href='#'
@@ -28,8 +31,8 @@ const LandingPageHero = () => {
               }}
             />
           </div>
-        </div>
-      </div>
+        </FlexContainer>
+      </FlexContainer>
     </Section>
   );
 };

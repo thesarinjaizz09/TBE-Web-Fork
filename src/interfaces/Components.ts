@@ -52,6 +52,7 @@ export interface PageLayoutProps {
 export interface SectionHeaderProps {
   heading: string;
   focusText: string;
+  headingLevel?: 1 | 2 | 3 | 4 | 5 | 6;
 }
 
 export interface CardSectionContainerProps {
@@ -66,4 +67,20 @@ export interface CardGradientContainerProps {
 export interface SkillCardProps {
   skilledDetails: SKILLProps[];
   title: string;
+}
+
+export interface WeGuideDifferentlyCardProps {
+  id?: string;
+  image: string;
+  imageAltText: string;
+  title: string;
+  content: string;
+}
+
+export interface FlexContainerProps {
+  children: React.ReactNode;
+  itemCenter?: boolean;
+  justifyCenter?: boolean;
+  className?: string;
+  direction?: 'row' | 'col';
 }

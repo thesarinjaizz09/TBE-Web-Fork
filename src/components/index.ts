@@ -18,6 +18,9 @@ import SkillCardItem from '@/components/containers/Cards/Items/SkillCardItem';
 import SkillCard from '@/components/containers/Cards/SkillCard';
 import Skills from '@/components/containers/Page/Landing/Skills';
 import SkillsMicroCamp from '@/components/containers/Page/Landing/SkillsMicroCamp';
+import WeGuideDifferentlyCard from '@/components/containers/Cards/WeGuideDifferentlyCard';
+import WeGuideDifferently from '@/components/containers/Page/Landing/WeGuideDifferently';
+import FlexContainer from '@/components/containers/Page/common/FlexContainer';
 
 export {
   Navbar,
@@ -40,4 +43,7 @@ export {
   SkillCard,
   Skills,
   SkillsMicroCamp,
+  WeGuideDifferentlyCard,
+  WeGuideDifferently,
+  FlexContainer,
 };

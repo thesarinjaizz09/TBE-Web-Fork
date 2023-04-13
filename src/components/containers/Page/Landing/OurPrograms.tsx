@@ -1,5 +1,6 @@
 import {
   CardSectionContainer,
+  FlexContainer,
   ProgramCard,
   Section,
   SectionHeaderContainer,
@@ -9,7 +10,7 @@ import { PROGRAMS } from '@/constant';
 const OurPrograms = () => {
   return (
     <Section>
-      <div className='flex flex-col'>
+      <FlexContainer direction='col'>
         <SectionHeaderContainer heading='Our' focusText='Programs' />
         <CardSectionContainer>
           {PROGRAMS.map((program) => {
@@ -26,7 +27,7 @@ const OurPrograms = () => {
             );
           })}
         </CardSectionContainer>
-      </div>
+      </FlexContainer>
     </Section>
   );
 };
