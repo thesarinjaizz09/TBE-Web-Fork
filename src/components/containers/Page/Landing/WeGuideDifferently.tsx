@@ -1,5 +1,6 @@
 import {
   CardSectionContainer,
+  FlexContainer,
   Section,
   SectionHeaderContainer,
   WeGuideDifferentlyCard,
@@ -9,14 +10,14 @@ import { USP } from '@/constant';
 const WeGuideDifferently = () => {
   return (
     <Section>
-      <div className='flex flex-col'>
+      <FlexContainer direction='col'>
         <SectionHeaderContainer heading='We do' focusText='differently' />
         <CardSectionContainer>
           {USP.map((item) => {
-            const { image, imageAltText, title, content, id } = item;
+            const { id, image, imageAltText, title, content } = item;
             return (
               <WeGuideDifferentlyCard
-                key={item.id}
+                key={id}
                 image={image}
                 imageAltText={imageAltText}
                 title={title}
@@ -25,7 +26,7 @@ const WeGuideDifferently = () => {
             );
           })}
         </CardSectionContainer>
-      </div>
+      </FlexContainer>
     </Section>
   );
 };

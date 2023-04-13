@@ -62,6 +62,9 @@ export interface CardSectionContainerProps {
 export interface CardGradientContainerProps {
   children: React.ReactNode;
   className?: string;
+  borderWidth?: number;
+  variant?: 1 | 2 | 3 | 4 | 5 | 6;
+  roundedWidth?: number;
 }
 
 export interface SkillCardProps {

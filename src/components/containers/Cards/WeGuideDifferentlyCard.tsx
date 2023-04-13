@@ -1,4 +1,4 @@
-import { Image, Text } from '@/components';
+import { CardGradientContainer, Image, Text } from '@/components';
 import { WeGuideDifferentlyCardProps } from '@/interfaces';
 
 const WeGuideDifferentlyCard = ({
@@ -8,24 +8,16 @@ const WeGuideDifferentlyCard = ({
   content,
 }: WeGuideDifferentlyCardProps) => {
   return (
-    <div className='flex-1'>
-      <div className='bg-gray-950 block h-full overflow-hidden rounded-lg  border-2'>
-        <div className='p-4 '>
-          <Image
-            className=' rounded-t-lg '
-            src={`${image}`}
-            alt={imageAltText}
-          />
-          <Text level='h4' className='heading-4 py-4 '>
-            {title}
-          </Text>
+    <CardGradientContainer>
+      <Image className='w-1/2' src={`${image}`} alt={imageAltText} />
+      <Text level='h4' className='heading-4 pt-4'>
+        {title}
+      </Text>
 
-          <Text level='p' className='paragraph text-justify'>
-            {content}
-          </Text>
-        </div>
-      </div>
-    </div>
+      <Text level='p' className='paragraph pt-2'>
+        {content}
+      </Text>
+    </CardGradientContainer>
   );
 };
 

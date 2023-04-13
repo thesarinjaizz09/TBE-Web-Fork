@@ -81,6 +81,14 @@ module.exports = {
         1: '5px',
         2: '10px',
       },
+      borderColor: {
+        'borderColor1': '#F6FFBE',
+        'borderColor2': '#2555FF',
+        'borderColor3': '#FFE259',
+        'borderColor4': '#FF76E1',
+        'borderColor5': '#923CFF',
+        'borderColor6': '#F0F3FF',
+      }
     },
   },
   plugins: [require('@tailwindcss/typography'), require('@tailwindcss/forms')],

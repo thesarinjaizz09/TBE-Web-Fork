@@ -9,6 +9,7 @@ import {
   SectionHeaderContainer,
   CardSectionContainer,
   WeGuideDifferently,
+  CanYouBeAProgrammer,
 } from '@/components';
 import { FOOTER_NAVIGATION, TESTIMONIALS, USP } from '@/constant';
 import { WeGuideDifferentlyCardProps } from '@/interfaces';
@@ -21,35 +22,7 @@ const Home = () => {
       <OurPrograms />
       <Skills />
       <WeGuideDifferently />
-      <section>
-        <div className='flex h-screen  flex-col justify-center  p-24'>
-          <div className='bg-gray-950 relative mx-auto flex max-w-xs flex-col items-center space-y-3 rounded-xl p-44 shadow-lg md:max-w-full md:flex-row md:space-x-5 md:space-y-0'>
-            <div className='grid w-full place-items-center rounded-lg  md:w-1/3'>
-              <Image
-                src='../svg/laptop.svg'
-                alt='laptop'
-                className='rounded-xl object-contain '
-              />
-            </div>
-            <div className='flex w-full flex-col space-y-5  p-3 '>
-              <Text level='h1' className='heading-1 '>
-                Can you be a programmer?
-              </Text>
-              <Text level='h4' className='heading-4 text-center text-gray-500'>
-                Book your session and discuss if programming is for you.
-              </Text>
-              <LinkButton
-                href='#'
-                buttonProps={{
-                  variant: 'PRIMARY',
-                  text: 'Book A Free Counselling Now',
-                  className: 'h-24 w-88 text-4xl',
-                }}
-              />
-            </div>
-          </div>
-        </div>
-      </section>
+      <CanYouBeAProgrammer />
       <section className='body-font text-gray-600'>
         <div className='container  mx-auto px-5 py-24'>
           <div className='flex justify-center pb-4  '>

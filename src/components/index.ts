@@ -21,6 +21,7 @@ import SkillsMicroCamp from '@/components/containers/Page/Landing/SkillsMicroCam
 import WeGuideDifferentlyCard from '@/components/containers/Cards/WeGuideDifferentlyCard';
 import WeGuideDifferently from '@/components/containers/Page/Landing/WeGuideDifferently';
 import FlexContainer from '@/components/containers/Page/common/FlexContainer';
+import CanYouBeAProgrammer from '@/components/containers/Page/Landing/CanYouBeAProgrammer';
 
 export {
   Navbar,
@@ -46,4 +47,5 @@ export {
   WeGuideDifferentlyCard,
   WeGuideDifferently,
   FlexContainer,
+  CanYouBeAProgrammer,
 };

@@ -2,11 +2,16 @@ import { CardGradientContainerProps } from '@/interfaces';
 
 const CardGradientContainer = ({
   children,
-  className,
+  className = '',
+  variant = 1,
+  borderWidth = 2,
+  roundedWidth = 2,
 }: CardGradientContainerProps) => {
   return (
-    <div className={`gradient-2 max-w-sm rounded-2 ${className}`}>
-      <div className='m-[1px] rounded-2 bg-dark p-4'>{children}</div>
+    <div
+      className={`flex-1 rounded-${roundedWidth} border-${borderWidth} border-borderColor${variant} ${className}`}
+    >
+      <div className={`bg-dark p-4 rounded-${roundedWidth}`}>{children}</div>
     </div>
   );
 };

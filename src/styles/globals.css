@@ -47,11 +47,11 @@
   }
 
   .heading-4 {
-    @apply text-header-4 text-white font-bold tracking-wide;
+    @apply text-header-4 text-white font-semibold tracking-wide;
   }
 
   .heading-5 {
-    @apply text-header-5 text-white font-bold tracking-wide;
+    @apply text-header-5 text-white font-semibold tracking-wide;
   }
 
   .subtitle {
