@@ -13,7 +13,7 @@ const TestimonialCard = ({
       <Text level='h5' className='heading-5 pt-4'>
         {title}
       </Text>
-      <Text level='p' className='strong-text pt-1 text-grey-dark'>
+      <Text level='p' className='paragraph pt-1 text-grey-dark'>
         {content}
       </Text>
     </CardGradientContainer>
