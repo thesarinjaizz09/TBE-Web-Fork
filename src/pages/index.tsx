@@ -31,11 +31,11 @@ const Home = () => {
         <div className='flex w-full items-stretch justify-center   '>
           {USP.map((item) => (
             <div key={item.id} className='flex-1 p-4 '>
-              <div className='bg-gray-950 block h-full overflow-hidden rounded-lg  border-2'>
+              <div className='block h-full overflow-hidden rounded-lg border-2  bg-gray-950'>
                 <div className='p-4 '>
                   <Image
                     className=' rounded-t-lg '
-                    src={`../svg/${item.image}`}
+                    src={`${item.image}`}
                     alt={item.imageAltText}
                   />
                   <Text level='h4' className='heading-4 py-4 '>
@@ -53,7 +53,7 @@ const Home = () => {
       </div>
       <section>
         <div className='flex h-screen  flex-col justify-center  p-24'>
-          <div className='bg-gray-950 relative mx-auto flex max-w-xs flex-col items-center space-y-3 rounded-xl p-44 shadow-lg md:max-w-full md:flex-row md:space-x-5 md:space-y-0'>
+          <div className='relative mx-auto flex max-w-xs flex-col items-center space-y-3 rounded-xl bg-gray-950 p-44 shadow-lg md:max-w-full md:flex-row md:space-x-5 md:space-y-0'>
             <div className='grid w-full place-items-center rounded-lg  md:w-1/3'>
               <Image
                 src='../svg/laptop.svg'
@@ -96,11 +96,11 @@ const Home = () => {
           <div className='-m-4 flex flex-wrap'>
             {TESTIMONIALS.map((item) => (
               <div key={item.id} className='flex-1 p-4 '>
-                <div className='bg-gray-950 block h-full overflow-hidden rounded-lg  border-2'>
+                <div className='block h-full overflow-hidden rounded-lg border-2  bg-gray-950'>
                   <div className='p-4 '>
                     <Image
                       className=' w-16 rounded-t-lg'
-                      src={`../svg/${item.image}`}
+                      src={`${item.image}`}
                       alt={item.imageAltText}
                     />
                     <Text level='h4' className='heading-4 py-4 '>

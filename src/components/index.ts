@@ -17,6 +17,7 @@ import CardGradientContainer from '@/components/containers/Page/common/CardGradi
 import SkillCardItem from '@/components/containers/Cards/Items/SkillCardItem';
 import SkillCard from '@/components/containers/Cards/SkillCard';
 import Skills from '@/components/containers/Page/Landing/Skills';
+import SkillsMicroCamp from '@/components/containers/Page/Landing/SkillsMicroCamp';
 
 export {
   Navbar,
@@ -38,4 +39,5 @@ export {
   SkillCardItem,
   SkillCard,
   Skills,
+  SkillsMicroCamp,
 };

@@ -1,4 +1,10 @@
-import { LinkButton, Section, Text, Image } from '@/components';
+import {
+  LinkButton,
+  Section,
+  Text,
+  Image,
+  SkillsMicroCamp,
+} from '@/components';
 import { useRouter } from 'next/router';
 import { useEffect } from 'react';
 
@@ -11,9 +17,9 @@ const MicroCampLanding = () => {
   const { push } = useRouter();
 
   useEffect(() => {
-    // push(
-    //   'https://docs.google.com/forms/d/e/1FAIpQLSejDBJvhWMWeKZFkWY2PxuUa_LZYsstDvJljrn0Tbm2_2Kd7Q/viewform?usp=sf_link'
-    // );
+    push(
+      'https://docs.google.com/forms/d/e/1FAIpQLSejDBJvhWMWeKZFkWY2PxuUa_LZYsstDvJljrn0Tbm2_2Kd7Q/viewform?usp=sf_link'
+    );
   }, []);
 
   return (
@@ -122,55 +128,7 @@ const MicroCampLanding = () => {
           </div>
         </div>
       </Section>
-      <Section>
-        <div className='flex w-full flex-col items-center justify-center p-10  '>
-          <div className='flex justify-center'>
-            <Text level='h3' className='heading-3'>
-              Skill
-            </Text>
-            <Text level='h3' className='heading-3 pl-2 text-primary'>
-              We Teach
-            </Text>
-          </div>
-
-          <div className='flex w-full items-center justify-around px-72 pt-4 '>
-            {SKILLS_MICROCAMP.map((skill) => (
-              <div
-                key={skill.id}
-                className='block max-w-xs rounded-lg border shadow-lg dark:bg-neutral-700'
-              >
-                <div className='flex w-full items-center justify-around py-4'>
-                  {skill.details.map((detail) => (
-                    <div
-                      key={detail.id}
-                      className='flex w-44 flex-col items-center'
-                    >
-                      <Image
-                        className='w-4 rounded-t-lg'
-                        src={`../svg/${detail.image}`}
-                        alt={detail.imageAltText}
-                      />
-
-                      <Text level='p' className='paragraph text-white'>
-                        {detail.name}
-                      </Text>
-                    </div>
-                  ))}
-                </div>
-                <div className='p-6'>
-                  <Text
-                    level='h5'
-                    className='heading-5 mb-2 text-center  leading-tight  text-white dark:text-neutral-50'
-                  >
-                    {skill.title}
-                  </Text>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </Section>
-
+      <SkillsMicroCamp />
       <Section>
         <div className='flex w-full flex-col items-center justify-center px-10  '>
           <div className='flex flex-col items-center justify-center'>
@@ -229,8 +187,8 @@ const MicroCampLanding = () => {
                 <div className='block h-full overflow-hidden rounded-lg border-2  bg-gray-950'>
                   <div className='p-4 '>
                     <Image
-                      className=' rounded-t-lg '
-                      src={`../svg/${item.image}`}
+                      className=' w-14 rounded-t-lg'
+                      src={`${item.image}`}
                       alt={item.imageAltText}
                     />
                     <Text level='h4' className='heading-4 py-4 '>
