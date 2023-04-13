@@ -4,7 +4,10 @@ import { FOOTER_NAVIGATION } from '@/constant';
 const Footer = () => {
   return (
     <footer className='bg-dark'>
-      <FlexContainer className='px-8 py-12'>
+      <FlexContainer
+        className='items-start gap-4 px-4 py-6 md:px-8 md:py-12'
+        itemCenter={false}
+      >
         <FlexContainer
           direction='col'
           itemCenter={false}
@@ -22,7 +25,7 @@ const Footer = () => {
           </Text>
         </FlexContainer>
         <FlexContainer
-          className='w-full flex-1 flex-wrap items-baseline justify-between'
+          className='items-baseline justify-between gap-4'
           itemCenter={false}
         >
           {FOOTER_NAVIGATION.map((item) => {

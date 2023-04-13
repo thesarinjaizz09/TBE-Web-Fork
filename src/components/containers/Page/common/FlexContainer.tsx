@@ -11,7 +11,7 @@ const FlexContainer = ({
     <div
       className={`flex flex-${direction} ${itemCenter && 'items-center'} ${
         justifyCenter && 'justify-center'
-      } ${className}`}
+      } ${className} flex-wrap`}
     >
       {children}
     </div>

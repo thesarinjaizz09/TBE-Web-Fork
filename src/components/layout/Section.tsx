@@ -5,7 +5,10 @@ interface SectionProps {
   className?: string;
 }
 
-const Section = ({ children, className = 'px-8 py-12' }: SectionProps) => {
+const Section = ({
+  children,
+  className = 'md:px-8 md:py-12 px-4 py-6',
+}: SectionProps) => {
   return <section className={className}>{children}</section>;
 };
 

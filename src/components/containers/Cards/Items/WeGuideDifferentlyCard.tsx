@@ -14,7 +14,7 @@ const WeGuideDifferentlyCard = ({
         {title}
       </Text>
 
-      <Text level='p' className='paragraph pt-2'>
+      <Text level='p' className='paragraph pt-2 text-grey'>
         {content}
       </Text>
     </CardGradientContainer>
