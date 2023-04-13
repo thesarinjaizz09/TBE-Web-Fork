@@ -1,4 +1,5 @@
 import {
+  FooterNavigationDataProps,
   SKILLSProps,
   TestimonialCardProps,
   WeGuideDifferentlyCardProps,
@@ -227,46 +228,46 @@ const TESTIMONIALS: TestimonialCardProps[] = [
   },
 ];
 
-const FOOTER_NAVIGATION = [
+const FOOTER_NAVIGATION: FooterNavigationDataProps[] = [
   {
     id: v4(),
     title: `Our Products`,
     isShow: true,
-    url_content: [
-      { id: v4(), link_text: `Be A Frontend Master`, href: `#` },
-      { id: v4(), link_text: `Be A Backend Master`, href: `#` },
-      { id: v4(), link_text: `The Boring Workshop`, href: `#` },
+    urls: [
+      { id: v4(), label: `Be A Frontend Master`, href: `#` },
+      { id: v4(), label: `Be A Backend Master`, href: `#` },
+      { id: v4(), label: `The Boring Workshop`, href: `#` },
     ],
   },
   {
     id: v4(),
     title: `Company`,
     isShow: true,
-    url_content: [
-      { id: v4(), link_text: `About US`, href: `#` },
-      { id: v4(), link_text: `Contact Us`, href: `#` },
-      { id: v4(), link_text: `Refund Policy`, href: `#` },
+    urls: [
+      { id: v4(), label: `About US`, href: `#` },
+      { id: v4(), label: `Contact Us`, href: `#` },
+      { id: v4(), label: `Refund Policy`, href: `#` },
     ],
   },
   {
     id: v4(),
     title: `Resources`,
     isShow: false,
-    url_content: [
-      { id: v4(), link_text: `Overview`, href: `#` },
-      { id: v4(), link_text: `Overview`, href: `#` },
-      { id: v4(), link_text: `Overview`, href: `#` },
+    urls: [
+      { id: v4(), label: `Overview`, href: `#` },
+      { id: v4(), label: `Overview`, href: `#` },
+      { id: v4(), label: `Overview`, href: `#` },
     ],
   },
   {
     id: v4(),
     title: `Connect With Us`,
     isShow: true,
-    url_content: [
-      { id: v4(), link_text: `Discord`, href: `#` },
+    urls: [
+      { id: v4(), label: `Discord`, href: `#` },
       {
         id: v4(),
-        link_text: `Instagram`,
+        label: `Instagram`,
         href: `https://www.instagram.com/theboringeducation/`,
       },
     ],
@@ -275,10 +276,10 @@ const FOOTER_NAVIGATION = [
     id: v4(),
     title: `Legal`,
     isShow: false,
-    url_content: [
-      { id: v4(), link_text: `Overview`, href: `#` },
-      { id: v4(), link_text: `Overview`, href: `#` },
-      { id: v4(), link_text: `Overview`, href: `#` },
+    urls: [
+      { id: v4(), label: `Overview`, href: `#` },
+      { id: v4(), label: `Overview`, href: `#` },
+      { id: v4(), label: `Overview`, href: `#` },
     ],
   },
 ];

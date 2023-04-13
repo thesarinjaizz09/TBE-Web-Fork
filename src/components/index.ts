@@ -23,6 +23,9 @@ import FlexContainer from '@/components/containers/Page/common/FlexContainer';
 import CanYouBeAProgrammer from '@/components/containers/Page/Landing/CanYouBeAProgrammer';
 import TestimonialCard from '@/components/containers/Cards/Items/TestimonialCard';
 import Testimonials from '@/components/containers/Cards/Testimonials';
+import Footer from '@/components/layout/Footer';
+import FooterLink from '@/components/common/typography/FooterLink';
+import FooterLinksContainer from '@/components/containers/Page/common/FooterLinksContainer';
 
 export {
   Navbar,
@@ -50,4 +53,7 @@ export {
   CanYouBeAProgrammer,
   TestimonialCard,
   Testimonials,
+  Footer,
+  FooterLink,
+  FooterLinksContainer,
 };

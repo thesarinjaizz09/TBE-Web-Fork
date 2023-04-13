@@ -95,3 +95,14 @@ export interface TestimonialCardProps {
   title: string;
   content: string;
 }
+
+export interface FooterLinkProps {
+  id?: string;
+  label: string;
+  href: string;
+}
+
+export interface FooterLinksContainerProps {
+  title: string;
+  urls: FooterLinkProps[];
+}
