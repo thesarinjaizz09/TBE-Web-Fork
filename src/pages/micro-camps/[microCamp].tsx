@@ -1,4 +1,14 @@
-import { LinkButton, Section, Text, Image, Skills } from '@/components';
+import {
+  LinkButton,
+  Section,
+  Text,
+  Image,
+  Skills,
+  FlexContainer,
+  SectionHeaderContainer,
+  MicroCampBGGradientContainer,
+  MicroCampLandingHeader,
+} from '@/components';
 import { useRouter } from 'next/router';
 import { useEffect } from 'react';
 
@@ -14,84 +24,8 @@ const MicroCampLanding = () => {
 
   return (
     <>
-      <Section className='px-8 py-4'>
-        <div className='gradient-6 rounded-2'>
-          <div className='flex flex-col p-8'>
-            <div className='flex items-center justify-center'>
-              <Text level='h4' className='heading-4  text-dark'>
-                The Boring
-              </Text>
-              <Text level='h4' className=' heading-4 text-primary'>
-                &nbsp;Micro-camp
-              </Text>
-            </div>
-            <div className='flex flex-col items-center pt-5'>
-              <div className='flex w-full flex-col justify-center'>
-                <div className='flex w-full justify-center'>
-                  <Text level='h2' className='heading-2 text-dark'>
-                    Be{' '}
-                    <Text level='span' className='heading-2 text-primary'>
-                      Front-end{' '}
-                    </Text>
-                    <Text level='span' className='heading-2 text-dark'>
-                      Master
-                    </Text>
-                  </Text>
-                </div>
-                <div className='flex w-full justify-center pt-1'>
-                  <Text level='p' className='strong-text text-dark'>
-                    Learn Core of Front-end Engineering with Placement
-                    Assistance in 8 Weeks.
-                  </Text>
-                </div>
-              </div>
-              <div className='flex w-1/3 justify-center  space-x-2 pt-4'>
-                <LinkButton
-                  href='#'
-                  buttonProps={{ variant: 'PRIMARY', text: 'Register now' }}
-                />
-                <LinkButton
-                  href='#'
-                  buttonProps={{ variant: 'OUTLINE', text: 'Explore program' }}
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </Section>
-      <Section className='px-8 py-4'>
-        <div className='flex flex-col'>
-          <div className='flex flex-col'>
-            <Text level='p' className='paragraph text-center text-gray-500'>
-              IN THIS COHORT
-            </Text>
-            <div className='flex items-center justify-center'>
-              <Text level='h3' className='heading-3 pr-2'>
-                Learn Fundamentals of
-              </Text>
-              <Text level='h3' className='heading-3 text-primary'>
-                Front-end Engineering
-              </Text>
-            </div>
-          </div>
-          <div className='grid grid-cols-3 gap-3 pt-4'>
-            {FRONTEND_MICROCAMP_CURRICULUM.map((item) => (
-              <div
-                className='flex flex-col items-center justify-center rounded-lg  bg-blue-600 px-4 py-4 text-blue-100 duration-300 hover:bg-blue-500'
-                key={item.id}
-              >
-                <Text level='h2' className='heading-2'>
-                  {item.title}
-                </Text>
-                <Text level='p' className='paragraph text-2xl'>
-                  {item.content}
-                </Text>
-              </div>
-            ))}
-          </div>
-        </div>
-      </Section>
-
+      <MicroCampLandingHeader />
+      <InThisCohortContainer />
       <Section>
         <div className='flex w-full items-stretch justify-center   '>
           <div className='flex w-full justify-center p-4 '>
@@ -163,7 +97,6 @@ const MicroCampLanding = () => {
           </div>
         </div>
       </Section>
-
       <Section>
         <div className='flex w-full flex-col items-center justify-center  '>
           <div className='flex flex-col items-center justify-center py-2'>
@@ -200,3 +133,39 @@ const MicroCampLanding = () => {
 };
 
 export default MicroCampLanding;
+
+const InThisCohortContainer = () => {
+  return (
+    <Section>
+      <FlexContainer direction='col'>
+        <FlexContainer direction='col'>
+          <Text level='p' className='strong-text text-grey'>
+            IN THIS COHORT
+          </Text>
+          <SectionHeaderContainer
+            heading='Learn Fundamentals of'
+            focusText='Front-end Engineering'
+            headingLevel={4}
+            className='pt-2'
+          />
+        </FlexContainer>
+
+        <div className='grid grid-cols-3 gap-1 pt-5'>
+          {FRONTEND_MICROCAMP_CURRICULUM.map((item) => (
+            <div
+              className='flex flex-col items-center justify-center rounded-lg  bg-blue-600 px-4 py-4 text-blue-100 duration-300 hover:bg-blue-500'
+              key={item.id}
+            >
+              <Text level='h2' className='heading-2'>
+                {item.title}
+              </Text>
+              <Text level='p' className='paragraph text-2xl'>
+                {item.content}
+              </Text>
+            </div>
+          ))}
+        </div>
+      </FlexContainer>
+    </Section>
+  );
+};

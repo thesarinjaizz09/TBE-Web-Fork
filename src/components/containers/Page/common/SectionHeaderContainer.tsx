@@ -5,12 +5,13 @@ const SectionHeaderContainer = ({
   heading,
   focusText,
   headingLevel = 4,
+  className = '',
 }: SectionHeaderProps) => {
   return (
     <FlexContainer justifyCenter={true} className='w-full'>
       <Text
         level={`h${headingLevel}`}
-        className={`heading-${headingLevel}`}
+        className={`heading-${headingLevel} ${className}`}
         textCenter={true}
       >
         {heading}

@@ -26,6 +26,8 @@ import Testimonials from '@/components/containers/Cards/Testimonials';
 import Footer from '@/components/layout/Footer';
 import FooterLink from '@/components/common/typography/FooterLink';
 import FooterLinksContainer from '@/components/containers/Page/common/FooterLinksContainer';
+import MicroCampBGGradientContainer from '@/components/containers/Page/common/MicroCampBGGradientContainer';
+import MicroCampLandingHeader from '@/components/containers/Page/common/MicroCampLandingHeader';
 
 export {
   Navbar,
@@ -56,4 +58,6 @@ export {
   Footer,
   FooterLink,
   FooterLinksContainer,
+  MicroCampBGGradientContainer,
+  MicroCampLandingHeader,
 };

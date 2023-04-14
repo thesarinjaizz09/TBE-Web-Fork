@@ -54,6 +54,7 @@ export interface SectionHeaderProps {
   heading: string;
   focusText: string;
   headingLevel?: 1 | 2 | 3 | 4 | 5 | 6;
+  className?: string;
 }
 
 export interface CardSectionContainerProps {
@@ -106,4 +107,8 @@ export interface FooterLinkProps {
 export interface FooterLinksContainerProps {
   title: string;
   urls: FooterLinkProps[];
+}
+
+export interface MicroCampBGGradientContainerProps {
+  children: React.ReactNode;
 }
