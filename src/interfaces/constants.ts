@@ -1,4 +1,4 @@
-import { FooterLinksContainerProps } from '.';
+import { FooterLinksContainerProps, MicroCampFeatureCardProps } from '.';
 
 export interface SKILLProps {
   id?: string;
@@ -16,4 +16,9 @@ export interface SKILLSProps {
 export interface FooterNavigationDataProps extends FooterLinksContainerProps {
   id: string;
   isShow: boolean;
+}
+
+export interface MicroCampFeatureCardContantProps
+  extends MicroCampFeatureCardProps {
+  id: string;
 }

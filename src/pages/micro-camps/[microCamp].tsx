@@ -8,6 +8,9 @@ import {
   SectionHeaderContainer,
   MicroCampBGGradientContainer,
   MicroCampLandingHeader,
+  MicroCampFeatureCard,
+  GridContainer,
+  InThisCohortContainer,
 } from '@/components';
 import { useRouter } from 'next/router';
 import { useEffect } from 'react';
@@ -17,9 +20,9 @@ const MicroCampLanding = () => {
   const { push } = useRouter();
 
   useEffect(() => {
-    push(
-      'https://docs.google.com/forms/d/e/1FAIpQLSejDBJvhWMWeKZFkWY2PxuUa_LZYsstDvJljrn0Tbm2_2Kd7Q/viewform?usp=sf_link'
-    );
+    // push(
+    //   'https://docs.google.com/forms/d/e/1FAIpQLSejDBJvhWMWeKZFkWY2PxuUa_LZYsstDvJljrn0Tbm2_2Kd7Q/viewform?usp=sf_link'
+    // );
   }, []);
 
   return (
@@ -133,39 +136,3 @@ const MicroCampLanding = () => {
 };
 
 export default MicroCampLanding;
-
-const InThisCohortContainer = () => {
-  return (
-    <Section>
-      <FlexContainer direction='col'>
-        <FlexContainer direction='col'>
-          <Text level='p' className='strong-text text-grey'>
-            IN THIS COHORT
-          </Text>
-          <SectionHeaderContainer
-            heading='Learn Fundamentals of'
-            focusText='Front-end Engineering'
-            headingLevel={4}
-            className='pt-2'
-          />
-        </FlexContainer>
-
-        <div className='grid grid-cols-3 gap-1 pt-5'>
-          {FRONTEND_MICROCAMP_CURRICULUM.map((item) => (
-            <div
-              className='flex flex-col items-center justify-center rounded-lg  bg-blue-600 px-4 py-4 text-blue-100 duration-300 hover:bg-blue-500'
-              key={item.id}
-            >
-              <Text level='h2' className='heading-2'>
-                {item.title}
-              </Text>
-              <Text level='p' className='paragraph text-2xl'>
-                {item.content}
-              </Text>
-            </div>
-          ))}
-        </div>
-      </FlexContainer>
-    </Section>
-  );
-};

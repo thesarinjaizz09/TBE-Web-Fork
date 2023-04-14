@@ -28,6 +28,9 @@ import FooterLink from '@/components/common/typography/FooterLink';
 import FooterLinksContainer from '@/components/containers/Page/common/FooterLinksContainer';
 import MicroCampBGGradientContainer from '@/components/containers/Page/common/MicroCampBGGradientContainer';
 import MicroCampLandingHeader from '@/components/containers/Page/common/MicroCampLandingHeader';
+import MicroCampFeatureCard from '@/components/containers/Cards/Items/MicroCampFeatureCard';
+import GridContainer from '@/components/containers/Page/common/GridContainer';
+import InThisCohortContainer from '@/components/containers/Page/common/InThisCohortContainer';
 
 export {
   Navbar,
@@ -60,4 +63,7 @@ export {
   FooterLinksContainer,
   MicroCampBGGradientContainer,
   MicroCampLandingHeader,
+  MicroCampFeatureCard,
+  GridContainer,
+  InThisCohortContainer,
 };

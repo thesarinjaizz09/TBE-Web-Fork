@@ -1,5 +1,6 @@
 import {
   FooterNavigationDataProps,
+  MicroCampFeatureCardContantProps,
   SKILLSProps,
   TestimonialCardProps,
   WeGuideDifferentlyCardProps,
@@ -284,7 +285,73 @@ const FOOTER_NAVIGATION: FooterNavigationDataProps[] = [
   },
 ];
 
-const FRONTEND_MICROCAMP_CURRICULUM = [
+const FRONTEND_MICROCAMP_CURRICULUM: MicroCampFeatureCardContantProps[] = [
+  {
+    id: v4(),
+    title: `8 Weeks`,
+    content: `Duration`,
+  },
+  {
+    id: v4(),
+    title: `1:1 Mentorship`,
+    content: `Weekly Session with Mentors`,
+  },
+  {
+    id: v4(),
+    title: `Only Projects`,
+    content: `Learn by Building`,
+  },
+  {
+    id: v4(),
+    title: `Code Review`,
+    content: `Weekly code reviews by mentors`,
+  },
+  {
+    id: v4(),
+    title: `Tech Workshops`,
+    content: `Workshops on Tech every weekend`,
+  },
+  {
+    id: v4(),
+    title: `Be Job Ready`,
+    content: `Project & Resume to Job, All in one`,
+  },
+];
+
+const BACKEND_MICROCAMP_CURRICULUM: MicroCampFeatureCardContantProps[] = [
+  {
+    id: v4(),
+    title: `8 Weeks`,
+    content: `Duration`,
+  },
+  {
+    id: v4(),
+    title: `1:1 Mentorship`,
+    content: `Weekly Session with Mentors`,
+  },
+  {
+    id: v4(),
+    title: `Only Projects`,
+    content: `Learn by Building`,
+  },
+  {
+    id: v4(),
+    title: `Code Review`,
+    content: `Weekly code reviews by mentors`,
+  },
+  {
+    id: v4(),
+    title: `Tech Workshops`,
+    content: `Workshops on Tech every weekend`,
+  },
+  {
+    id: v4(),
+    title: `Be Job Ready`,
+    content: `Project & Resume to Job, All in one`,
+  },
+];
+
+const JUNIOR_CAMP_CURRICULUM: MicroCampFeatureCardContantProps[] = [
   {
     id: v4(),
     title: `8 Weeks`,
@@ -365,4 +432,6 @@ export {
   USP,
   FRONTEND_MICROCAMP_CURRICULUM,
   WHAT_WE_DO_FOR_YOU,
+  BACKEND_MICROCAMP_CURRICULUM,
+  JUNIOR_CAMP_CURRICULUM,
 };

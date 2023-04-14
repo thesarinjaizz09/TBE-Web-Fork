@@ -112,3 +112,15 @@ export interface FooterLinksContainerProps {
 export interface MicroCampBGGradientContainerProps {
   children: React.ReactNode;
 }
+
+export interface MicroCampFeatureCardProps {
+  title: string;
+  content: string;
+}
+
+export interface GridContainerProps {
+  children: React.ReactNode;
+  columns?: number;
+  rows?: number;
+  className?: string;
+}
