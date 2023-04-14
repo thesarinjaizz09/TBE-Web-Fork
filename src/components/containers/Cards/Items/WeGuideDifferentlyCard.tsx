@@ -8,8 +8,8 @@ const WeGuideDifferentlyCard = ({
   content,
 }: WeGuideDifferentlyCardProps) => {
   return (
-    <CardGradientContainer>
-      <Image className='w-1/2' src={`${image}`} alt={imageAltText} />
+    <CardGradientContainer className='max-w-sm'>
+      <Image className='w-56' src={`${image}`} alt={imageAltText} />
       <Text level='h4' className='heading-4 pt-4'>
         {title}
       </Text>

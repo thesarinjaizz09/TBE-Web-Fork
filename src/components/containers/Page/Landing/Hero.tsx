@@ -17,7 +17,11 @@ const LandingPageHero = () => {
               heading='Tech Learning for'
               focusText='Everyone'
             />
-            <Text level='p' className='paragraph mt-2 text-grey'>
+            <Text
+              level='p'
+              className='paragraph mt-2 text-grey'
+              textCenter={true}
+            >
               Learn Tech Skills & Prepare yourself for a Tech Job.
             </Text>
           </FlexContainer>
