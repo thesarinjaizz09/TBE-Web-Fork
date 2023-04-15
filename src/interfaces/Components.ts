@@ -35,7 +35,7 @@ export interface ButtonProps {
   variant: 'PRIMARY' | 'OUTLINE';
   className?: string;
   text: string;
-  onClick?: MouseEventHandler<HTMLButtonElement> | undefined;
+  onClick?: MouseEventHandler<HTMLButtonElement>;
 }
 
 export interface ProgramCardProps {
@@ -128,7 +128,7 @@ export interface MicroCampFeatureCardProps {
 
 export interface GridContainerProps {
   children: React.ReactNode;
-  columns?: number;
-  rows?: number;
+  columns?: string;
+  rows?: string;
   className?: string;
 }

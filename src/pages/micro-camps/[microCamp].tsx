@@ -34,10 +34,10 @@ const MicroCampLanding = () => {
       <InThisCohortContainer />
       <NotAnotherTechCourse />
       <Section>
-        <div className=' flex w-full items-stretch justify-center  '>
-          <div className=' flex w-full justify-center p-4 '>
-            <div className='w-76 gradient-4 block h-full overflow-hidden rounded-lg   bg-gray-950'>
-              <div className='flex flex-col items-center justify-center p-8 '>
+        <div className='flex w-full items-stretch justify-center   '>
+          <div className='flex w-full justify-center p-4 '>
+            <div className='w-76 gradient-4 block h-full overflow-hidden rounded-lg  bg-gray-950'>
+              <div className='flex flex-col items-center justify-center p-4 '>
                 <Image
                   src='../svg/context_based_learning.svg'
                   alt='developer activities'
@@ -188,7 +188,7 @@ const MicroCampLanding = () => {
                   VALUE YOU GET
                 </Text>
               </div>
-              <GridContainer className=' flex gap-1 pt-5' columns={2}>
+              <GridContainer className=' flex gap-1 pt-5'>
                 {FRONTEND_MICROCAMP_CURRICULUM.map((item) => {
                   const { id } = item;
                   return <MicroCampFeatureCard key={id} {...item} />;

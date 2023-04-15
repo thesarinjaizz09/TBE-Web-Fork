@@ -2,8 +2,8 @@ import { GridContainerProps } from '@/interfaces';
 
 const GridContainer = ({
   children,
-  columns,
-  rows,
+  columns = 'auto',
+  rows = 'auto',
   className,
 }: GridContainerProps) => {
   return (

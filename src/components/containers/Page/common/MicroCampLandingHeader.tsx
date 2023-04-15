@@ -9,7 +9,7 @@ import {
 
 const MicroCampLandingHeader = () => {
   return (
-    <Section className='px-8 py-4'>
+    <Section>
       <MicroCampBGGradientContainer>
         <FlexContainer className='px-12 py-8' direction='col'>
           <FlexContainer itemCenter={true} justifyCenter={true}>
