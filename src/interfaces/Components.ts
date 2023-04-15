@@ -120,7 +120,7 @@ export interface MicroCampFeatureCardProps {
 
 export interface GridContainerProps {
   children: React.ReactNode;
-  columns?: number;
-  rows?: number;
+  columns?: string;
+  rows?: string;
   className?: string;
 }
