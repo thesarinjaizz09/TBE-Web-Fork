@@ -4,6 +4,7 @@
 
 /* Custom Classes */
 @layer components {
+
   /* 1. Gradients */
   .gradient-1 {
     @apply bg-gradient-to-r from-[#F6FFBE] to-[#F99156];
@@ -73,6 +74,8 @@
   .button-text {
     @apply text-button-text text-white font-bold tracking-wide;
   }
+
+
 
   /* Image */
   .image {

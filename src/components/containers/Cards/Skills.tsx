@@ -11,7 +11,7 @@ const Skills = () => {
   return (
     <Section>
       <FlexContainer direction='col' className='w-full'>
-        <SectionHeaderContainer heading='Skills you will' focusText='build' />
+        <SectionHeaderContainer heading='Skills we teach' focusText='build' />
         <CardSectionContainer>
           {SKILLS.map((skill) => {
             const { id, title, details: skilledDetails } = skill;

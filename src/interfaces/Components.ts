@@ -82,6 +82,14 @@ export interface WeGuideDifferentlyCardProps {
   content: string;
 }
 
+export interface NotAnotherTechCourseCardProps {
+  id?: string;
+  image: string;
+  imageAltText: string;
+  title: string;
+  content: string;
+}
+
 export interface FlexContainerProps {
   children: React.ReactNode;
   itemCenter?: boolean;

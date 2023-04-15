@@ -19,6 +19,8 @@ import SkillCard from '@/components/containers/Cards/Items/SkillCard';
 import Skills from '@/components/containers/Cards/Skills';
 import WeGuideDifferentlyCard from '@/components/containers/Cards/Items/WeGuideDifferentlyCard';
 import WeGuideDifferently from '@/components/containers/Cards/WeGuideDifferently';
+import NotAnotherTechCourseCard from './containers/Cards/Items/NotAnotherTechCourseCard';
+import NotAnotherTechCourse from './containers/Cards/NotAnotherTechCourse';
 import FlexContainer from '@/components/containers/Page/common/FlexContainer';
 import CanYouBeAProgrammer from '@/components/containers/Page/Landing/CanYouBeAProgrammer';
 import TestimonialCard from '@/components/containers/Cards/Items/TestimonialCard';
@@ -54,6 +56,8 @@ export {
   Skills,
   WeGuideDifferentlyCard,
   WeGuideDifferently,
+  NotAnotherTechCourseCard,
+  NotAnotherTechCourse,
   FlexContainer,
   CanYouBeAProgrammer,
   TestimonialCard,

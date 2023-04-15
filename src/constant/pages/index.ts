@@ -445,6 +445,30 @@ const WE_TAUGHT = [
   },
 ];
 
+const NOT_ANOTHER_TECH_COURSE = [
+  {
+    id: v4(),
+    title: `Context based learning`,
+    content: `ChatGPT writes better code than us so we make sure your learnings are relevant.`,
+    image: `${SVG_BASE_PATH}/context_learning.svg`,
+    imageAltText: `context based learning`,
+  },
+  {
+    id: v4(),
+    title: `Arjuna Needed Drona.`,
+    content: `You can learn anything from Internet but you can’t do it in shortest way possible.`,
+    image: `${SVG_BASE_PATH}/arjun_needed_drona.svg`,
+    imageAltText: `arjun needed drona`,
+  },
+  {
+    id: v4(),
+    title: `Minimal Learning`,
+    content: `We make sure you start small, on each topic, every week so you don’t feel to much.`,
+    image: `${SVG_BASE_PATH}/minimal_learning.svg`,
+    imageAltText: `minimal learning`,
+  },
+];
+
 export {
   FOOTER_NAVIGATION,
   PROGRAMS,
@@ -458,4 +482,5 @@ export {
   BACKEND_MICROCAMP_CURRICULUM,
   JUNIOR_CAMP_CURRICULUM,
   WE_TAUGHT,
+  NOT_ANOTHER_TECH_COURSE,
 };
