@@ -22,9 +22,9 @@ const MicroCampLanding = () => {
   const { push } = useRouter();
 
   useEffect(() => {
-    // push(
-    //   'https://docs.google.com/forms/d/e/1FAIpQLSejDBJvhWMWeKZFkWY2PxuUa_LZYsstDvJljrn0Tbm2_2Kd7Q/viewform?usp=sf_link'
-    // );
+    push(
+      'https://docs.google.com/forms/d/e/1FAIpQLSejDBJvhWMWeKZFkWY2PxuUa_LZYsstDvJljrn0Tbm2_2Kd7Q/viewform?usp=sf_link'
+    );
   }, []);
 
   return (
@@ -34,7 +34,7 @@ const MicroCampLanding = () => {
       <Section>
         <div className='flex w-full items-stretch justify-center   '>
           <div className='flex w-full justify-center p-4 '>
-            <div className='w-76 block h-full overflow-hidden rounded-lg  border-2 bg-gray-950'>
+            <div className='w-76 bg-gray-950 block h-full overflow-hidden  rounded-lg border-2'>
               <div className='flex flex-col items-center justify-center p-4 '>
                 <Image
                   src='../svg/context_based_learning.svg'
@@ -112,7 +112,7 @@ const MicroCampLanding = () => {
           <div className='flex w-full items-stretch justify-between space-x-2   '>
             {WHAT_WE_DO_FOR_YOU.map((item) => (
               <div key={item.id} className='flex-1  '>
-                <div className='block h-full overflow-hidden rounded-lg border-2  bg-gray-950'>
+                <div className='bg-gray-950 block h-full overflow-hidden rounded-lg  border-2'>
                   <div className='p-4 '>
                     <Image
                       className=' w-14 rounded-t-lg'
@@ -149,7 +149,7 @@ const MicroCampLanding = () => {
             </Text>
           </div>
           <div className='flex w-full justify-center p-4 '>
-            <div className='block h-full w-full overflow-hidden rounded-lg  border-2 bg-gray-950'>
+            <div className='bg-gray-950 block h-full w-full overflow-hidden  rounded-lg border-2'>
               <div className='flex flex-col items-center justify-center p-4 '>
                 <Text level='p' className='paragraph'>
                   PRICE YOU PAY
