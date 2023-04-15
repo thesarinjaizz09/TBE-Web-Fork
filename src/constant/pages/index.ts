@@ -422,6 +422,29 @@ const WHAT_WE_DO_FOR_YOU = [
   },
 ];
 
+const WE_TAUGHT = [
+  {
+    id: v4(),
+    image: `${SVG_BASE_PATH}/pesto.svg`,
+    imageAltText: `pesto`,
+  },
+  {
+    id: v4(),
+    image: `${SVG_BASE_PATH}/masai.svg`,
+    imageAltText: `masai`,
+  },
+  {
+    id: v4(),
+    image: `${SVG_BASE_PATH}/cuemath.svg`,
+    imageAltText: `cuemath`,
+  },
+  {
+    id: v4(),
+    image: `${SVG_BASE_PATH}/newton.svg`,
+    imageAltText: `newton`,
+  },
+];
+
 export {
   FOOTER_NAVIGATION,
   PROGRAMS,
@@ -434,4 +457,5 @@ export {
   WHAT_WE_DO_FOR_YOU,
   BACKEND_MICROCAMP_CURRICULUM,
   JUNIOR_CAMP_CURRICULUM,
+  WE_TAUGHT,
 };

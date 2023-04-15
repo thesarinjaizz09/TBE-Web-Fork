@@ -1,21 +1,23 @@
 import {
-  LinkButton,
   Section,
   Text,
   Image,
   Skills,
-  FlexContainer,
-  SectionHeaderContainer,
-  MicroCampBGGradientContainer,
   MicroCampLandingHeader,
-  MicroCampFeatureCard,
   GridContainer,
   InThisCohortContainer,
+  MicroCampFeatureCard,
+  Testimonials,
+  Footer,
 } from '@/components';
 import { useRouter } from 'next/router';
 import { useEffect } from 'react';
 
-import { FRONTEND_MICROCAMP_CURRICULUM, WHAT_WE_DO_FOR_YOU } from '@/constant';
+import {
+  FRONTEND_MICROCAMP_CURRICULUM,
+  WHAT_WE_DO_FOR_YOU,
+  WE_TAUGHT,
+} from '@/constant';
 const MicroCampLanding = () => {
   const { push } = useRouter();
 
@@ -32,7 +34,7 @@ const MicroCampLanding = () => {
       <Section>
         <div className='flex w-full items-stretch justify-center   '>
           <div className='flex w-full justify-center p-4 '>
-            <div className='w-76 bg-gray-950 block h-full overflow-hidden  rounded-lg border-2'>
+            <div className='w-76 block h-full overflow-hidden rounded-lg  border-2 bg-gray-950'>
               <div className='flex flex-col items-center justify-center p-4 '>
                 <Image
                   src='../svg/context_based_learning.svg'
@@ -110,7 +112,7 @@ const MicroCampLanding = () => {
           <div className='flex w-full items-stretch justify-between space-x-2   '>
             {WHAT_WE_DO_FOR_YOU.map((item) => (
               <div key={item.id} className='flex-1  '>
-                <div className='bg-gray-950 block h-full overflow-hidden rounded-lg  border-2'>
+                <div className='block h-full overflow-hidden rounded-lg border-2  bg-gray-950'>
                   <div className='p-4 '>
                     <Image
                       className=' w-14 rounded-t-lg'
@@ -131,6 +133,63 @@ const MicroCampLanding = () => {
           </div>
         </div>
       </Section>
+      <Section>
+        <div className='flex flex-col'>
+          <div className='flex flex-col items-center justify-center'>
+            <Text level='h4' className='heading-4 '>
+              TECH EDUCATION FOR EVERYONE
+            </Text>
+            <Text level='h1' className='heading-1'>
+              Simple <span className='text-primary'>Pricing</span>-Transparent{' '}
+              <span className='text-primary'>Pricing</span>.
+            </Text>
+            <Text level='p' className='paragraph text-gray-500'>
+              We don’t believe in variable pricing for our products. We don’t
+              sell you anything blindly.
+            </Text>
+          </div>
+          <div className='flex w-full justify-center p-4 '>
+            <div className='block h-full w-full overflow-hidden rounded-lg  border-2 bg-gray-950'>
+              <div className='flex flex-col items-center justify-center p-4 '>
+                <Text level='p' className='paragraph'>
+                  PRICE YOU PAY
+                </Text>
+                <Text level='h2' className='heading-2 py-2 '>
+                  ₹6000
+                </Text>
+
+                <Text level='p' className='paragraph text-justify'>
+                  VALUE YOU GET
+                </Text>
+              </div>
+              <GridContainer className='flex gap-1 pt-5' columns={3}>
+                {FRONTEND_MICROCAMP_CURRICULUM.map((item) => {
+                  const { id } = item;
+                  return <MicroCampFeatureCard key={id} {...item} />;
+                })}
+              </GridContainer>
+            </div>
+          </div>
+        </div>
+      </Section>
+      <Section>
+        <div className='flex w-full flex-col items-center justify-center'>
+          <div className='mb-4 flex'>
+            <Text level='h1' className='heading-1'>
+              We already <span className=' text-primary'>taught</span> at
+            </Text>
+          </div>
+          <div className='grid w-full grid-cols-2 gap-6  md:grid-cols-2 lg:grid-cols-2  xl:grid-cols-2'>
+            {WE_TAUGHT.map((item) => (
+              <div key={item.id} className='flex '>
+                <Image src={item.image} className='w-full' alt='pesto' />
+              </div>
+            ))}
+          </div>
+        </div>
+      </Section>
+      <Testimonials />
+      <Footer />
     </>
   );
 };

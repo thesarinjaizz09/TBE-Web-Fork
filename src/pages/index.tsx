@@ -11,7 +11,7 @@ import {
 
 const Home = () => {
   return (
-    <React.Fragment>
+    <>
       <LandingPageHero />
       <OurPrograms />
       <Skills />
@@ -19,7 +19,7 @@ const Home = () => {
       <CanYouBeAProgrammer />
       <Testimonials />
       <Footer />
-    </React.Fragment>
+    </>
   );
 };
 
