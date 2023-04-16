@@ -4,22 +4,20 @@ import {
   Image,
   Skills,
   MicroCampLandingHeader,
-  GridContainer,
   InThisCohortContainer,
-  MicroCampFeatureCard,
   Testimonials,
   Footer,
   NotAnotherTechCourse,
-  FlexContainer,
   ContextBasedLearning,
+  TechEducationForEveryone,
 } from '@/components';
 import { useRouter } from 'next/router';
 import { useEffect } from 'react';
 
 import {
-  FRONTEND_MICROCAMP_CURRICULUM,
   WHAT_WE_DO_FOR_YOU,
   WE_TAUGHT,
+  TALK_ABOUT_OPPORTUNITIES,
 } from '@/constant';
 const MicroCampLanding = () => {
   const { push } = useRouter();
@@ -48,48 +46,32 @@ const MicroCampLanding = () => {
             </Text>
           </div>
           <div className='flex w-full items-center justify-center   pt-4 '>
-            <div className='mr-4 block max-w-xs rounded-lg border shadow-lg dark:bg-neutral-700'>
-              <div className='flex w-full items-center justify-around py-4'>
-                <div className='flex w-64 flex-col px-2'>
-                  <Text
-                    level='p'
-                    className='paragraph font-semibold text-gray-500'
-                  >
-                    Avg. Salary
-                  </Text>
-                  <Text level='h4' className='heading-4 my-1'>
-                    8-20 LPA
-                  </Text>
-                  <Text
-                    level='p'
-                    className='paragraph font-semibold text-gray-500'
-                  >
-                    Source: Glassdoor
-                  </Text>
+            {TALK_ABOUT_OPPORTUNITIES.map((item) => (
+              <div
+                key={item.id}
+                className='mr-4 block max-w-xs rounded-lg border shadow-lg dark:bg-neutral-700'
+              >
+                <div className='flex w-full items-center justify-around py-4'>
+                  <div className='flex w-64 flex-col px-2'>
+                    <Text
+                      level='p'
+                      className='paragraph font-semibold text-gray-500'
+                    >
+                      {item.heading}
+                    </Text>
+                    <Text level='h4' className='heading-4 my-1'>
+                      {item.title}
+                    </Text>
+                    <Text
+                      level='p'
+                      className='paragraph font-semibold text-gray-500'
+                    >
+                      {item.content}
+                    </Text>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div className='mr-4 block max-w-xs rounded-lg border shadow-lg dark:bg-neutral-700'>
-              <div className='flex w-full items-center justify-around py-4'>
-                <div className='flex w-64 flex-col px-2'>
-                  <Text
-                    level='p'
-                    className='paragraph font-semibold text-gray-500'
-                  >
-                    Jobs in Market
-                  </Text>
-                  <Text level='h4' className='heading-4 my-1 '>
-                    55000+
-                  </Text>
-                  <Text
-                    level='p'
-                    className='paragraph font-semibold text-gray-500'
-                  >
-                    Source: Glassdoor
-                  </Text>
-                </div>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </Section>
@@ -127,45 +109,7 @@ const MicroCampLanding = () => {
           </div>
         </div>
       </Section>
-      <Section>
-        <div className='flex flex-col'>
-          <div className='flex flex-col items-center justify-center'>
-            <Text level='p' className='strong-text '>
-              TECH EDUCATION FOR EVERYONE
-            </Text>
-            <Text level='h3' className='heading-3'>
-              Simple <span className='text-primary'>Pricing</span>-Transparent{' '}
-              <span className='text-primary'>Pricing</span>.
-            </Text>
-            <Text level='p' className='text-subtitle text-gray-500'>
-              We don’t believe in variable pricing for our products. We don’t
-              sell you anything blindly.
-            </Text>
-          </div>
-          <div className='flex w-full justify-center p-4 '>
-            <div className='bg-gray-950 block h-full w-full overflow-hidden  rounded-lg border-2'>
-              <div className='flex flex-col items-center justify-center p-4 '>
-                <Text level='p' className='strong-text'>
-                  PRICE YOU PAY
-                </Text>
-                <Text level='h2' className='heading-2 py-2 '>
-                  ₹6000
-                </Text>
-
-                <Text level='p' className='strong-text text-justify'>
-                  VALUE YOU GET
-                </Text>
-              </div>
-              <GridContainer className=' flex gap-1 pt-5'>
-                {FRONTEND_MICROCAMP_CURRICULUM.map((item) => {
-                  const { id } = item;
-                  return <MicroCampFeatureCard key={id} {...item} />;
-                })}
-              </GridContainer>
-            </div>
-          </div>
-        </div>
-      </Section>
+      <TechEducationForEveryone />
       <Section>
         <div className='flex w-full flex-col items-center justify-center'>
           <div className='mb-4 flex'>
@@ -173,10 +117,14 @@ const MicroCampLanding = () => {
               We already <span className=' text-primary'>taught</span> at
             </Text>
           </div>
-          <div className='grid w-full grid-cols-2 gap-6  md:grid-cols-2 lg:grid-cols-2  xl:grid-cols-2'>
+          <div className='w-88 flex items-center justify-between space-x-4'>
             {WE_TAUGHT.map((item) => (
               <div key={item.id} className='flex '>
-                <Image src={item.image} className='w-full' alt='pesto' />
+                <Image
+                  src={item.image}
+                  className='w-full'
+                  alt={item.imageAltText}
+                />
               </div>
             ))}
           </div>

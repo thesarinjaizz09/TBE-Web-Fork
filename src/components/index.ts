@@ -34,6 +34,8 @@ import MicroCampFeatureCard from '@/components/containers/Cards/Items/MicroCampF
 import GridContainer from '@/components/containers/Page/common/GridContainer';
 import InThisCohortContainer from '@/components/containers/Page/common/InThisCohortContainer';
 import ContextBasedLearning from '@/components/containers/Page/common/ContextBasedLearning';
+import TechEducationForEveryone from './containers/Cards/Items/TechEducationForEveryone';
+import PricingFeatureCard from './containers/Cards/Items/PricingFeatureCard';
 
 export {
   Navbar,
@@ -72,4 +74,6 @@ export {
   GridContainer,
   InThisCohortContainer,
   ContextBasedLearning,
+  TechEducationForEveryone,
+  PricingFeatureCard,
 };

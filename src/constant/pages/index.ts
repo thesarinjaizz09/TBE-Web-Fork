@@ -1,6 +1,6 @@
 import {
   FooterNavigationDataProps,
-  MicroCampFeatureCardContantProps,
+  MicroCampFeatureCardContentProps,
   SKILLSProps,
   TestimonialCardProps,
   WeGuideDifferentlyCardProps,
@@ -285,7 +285,7 @@ const FOOTER_NAVIGATION: FooterNavigationDataProps[] = [
   },
 ];
 
-const FRONTEND_MICROCAMP_CURRICULUM: MicroCampFeatureCardContantProps[] = [
+const FRONTEND_MICROCAMP_CURRICULUM: MicroCampFeatureCardContentProps[] = [
   {
     id: v4(),
     title: `8 Weeks`,
@@ -318,7 +318,7 @@ const FRONTEND_MICROCAMP_CURRICULUM: MicroCampFeatureCardContantProps[] = [
   },
 ];
 
-const BACKEND_MICROCAMP_CURRICULUM: MicroCampFeatureCardContantProps[] = [
+const BACKEND_MICROCAMP_CURRICULUM: MicroCampFeatureCardContentProps[] = [
   {
     id: v4(),
     title: `8 Weeks`,
@@ -351,7 +351,7 @@ const BACKEND_MICROCAMP_CURRICULUM: MicroCampFeatureCardContantProps[] = [
   },
 ];
 
-const JUNIOR_CAMP_CURRICULUM: MicroCampFeatureCardContantProps[] = [
+const JUNIOR_CAMP_CURRICULUM: MicroCampFeatureCardContentProps[] = [
   {
     id: v4(),
     title: `8 Weeks`,
@@ -469,6 +469,20 @@ const NOT_ANOTHER_TECH_COURSE = [
   },
 ];
 
+const TALK_ABOUT_OPPORTUNITIES = [
+  {
+    id: v4(),
+    heading: `Avg. Salary`,
+    title: `8-20 LPA`,
+    content: `Source: Glassdoor`,
+  },
+  {
+    id: v4(),
+    heading: `Jobs In Market`,
+    title: `55000+`,
+    content: `Source: Glassdoor`,
+  },
+];
 export {
   FOOTER_NAVIGATION,
   PROGRAMS,
@@ -483,4 +497,5 @@ export {
   JUNIOR_CAMP_CURRICULUM,
   WE_TAUGHT,
   NOT_ANOTHER_TECH_COURSE,
+  TALK_ABOUT_OPPORTUNITIES,
 };

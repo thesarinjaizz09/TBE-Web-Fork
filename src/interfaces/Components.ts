@@ -123,6 +123,12 @@ export interface MicroCampFeatureCardProps {
   content: string;
 }
 
+export interface TechEducationForEveryoneProps {
+  heading: string;
+  title: string;
+  content: string;
+}
+
 export interface GridContainerProps {
   children: React.ReactNode;
   className?: string;

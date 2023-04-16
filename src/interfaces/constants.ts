@@ -18,7 +18,7 @@ export interface FooterNavigationDataProps extends FooterLinksContainerProps {
   isShow: boolean;
 }
 
-export interface MicroCampFeatureCardContantProps
+export interface MicroCampFeatureCardContentProps
   extends MicroCampFeatureCardProps {
   id: string;
 }
