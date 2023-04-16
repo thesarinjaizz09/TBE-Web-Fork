@@ -26,7 +26,18 @@ const TechEducationForEveryone = () => {
           </Text>
         </FlexContainer>
 
-        <GridContainer className='gradient-2  grid-cols-1 gap-2 rounded-lg p-10'>
+        <GridContainer className='gradient-2  grid-cols-1 gap-2 rounded-lg p-8'>
+          <div className='flex flex-col  justify-between pb-3'>
+            <Text level='p' className='paragraph strong-text'>
+              PRICE YOU PAY
+            </Text>
+            <Text level='h2' className='heading-2 py-2'>
+              ₹6000
+            </Text>
+            <Text level='p' className='paragraph strong-text'>
+              VALUE YOU GET
+            </Text>
+          </div>
           {FRONTEND_MICROCAMP_CURRICULUM.map((item) => {
             const { id } = item;
             return <PricingFeatureCard key={id} {...item} />;
