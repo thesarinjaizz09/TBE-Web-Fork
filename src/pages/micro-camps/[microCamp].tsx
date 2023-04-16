@@ -10,6 +10,8 @@ import {
   Testimonials,
   Footer,
   NotAnotherTechCourse,
+  FlexContainer,
+  ContextBasedLearning,
 } from '@/components';
 import { useRouter } from 'next/router';
 import { useEffect } from 'react';
@@ -33,41 +35,7 @@ const MicroCampLanding = () => {
       <MicroCampLandingHeader />
       <InThisCohortContainer />
       <NotAnotherTechCourse />
-      <Section>
-        <div className='flex w-full items-stretch justify-center   '>
-          <div className='flex w-full justify-center p-4 '>
-            <div className='w-76 gradient-4 block h-full overflow-hidden rounded-lg  bg-gray-950'>
-              <div className='flex flex-col items-center justify-center p-4 '>
-                <Image
-                  src='../svg/context_based_learning.svg'
-                  alt='developer activities'
-                  className='w-64 pb-2'
-                />
-                <Text
-                  level='p'
-                  className='paragraph pt-4 font-medium text-black'
-                >
-                  WE FOCUS ON
-                </Text>
-                <Text
-                  level='h3'
-                  className='heading-3 w-72 py-2 text-center leading-10 text-black'
-                >
-                  Context Based Learning
-                </Text>
-
-                <Text
-                  level='p'
-                  className='paragraph  w-72 text-center font-medium leading-5 text-black'
-                >
-                  Our Curriculum designed to teach minimal learning so you care
-                  about learning more and remembering less.
-                </Text>
-              </div>
-            </div>
-          </div>
-        </div>
-      </Section>
+      <ContextBasedLearning />
       <Skills />
       <Section>
         <div className='flex w-full flex-col items-center justify-center px-10  '>
@@ -175,7 +143,7 @@ const MicroCampLanding = () => {
             </Text>
           </div>
           <div className='flex w-full justify-center p-4 '>
-            <div className='block h-full w-full overflow-hidden rounded-lg  border-2 bg-gray-950'>
+            <div className='bg-gray-950 block h-full w-full overflow-hidden  rounded-lg border-2'>
               <div className='flex flex-col items-center justify-center p-4 '>
                 <Text level='p' className='strong-text'>
                   PRICE YOU PAY

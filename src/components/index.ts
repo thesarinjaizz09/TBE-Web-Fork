@@ -33,6 +33,7 @@ import MicroCampLandingHeader from '@/components/containers/Page/common/MicroCam
 import MicroCampFeatureCard from '@/components/containers/Cards/Items/MicroCampFeatureCard';
 import GridContainer from '@/components/containers/Page/common/GridContainer';
 import InThisCohortContainer from '@/components/containers/Page/common/InThisCohortContainer';
+import ContextBasedLearning from '@/components/containers/Page/common/ContextBasedLearning';
 
 export {
   Navbar,
@@ -70,4 +71,5 @@ export {
   MicroCampFeatureCard,
   GridContainer,
   InThisCohortContainer,
+  ContextBasedLearning,
 };

@@ -24,7 +24,7 @@ const InThisCohortContainer = () => {
           />
         </FlexContainer>
 
-        <GridContainer className='gap-1 pt-5' columns='3'>
+        <GridContainer className='grid-cols-3 gap-1 pt-5'>
           {FRONTEND_MICROCAMP_CURRICULUM.map((item) => {
             const { id } = item;
             return <MicroCampFeatureCard key={id} {...item} />;
