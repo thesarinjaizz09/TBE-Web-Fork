@@ -38,6 +38,8 @@ import TechEducationForEveryone from './containers/Cards/Items/TechEducationForE
 import PricingFeatureCard from './containers/Cards/Items/PricingFeatureCard';
 import OpportunityCard from './containers/Cards/Items/OpportunityCard';
 import Opportunities from './containers/Cards/Opportunities';
+import WhatWeDoForYouCard from './containers/Cards/Items/WhatWeDoForYouCard';
+import WhatWeDoForYou from './containers/Cards/WhatWeDoForYou';
 
 export {
   Navbar,
@@ -80,4 +82,6 @@ export {
   PricingFeatureCard,
   OpportunityCard,
   Opportunities,
+  WhatWeDoForYouCard,
+  WhatWeDoForYou,
 };

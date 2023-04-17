@@ -19,6 +19,8 @@ export interface ImageContainerProps {
   alt: string;
   className?: string;
   loading?: 'lazy' | 'eager';
+  fullHeight?: boolean;
+  fullWidth?: boolean;
 }
 
 export interface LogoProps {
@@ -60,6 +62,7 @@ export interface SectionHeaderProps {
 export interface CardSectionContainerProps {
   children: React.ReactNode;
   isWidthFull?: boolean;
+  className?: string;
 }
 
 export interface CardGradientContainerProps {
@@ -138,6 +141,13 @@ export interface GridContainerProps {
 export interface OpportunityCardProps {
   id?: string;
   heading: string;
+  title: string;
+  content: string;
+}
+
+export interface WhatWeDoForYouCardProps {
+  image: string;
+  imageAltText: string;
   title: string;
   content: string;
 }

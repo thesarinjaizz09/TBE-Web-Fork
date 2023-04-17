@@ -19,7 +19,7 @@ const Opportunities = () => {
             Front-end Engineering
           </Text>
         </FlexContainer>
-        <CardSectionContainer isWidthFull={false}>
+        <CardSectionContainer isWidthFull={false} className='w-1/2'>
           {TALK_ABOUT_OPPORTUNITIES.map((item) => {
             const { id } = item;
             return <OpportunityCard key={id} {...item} />;
