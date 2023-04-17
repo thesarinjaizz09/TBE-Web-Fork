@@ -36,6 +36,8 @@ import InThisCohortContainer from '@/components/containers/Page/common/InThisCoh
 import ContextBasedLearning from '@/components/containers/Page/common/ContextBasedLearning';
 import TechEducationForEveryone from './containers/Cards/Items/TechEducationForEveryone';
 import PricingFeatureCard from './containers/Cards/Items/PricingFeatureCard';
+import OpportunityCard from './containers/Cards/Items/OpportunityCard';
+import Opportunities from './containers/Cards/Opportunities';
 
 export {
   Navbar,
@@ -76,4 +78,6 @@ export {
   ContextBasedLearning,
   TechEducationForEveryone,
   PricingFeatureCard,
+  OpportunityCard,
+  Opportunities,
 };

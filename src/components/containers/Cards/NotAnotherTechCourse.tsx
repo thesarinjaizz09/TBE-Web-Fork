@@ -2,7 +2,6 @@ import {
   CardSectionContainer,
   FlexContainer,
   Section,
-  SectionHeaderContainer,
   NotAnotherTechCourseCard,
   Text,
 } from '@/components';

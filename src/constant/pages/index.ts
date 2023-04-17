@@ -1,6 +1,7 @@
 import {
   FooterNavigationDataProps,
   MicroCampFeatureCardContentProps,
+  OpportunityCardProps,
   SKILLSProps,
   TestimonialCardProps,
   WeGuideDifferentlyCardProps,
@@ -469,7 +470,7 @@ const NOT_ANOTHER_TECH_COURSE = [
   },
 ];
 
-const TALK_ABOUT_OPPORTUNITIES = [
+const TALK_ABOUT_OPPORTUNITIES: OpportunityCardProps[] = [
   {
     id: v4(),
     heading: `Avg. Salary`,
@@ -483,6 +484,7 @@ const TALK_ABOUT_OPPORTUNITIES = [
     content: `Source: Glassdoor`,
   },
 ];
+
 export {
   FOOTER_NAVIGATION,
   PROGRAMS,

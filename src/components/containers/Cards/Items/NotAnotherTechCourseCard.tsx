@@ -8,8 +8,8 @@ const NotAnotherTechCourseCard = ({
   content,
 }: NotAnotherTechCourseCardProps) => {
   return (
-    <CardGradientContainer className='max-w-sm border-borderColor4'>
-      <Image className='w-56' src={`${image}`} alt={imageAltText} />
+    <CardGradientContainer className='max-w-sm border-borderColor4 bg-dark'>
+      <Image className='flex h-48 w-56' src={`${image}`} alt={imageAltText} />
       <Text level='h4' className='heading-4 pt-4'>
         {title}
       </Text>

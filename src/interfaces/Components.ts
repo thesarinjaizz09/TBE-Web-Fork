@@ -59,6 +59,7 @@ export interface SectionHeaderProps {
 
 export interface CardSectionContainerProps {
   children: React.ReactNode;
+  isWidthFull?: boolean;
 }
 
 export interface CardGradientContainerProps {
@@ -132,4 +133,11 @@ export interface TechEducationForEveryoneProps {
 export interface GridContainerProps {
   children: React.ReactNode;
   className?: string;
+}
+
+export interface OpportunityCardProps {
+  id?: string;
+  heading: string;
+  title: string;
+  content: string;
 }
