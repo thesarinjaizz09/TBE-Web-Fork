@@ -8,12 +8,20 @@ const TestimonialCard = ({
   content,
 }: TestimonialCardProps) => {
   return (
-    <CardGradientContainer variant={1} className='max-w-sm'>
-      <Image className='w-24' src={`${image}`} alt={imageAltText} />
+    <CardGradientContainer
+      className='max-w-sm border-borderColor3'
+      backgroundColor='gradient-bg'
+    >
+      <Image
+        className='w-24'
+        fullWidth={false}
+        src={`${image}`}
+        alt={imageAltText}
+      />
       <Text level='h5' className='heading-5 pt-4'>
         {title}
       </Text>
-      <Text level='p' className='paragraph pt-1 text-grey-dark'>
+      <Text level='p' className='paragraph text-grey-dark pt-1'>
         {content}
       </Text>
     </CardGradientContainer>

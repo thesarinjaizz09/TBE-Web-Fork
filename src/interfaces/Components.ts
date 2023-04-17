@@ -68,6 +68,7 @@ export interface CardSectionContainerProps {
 export interface CardGradientContainerProps {
   children: React.ReactNode;
   className?: string;
+  backgroundColor?: string;
 }
 
 export interface SkillCardProps {
@@ -150,4 +151,10 @@ export interface WhatWeDoForYouCardProps {
   imageAltText: string;
   title: string;
   content: string;
+}
+
+export interface WeToughtAtCardProps {
+  id?: string;
+  image: string;
+  imageAltText: string;
 }

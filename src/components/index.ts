@@ -34,12 +34,15 @@ import MicroCampFeatureCard from '@/components/containers/Cards/Items/MicroCampF
 import GridContainer from '@/components/containers/Page/common/GridContainer';
 import InThisCohortContainer from '@/components/containers/Page/common/InThisCohortContainer';
 import ContextBasedLearning from '@/components/containers/Page/common/ContextBasedLearning';
-import TechEducationForEveryone from './containers/Cards/Items/TechEducationForEveryone';
+import MicrocampPricing from './containers/Cards/Items/MicrocampPricing';
 import PricingFeatureCard from './containers/Cards/Items/PricingFeatureCard';
 import OpportunityCard from './containers/Cards/Items/OpportunityCard';
 import Opportunities from './containers/Cards/Opportunities';
 import WhatWeDoForYouCard from './containers/Cards/Items/WhatWeDoForYouCard';
 import WhatWeDoForYou from './containers/Cards/WhatWeDoForYou';
+import WeToughtAt from './containers/Cards/WeToughtAt';
+import WeToughtAtCard from './containers/Cards/Items/WeToughtAtCard';
+import MicrocampRegisterForm from './containers/Forms/MicrocampRegisterForm';
 
 export {
   Navbar,
@@ -78,10 +81,13 @@ export {
   GridContainer,
   InThisCohortContainer,
   ContextBasedLearning,
-  TechEducationForEveryone,
+  MicrocampPricing,
   PricingFeatureCard,
   OpportunityCard,
   Opportunities,
   WhatWeDoForYouCard,
   WhatWeDoForYou,
+  WeToughtAt,
+  WeToughtAtCard,
+  MicrocampRegisterForm,
 };
