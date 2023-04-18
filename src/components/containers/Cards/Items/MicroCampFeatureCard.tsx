@@ -8,14 +8,12 @@ const MicroCampFeatureCard = ({
   return (
     <FlexContainer
       direction='col'
-      itemCenter={true}
-      justifyCenter={true}
-      className='gradient-5 rounded-2 px-4 py-4 text-blue-100 duration-300 hover:bg-blue-500'
+      className='gradient-5 rounded-2 px-2 py-2 md:px-4 md:py-4'
     >
-      <Text level='h3' className='heading-3'>
+      <Text level='h3' className='heading-3 text-center'>
         {title}
       </Text>
-      <Text level='p' className='paragraph'>
+      <Text level='p' className='paragraph text-center'>
         {content}
       </Text>
     </FlexContainer>

@@ -7,7 +7,7 @@ const PricingFeatureCard = ({ content }: MicroCampFeatureCardProps) => {
       direction='col'
       itemCenter={true}
       justifyCenter={true}
-      className='rounded-2 bg-white px-4 py-2'
+      className='rounded-2 bg-white px-2 py-3 md:p-4'
     >
       <Text level='p' className='strong-text text-center text-contentLight'>
         {content}

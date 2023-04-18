@@ -13,27 +13,28 @@ const MicrocampPricing = () => {
     <Section>
       <FlexContainer direction='col'>
         <FlexContainer direction='col'>
-          <Text level='p' className='strong-text '>
+          <Text level='p' className='strong-text' textCenter={true}>
             TECH EDUCATION FOR EVERYONE
           </Text>
           <FlexContainer direction='col' className='pt-2'>
-            <Text level='h3' className='heading-3'>
+            <Text level='h3' className='heading-3' textCenter={true}>
               Simple <span className='text-primary'>Pricing.</span>
             </Text>
-            <Text level='h3' className='heading-3'>
+            <Text level='h3' className='heading-3' textCenter={true}>
               Transparent <span className='text-primary'>Pricing.</span>
             </Text>
           </FlexContainer>
           <Text
             level='p'
             className='subtitle pt-1 text-center text-grey md:w-2/3'
+            textCenter={true}
           >
             We don't believe in variable pricing for our products. We don't sell
             you anything blindly.
           </Text>
         </FlexContainer>
 
-        <div className='gradient-2  mt-4 w-1/2 grid-cols-1 gap-2 rounded-lg px-4 py-6'>
+        <div className='gradient-2 mt-4 w-full rounded-2 px-4 py-4 md:w-10/12 lg:w-2/3'>
           <div className='flex flex-col items-center justify-between'>
             <Text level='p' className='strong-text'>
               PRICE YOU PAY
@@ -46,18 +47,22 @@ const MicrocampPricing = () => {
             <Text level='p' className='strong-text'>
               VALUE YOU GET
             </Text>
-            <GridContainer className='grid-cols-2 gap-2 rounded-2 pt-2'>
+            <GridContainer className='w-full grid-cols-2 grid-cols-[repeat(auto-fit,minmax(100%,1fr))] gap-2 gap-1 rounded-2 pt-2 md:grid-cols-[repeat(auto-fit,minmax(16rem,1fr))]'>
               {FRONTEND_MICROCAMP_CURRICULUM.map((item) => {
                 const { id } = item;
                 return <PricingFeatureCard key={id} {...item} />;
               })}
             </GridContainer>
           </div>
-          <div className='flex flex-col items-center pt-8 text-center'>
-            <Text level='p' className='paragraph text-contentDark'>
+          <div className='flex flex-col items-center pt-8'>
+            <Text
+              level='p'
+              className='paragraph text-contentDark'
+              textCenter={true}
+            >
               CAN'T DECIDE?
             </Text>
-            <Text level='h4' className='heading-4 pt-1'>
+            <Text level='h4' className='heading-4 pt-1' textCenter={true}>
               Talk to our counsellors
             </Text>
             <FlexContainer justifyCenter={true} className='w-full pt-2'>

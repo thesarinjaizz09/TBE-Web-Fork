@@ -11,10 +11,14 @@ const NotAnotherTechCourse = () => {
   return (
     <Section>
       <FlexContainer direction='col'>
-        <Text level='h2' className='heading-2 text-grey'>
+        <Text level='h2' className='heading-2 text-grey' textCenter={true}>
           Not another Tech course
         </Text>
-        <Text level='p' className='paragraph strong-text mt-2'>
+        <Text
+          level='p'
+          className='paragraph strong-text mt-2'
+          textCenter={true}
+        >
           So what make us different?
         </Text>
         <CardSectionContainer>
