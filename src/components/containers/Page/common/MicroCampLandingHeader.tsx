@@ -35,28 +35,27 @@ const MicroCampLandingHeader = () => {
                 className='heading-2 text-dark'
                 textCenter={true}
               >
-                Be{' '}
+                Junior in{' '}
                 <Text level='span' className='heading-2 text-primary'>
-                  Front-end{' '}
+                  Web Engineering{' '}
                 </Text>
-                <Text level='span' className='heading-2 text-dark'>
+                {/* <Text level='span' className='heading-2 text-dark'>
                   Master
-                </Text>
+                </Text> */}
               </Text>
               <Text
                 level='p'
                 className='strong-text pt-1 text-dark'
                 textCenter={true}
               >
-                Learn Core of Front-end Engineering with Placement Assistance in
-                8 Weeks.
+                Learn Fundamentals of Web dev with industry experts in live sessions.
               </Text>
             </FlexContainer>
             <FlexContainer justifyCenter={true} className='w-full gap-2 pt-4'>
               <LinkButton
                 href={LINKS.juniorInWebEngineeringRegistrationLink}
                 target='BLANK'
-                buttonProps={{ variant: 'PRIMARY', text: 'Register now' }}
+                buttonProps={{ variant: 'PRIMARY', text: 'Join waitlist' }}
                 className='w-full md:w-auto'
               />
               <LinkButton
@@ -64,8 +63,8 @@ const MicroCampLandingHeader = () => {
                   basePath: router.basePath,
                   sectionID: routes.internals.microCampLanding.explore,
                 })}
-                buttonProps={{ variant: 'OUTLINE', text: 'Explore program' }}
-                className='w-full md:w-auto'
+                buttonProps={{ variant: 'OUTLINE', text: 'Explore' }}
+                className='w-full md:w-auto bg-white'
               />
             </FlexContainer>
           </FlexContainer>

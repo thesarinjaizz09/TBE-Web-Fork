@@ -135,6 +135,11 @@ export interface MicroCampFeatureCardProps {
   content: string;
 }
 
+export interface MicroCampFeaturePricingCardProps {
+  id: string;
+  content: string;
+}
+
 export interface TechEducationForEveryoneProps {
   heading: string;
   title: string;

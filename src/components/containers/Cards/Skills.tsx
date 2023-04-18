@@ -5,7 +5,7 @@ import {
   SectionHeaderContainer,
   SkillCard,
 } from '@/components';
-import { SKILLS } from '@/constant';
+import { SKILLS_MICROCAMP } from '@/constant';
 
 const Skills = () => {
   return (
@@ -13,7 +13,7 @@ const Skills = () => {
       <FlexContainer direction='col' className='w-full'>
         <SectionHeaderContainer heading='Skills we teach' focusText='build' />
         <CardSectionContainer>
-          {SKILLS.map((skill) => {
+          {SKILLS_MICROCAMP.map((skill) => {
             const { id, title, details: skilledDetails } = skill;
             return (
               <SkillCard

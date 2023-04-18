@@ -5,6 +5,7 @@ import {
   SKILLSProps,
   TestimonialCardProps,
   WeGuideDifferentlyCardProps,
+  MicroCampFeaturePricingCardProps,
 } from '@/interfaces';
 import { programs } from '../global';
 import { routes } from '../routes';
@@ -114,61 +115,31 @@ const SKILLS: SKILLSProps[] = [
 const SKILLS_MICROCAMP: SKILLSProps[] = [
   {
     id: v4(),
-    title: `FrontEnd Engineering`,
+    title: `Basic of Web Engineering`,
     details: [
       {
         id: v4(),
-        name: `ReactJS`,
-        image: `${SVG_BASE_PATH}/reactjs.svg`,
-        imageAltText: `ReactJS`,
+        name: `HTML`,
+        image: `${SVG_BASE_PATH}/html.svg`,
+        imageAltText: `HTML`,
       },
       {
         id: v4(),
-        name: `NextJs`,
-        image: `${SVG_BASE_PATH}/nextjs.svg`,
-        imageAltText: `NextJS`,
-      },
-      {
-        id: v4(),
-        name: `Redux`,
-        image: `${SVG_BASE_PATH}/redux.svg`,
-        imageAltText: `Redux`,
+        name: `CSS`,
+        image: `${SVG_BASE_PATH}/css.svg`,
+        imageAltText: `CSS`,
       },
     ],
   },
   {
     id: v4(),
-    title: `Deployment`,
+    title: `Programming Language`,
     details: [
       {
         id: v4(),
-        name: `Netlify`,
-        image: `${SVG_BASE_PATH}/netlify.svg`,
-        imageAltText: `Netlify`,
-      },
-      {
-        id: v4(),
-        name: `Vercel`,
-        image: `${SVG_BASE_PATH}/vercel.svg`,
-        imageAltText: `Vercel`,
-      },
-    ],
-  },
-  {
-    id: v4(),
-    title: `Extra Skills`,
-    details: [
-      {
-        id: v4(),
-        name: `Figma`,
-        image: `${SVG_BASE_PATH}/figma.svg`,
-        imageAltText: `Figma`,
-      },
-      {
-        id: v4(),
-        name: `TypeScript`,
-        image: `${SVG_BASE_PATH}/typescript.svg`,
-        imageAltText: `Typescript`,
+        name: `JavaScript`,
+        image: `${SVG_BASE_PATH}/js.svg`,
+        imageAltText: `JavaScript`,
       },
     ],
   },
@@ -370,72 +341,95 @@ const BACKEND_MICROCAMP_CURRICULUM: MicroCampFeatureCardContentProps[] = [
 const JUNIOR_CAMP_CURRICULUM: MicroCampFeatureCardContentProps[] = [
   {
     id: v4(),
-    title: `8 Weeks`,
+    title: `45 Days`,
     content: `Duration`,
   },
   {
     id: v4(),
-    title: `1:1 Mentorship`,
-    content: `Weekly Session with Mentors`,
+    title: `Live Classes`,
+    content: `Evening classes with Experts`,
   },
   {
     id: v4(),
-    title: `Only Projects`,
-    content: `Learn by Building`,
+    title: `Build Projects`,
+    content: `Build projects on HTML, CSS, JS`,
   },
   {
     id: v4(),
-    title: `Code Review`,
-    content: `Weekly code reviews by mentors`,
+    title: `Doubt Sessions`,
+    content: `Clear your doubts on Sunday`,
   },
   {
     id: v4(),
-    title: `Tech Workshops`,
-    content: `Workshops on Tech every weekend`,
+    title: `HW Everyday`,
+    content: `Practice problems everyday`,
   },
   {
     id: v4(),
-    title: `Be Job Ready`,
-    content: `Project & Resume to Job, All in one`,
+    title: `24x7 Support`,
+    content: `Ask questions anytime, We’ll answer.`,
   },
 ];
 
-const WHAT_WE_DO_FOR_YOU = [
+const JUNIOR_CAMP_CURRICULUM_PRICING: MicroCampFeaturePricingCardProps[] = [
   {
     id: v4(),
-    title: `Live Mock Interview`,
-    content: `Prepare for real world interviews by attending Mock Interviews hosted by Industry Experts.`,
+    content: `Live Sessions with Experts`,
+  },
+  {
+    id: v4(),
+    content: `Sunday Doubt Session`,
+  },
+  {
+    id: v4(),
+    content: `Only Project-based learning`,
+  },
+  {
+    id: v4(),
+    content: `Extra Skills in Tech Workshops`,
+  },
+  {
+    id: v4(),
+    content: `Community based learning`,
+  },
+];
+
+const WHAT_WE_DO_FOR_YOU_MICROCAMP = [
+  {
+    id: v4(),
+    title: `Live Classes`,
+    content: `Attend Evening classes after your work and prepare yourself for the future.`,
     image: `${SVG_BASE_PATH}/live_mock_interview.svg`,
-    imageAltText: `Live Mock Interview`,
+    imageAltText: `Live Classes`,
   },
   {
     id: v4(),
-    title: `Resume Building`,
-    content: `We build your resume that gets you shortlisted for the interviews.`,
-    image: `${SVG_BASE_PATH}/resume_building.svg`,
-    imageAltText: `Resume Building`,
-  },
-  {
-    id: v4(),
-    title: `Linkedin Optimization`,
-    content: `We guide your way of using LinkedIn to get interview calls and pitch yourself in front of HRs.`,
+    title: `Sunday Doubt Sessions`,
+    content: `Ask any doubt you've while preparing on Sunday. We also have 24x7 Support on our Discord community.`,
     image: `${SVG_BASE_PATH}/linkedin_optimization.svg`,
-    imageAltText: `Linkedin Optimization`,
+    imageAltText: `Sunday Doubt Sessions`,
   },
   {
     id: v4(),
-    title: `Job Profile Building`,
-    content: `A good job profile is needed for a good, and we make sure that you’ve one.`,
-    image: `${SVG_BASE_PATH}/job_profile_building.svg`,
-    imageAltText: `Job Profile Building`,
+    title: `Build Projects with Peers`,
+    content: `Don't just learn, Apply the coding skills into real-life projects.`,
+    image: `${SVG_BASE_PATH}/live_mock_interview.svg`,
+    imageAltText: `Build Projects with Peers`,
   },
   {
     id: v4(),
     title: `Some "Boring" Skills`,
-    content: `On Weekend workshops with “The Boring Workshop”, You’ll get hands-on experience in Tech topics.`,
+    content: `On Weekend workshops with "The Boring Workshop", You’ll get hands-on experience in Tech topics.`,
     image: `${SVG_BASE_PATH}/some_boring_skills.svg`,
     imageAltText: `Some Boring Skills`,
   },
+  // {
+  //   id: v4(),
+  //   title: `Some "Boring" Skills`,
+  //   content: `On Weekend workshops with “The Boring Workshop”, You’ll get hands-on experience in Tech topics.`,
+  //   image: `${SVG_BASE_PATH}/some_boring_skills.svg`,
+  //   imageAltText: `Some Boring Skills`,
+  // },
 ];
 
 const WE_TAUGHT = [
@@ -509,10 +503,11 @@ export {
   TOP_NAVIGATION,
   USP,
   FRONTEND_MICROCAMP_CURRICULUM,
-  WHAT_WE_DO_FOR_YOU,
+  WHAT_WE_DO_FOR_YOU_MICROCAMP,
   BACKEND_MICROCAMP_CURRICULUM,
   JUNIOR_CAMP_CURRICULUM,
   WE_TAUGHT,
   NOT_ANOTHER_TECH_COURSE,
   TALK_ABOUT_OPPORTUNITIES,
+  JUNIOR_CAMP_CURRICULUM_PRICING,
 };

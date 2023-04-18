@@ -6,7 +6,7 @@ import {
   Section,
   Text,
 } from '@/components';
-import { FRONTEND_MICROCAMP_CURRICULUM, LINKS } from '@/constant';
+import { JUNIOR_CAMP_CURRICULUM_PRICING, LINKS } from '@/constant';
 
 const MicrocampPricing = () => {
   return (
@@ -40,7 +40,7 @@ const MicrocampPricing = () => {
               PRICE YOU PAY
             </Text>
             <Text level='h2' className='heading-2 pt-2'>
-              ₹6000
+              ₹1999
             </Text>
           </div>
           <div className='flex flex-col items-center justify-between pt-4'>
@@ -48,7 +48,7 @@ const MicrocampPricing = () => {
               VALUE YOU GET
             </Text>
             <GridContainer className='w-full grid-cols-2 grid-cols-[repeat(auto-fit,minmax(100%,1fr))] gap-2 gap-1 rounded-2 pt-2 md:grid-cols-[repeat(auto-fit,minmax(16rem,1fr))]'>
-              {FRONTEND_MICROCAMP_CURRICULUM.map((item) => {
+              {JUNIOR_CAMP_CURRICULUM_PRICING.map((item) => {
                 const { id } = item;
                 return <PricingFeatureCard key={id} {...item} />;
               })}

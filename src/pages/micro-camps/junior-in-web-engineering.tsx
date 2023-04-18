@@ -23,7 +23,6 @@ const MicroCampLanding = () => {
       <NotAnotherTechCourse />
       <ContextBasedLearning />
       <Skills />
-      <Opportunities />
       <WhatWeDoForYou />
       <MicrocampPricing />
       <WeToughtAt />
