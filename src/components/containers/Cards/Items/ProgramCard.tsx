@@ -9,7 +9,7 @@ const ProgramCard = ({
   buttonText,
 }: ProgramCardProps) => {
   return (
-    <CardGradientContainer variant={1} className='max-w-sm'>
+    <CardGradientContainer className='max-w-sm border-borderColor2'>
       <Image
         className='m-auto w-3/5 rounded-t-lg'
         src={`${image}`}

@@ -7,11 +7,13 @@ import {
   CanYouBeAProgrammer,
   Testimonials,
   Footer,
+  SEO,
 } from '@/components';
 
 const Home = () => {
   return (
-    <>
+    <React.Fragment>
+      <SEO slug='/' />
       <LandingPageHero />
       <OurPrograms />
       <Skills />
@@ -19,7 +21,7 @@ const Home = () => {
       <CanYouBeAProgrammer />
       <Testimonials />
       <Footer />
-    </>
+    </React.Fragment>
   );
 };
 

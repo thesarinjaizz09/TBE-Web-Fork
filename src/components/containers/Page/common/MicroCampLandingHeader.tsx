@@ -6,8 +6,12 @@ import {
   SectionHeaderContainer,
   Text,
 } from '@/components';
+import { LINKS, generateSectionPath, routes } from '@/constant';
+import { useRouter } from 'next/router';
 
 const MicroCampLandingHeader = () => {
+  const router = useRouter();
+
   return (
     <Section>
       <MicroCampBGGradientContainer>
@@ -50,12 +54,16 @@ const MicroCampLandingHeader = () => {
             </FlexContainer>
             <FlexContainer justifyCenter={true} className='w-full gap-2 pt-4'>
               <LinkButton
-                href='#'
+                href={LINKS.juniorInWebEngineeringRegistrationLink}
+                target='BLANK'
                 buttonProps={{ variant: 'PRIMARY', text: 'Register now' }}
                 className='w-full md:w-auto'
               />
               <LinkButton
-                href='#'
+                href={generateSectionPath({
+                  basePath: router.basePath,
+                  sectionID: routes.internals.microCampLanding.explore,
+                })}
                 buttonProps={{ variant: 'OUTLINE', text: 'Explore program' }}
                 className='w-full md:w-auto'
               />

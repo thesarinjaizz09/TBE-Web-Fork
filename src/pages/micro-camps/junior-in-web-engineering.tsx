@@ -1,3 +1,4 @@
+import React from 'react';
 import {
   Skills,
   MicroCampLandingHeader,
@@ -10,21 +11,13 @@ import {
   Opportunities,
   WhatWeDoForYou,
   WeToughtAt,
+  SEO,
 } from '@/components';
-import { useRouter } from 'next/router';
-import { useEffect } from 'react';
 
 const MicroCampLanding = () => {
-  const { push } = useRouter();
-
-  useEffect(() => {
-    push(
-      'https://docs.google.com/forms/d/e/1FAIpQLSejDBJvhWMWeKZFkWY2PxuUa_LZYsstDvJljrn0Tbm2_2Kd7Q/viewform?usp=sf_link'
-    );
-  }, []);
-
   return (
-    <>
+    <React.Fragment>
+      <SEO slug='/junior-in-web-engineering' />
       <MicroCampLandingHeader />
       <InThisCohortContainer />
       <NotAnotherTechCourse />
@@ -36,7 +29,7 @@ const MicroCampLanding = () => {
       <WeToughtAt />
       <Testimonials />
       <Footer />
-    </>
+    </React.Fragment>
   );
 };
 

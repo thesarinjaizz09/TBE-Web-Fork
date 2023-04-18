@@ -1,15 +1,16 @@
+import { SectionProps } from '@/interfaces';
 import React from 'react';
-
-interface SectionProps {
-  children: React.ReactNode;
-  className?: string;
-}
 
 const Section = ({
   children,
   className = 'md:px-8 md:py-12 px-4 py-6',
+  id = '',
 }: SectionProps) => {
-  return <section className={className}>{children}</section>;
+  return (
+    <section className={className} id={id}>
+      {children}
+    </section>
+  );
 };
 
 export default Section;

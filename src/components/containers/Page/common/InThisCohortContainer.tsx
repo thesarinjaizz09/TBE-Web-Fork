@@ -6,11 +6,11 @@ import {
   SectionHeaderContainer,
   Text,
 } from '@/components';
-import { FRONTEND_MICROCAMP_CURRICULUM } from '@/constant';
+import { FRONTEND_MICROCAMP_CURRICULUM, routes } from '@/constant';
 
 const InThisCohortContainer = () => {
   return (
-    <Section>
+    <Section id={routes.internals.microCampLanding.explore}>
       <FlexContainer direction='col'>
         <FlexContainer direction='col'>
           <Text level='p' className='strong-text text-grey'>

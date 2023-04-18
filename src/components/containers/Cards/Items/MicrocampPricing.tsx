@@ -6,7 +6,7 @@ import {
   Section,
   Text,
 } from '@/components';
-import { FRONTEND_MICROCAMP_CURRICULUM } from '@/constant';
+import { FRONTEND_MICROCAMP_CURRICULUM, LINKS } from '@/constant';
 
 const MicrocampPricing = () => {
   return (
@@ -67,11 +67,12 @@ const MicrocampPricing = () => {
             </Text>
             <FlexContainer justifyCenter={true} className='w-full pt-2'>
               <LinkButton
-                href='#'
+                href={LINKS.freeTechConsultation}
                 buttonProps={{
                   variant: 'PRIMARY',
                   text: 'Book FREE Tech Consultation',
                 }}
+                target='BLANK'
               />
             </FlexContainer>
           </div>

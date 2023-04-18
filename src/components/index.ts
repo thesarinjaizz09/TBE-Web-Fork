@@ -43,6 +43,7 @@ import WhatWeDoForYou from './containers/Cards/WhatWeDoForYou';
 import WeToughtAt from './containers/Cards/WeToughtAt';
 import WeToughtAtCard from './containers/Cards/Items/WeToughtAtCard';
 import MicrocampRegisterForm from './containers/Forms/MicrocampRegisterForm';
+import SEO from './layout/SEO';
 
 export {
   Navbar,
@@ -90,4 +91,5 @@ export {
   WeToughtAt,
   WeToughtAtCard,
   MicrocampRegisterForm,
+  SEO,
 };

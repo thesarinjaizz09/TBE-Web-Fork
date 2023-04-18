@@ -1,4 +1,5 @@
 import { FlexContainer, Image, LinkButton, Section, Text } from '@/components';
+import { LINKS } from '@/constant';
 
 const CanYouBeAProgrammer = () => {
   return (
@@ -24,12 +25,13 @@ const CanYouBeAProgrammer = () => {
               unbiased.
             </Text>
             <LinkButton
-              href='#'
+              href={LINKS.freeTechConsultation}
               className='pt-3'
               buttonProps={{
                 variant: 'PRIMARY',
                 text: 'Book Free Session',
               }}
+              target='BLANK'
             />
           </FlexContainer>
         </FlexContainer>

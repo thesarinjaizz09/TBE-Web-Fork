@@ -2,9 +2,9 @@ import Link from 'next/link';
 
 import { LinkProps } from '@/interfaces';
 
-const LinkText = ({ href, children, className }: LinkProps) => {
+const LinkText = ({ href, children, className, target }: LinkProps) => {
   return (
-    <Link className={className + ' link'} href={href}>
+    <Link className={className + ' link'} href={href} target={target}>
       {children}
     </Link>
   );

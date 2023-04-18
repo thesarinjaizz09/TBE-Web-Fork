@@ -13,22 +13,21 @@ import { v4 } from 'uuid';
 const SVG_BASE_PATH = '/svg';
 
 const TOP_NAVIGATION = [
-  { id: v4(), name: 'Home', href: routes.home },
   {
     id: v4(),
     name: programs.juniorInWebEngineering.label,
     href: routes.microCampLanding(programs.juniorInWebEngineering.slug),
   },
-  {
-    id: v4(),
-    name: programs.beFrontendMaster.label,
-    href: routes.microCampLanding(programs.beFrontendMaster.slug),
-  },
-  {
-    id: v4(),
-    name: programs.beBackendMaster.label,
-    href: routes.microCampLanding(programs.beBackendMaster.slug),
-  },
+  // {
+  //   id: v4(),
+  //   name: programs.beFrontendMaster.label,
+  //   href: routes.microCampLanding(programs.beFrontendMaster.slug),
+  // },
+  // {
+  //   id: v4(),
+  //   name: programs.beBackendMaster.label,
+  //   href: routes.microCampLanding(programs.beBackendMaster.slug),
+  // },
   { id: v4(), name: 'Contact us', href: routes.contactUs },
 ];
 
@@ -236,9 +235,21 @@ const FOOTER_NAVIGATION: FooterNavigationDataProps[] = [
     title: `Our Products`,
     isShow: true,
     urls: [
-      { id: v4(), label: `Be A Frontend Master`, href: `#` },
-      { id: v4(), label: `Be A Backend Master`, href: `#` },
-      { id: v4(), label: `The Boring Workshop`, href: `#` },
+      {
+        id: v4(),
+        label: programs.juniorInWebEngineering.label,
+        href: routes.microCampLanding(programs.juniorInWebEngineering.slug),
+      },
+      // {
+      //   id: v4(),
+      //   label: programs.beFrontendMaster.label,
+      //   href: routes.microCampLanding(programs.beFrontendMaster.slug),
+      // },
+      // {
+      //   id: v4(),
+      //   label: programs.beBackendMaster.label,
+      //   href: routes.microCampLanding(programs.beBackendMaster.slug),
+      // },
     ],
   },
   {
@@ -246,27 +257,31 @@ const FOOTER_NAVIGATION: FooterNavigationDataProps[] = [
     title: `Company`,
     isShow: true,
     urls: [
-      { id: v4(), label: `About US`, href: `#` },
+      // { id: v4(), label: `About US`, href: `#` },
       { id: v4(), label: `Contact Us`, href: `#` },
-      { id: v4(), label: `Refund Policy`, href: `#` },
+      // { id: v4(), label: `Refund Policy`, href: `#` },
     ],
   },
-  {
-    id: v4(),
-    title: `Resources`,
-    isShow: false,
-    urls: [
-      { id: v4(), label: `Overview`, href: `#` },
-      { id: v4(), label: `Overview`, href: `#` },
-      { id: v4(), label: `Overview`, href: `#` },
-    ],
-  },
+  // {
+  //   id: v4(),
+  //   title: `Resources`,
+  //   isShow: false,
+  //   urls: [
+  //     { id: v4(), label: `Overview`, href: `#` },
+  //     { id: v4(), label: `Overview`, href: `#` },
+  //     { id: v4(), label: `Overview`, href: `#` },
+  //   ],
+  // },
   {
     id: v4(),
     title: `Connect With Us`,
     isShow: true,
     urls: [
-      { id: v4(), label: `Discord`, href: `#` },
+      {
+        id: v4(),
+        label: `Discord`,
+        href: `https://discord.com/invite/ypkKNsEFqU`,
+      },
       {
         id: v4(),
         label: `Instagram`,
@@ -274,16 +289,16 @@ const FOOTER_NAVIGATION: FooterNavigationDataProps[] = [
       },
     ],
   },
-  {
-    id: v4(),
-    title: `Legal`,
-    isShow: false,
-    urls: [
-      { id: v4(), label: `Overview`, href: `#` },
-      { id: v4(), label: `Overview`, href: `#` },
-      { id: v4(), label: `Overview`, href: `#` },
-    ],
-  },
+  // {
+  //   id: v4(),
+  //   title: `Legal`,
+  //   isShow: false,
+  //   urls: [
+  //     { id: v4(), label: `Overview`, href: `#` },
+  //     { id: v4(), label: `Overview`, href: `#` },
+  //     { id: v4(), label: `Overview`, href: `#` },
+  //   ],
+  // },
 ];
 
 const FRONTEND_MICROCAMP_CURRICULUM: MicroCampFeatureCardContentProps[] = [

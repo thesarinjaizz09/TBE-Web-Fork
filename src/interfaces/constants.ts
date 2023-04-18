@@ -22,3 +22,5 @@ export interface MicroCampFeatureCardContentProps
   extends MicroCampFeatureCardProps {
   id: string;
 }
+
+export type PageSlug = '/' | '/junior-in-web-engineering' | '/404';

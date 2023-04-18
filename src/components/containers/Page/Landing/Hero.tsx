@@ -5,8 +5,12 @@ import {
   SectionHeaderContainer,
   Text,
 } from '@/components';
+import { generateSectionPath, routes } from '@/constant';
+import { useRouter } from 'next/router';
 
 const LandingPageHero = () => {
+  const router = useRouter();
+
   return (
     <Section>
       <FlexContainer justifyCenter={true} className='py-6' direction='col'>
@@ -27,7 +31,10 @@ const LandingPageHero = () => {
           </FlexContainer>
           <div className='mt-4'>
             <LinkButton
-              href='#'
+              href={generateSectionPath({
+                basePath: router.basePath,
+                sectionID: routes.internals.landing.programs,
+              })}
               buttonProps={{
                 variant: 'PRIMARY',
                 text: 'Explore Roadmaps',

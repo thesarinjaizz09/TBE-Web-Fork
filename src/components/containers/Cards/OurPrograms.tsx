@@ -5,11 +5,11 @@ import {
   Section,
   SectionHeaderContainer,
 } from '@/components';
-import { PROGRAMS } from '@/constant';
+import { PROGRAMS, routes } from '@/constant';
 
 const OurPrograms = () => {
   return (
-    <Section>
+    <Section id={routes.internals.landing.programs}>
       <FlexContainer direction='col'>
         <SectionHeaderContainer heading='Our' focusText='Programs' />
         <CardSectionContainer>

@@ -1,10 +1,17 @@
 import { MouseEventHandler } from 'react';
-import { SKILLProps } from '.';
+import { PageSlug, SKILLProps } from '.';
 
-export interface LinkProps {
+export interface SectionProps {
   children: React.ReactNode;
   className?: string;
+  id?: string;
+}
+
+export interface LinkProps {
+  children?: React.ReactNode;
+  className?: string;
   href: string;
+  target?: 'BLANK';
 }
 
 export interface TextProps {
@@ -27,7 +34,7 @@ export interface LogoProps {
   className?: string;
 }
 
-export interface LinkButtonProps {
+export interface LinkButtonProps extends LinkProps {
   buttonProps: ButtonProps;
   href: string;
   className?: string;
@@ -157,4 +164,13 @@ export interface WeToughtAtCardProps {
   id?: string;
   image: string;
   imageAltText: string;
+}
+
+export type GenerateSectionPathProps = {
+  basePath: string;
+  sectionID: string;
+};
+
+export interface SEOProps {
+  slug: PageSlug;
 }
