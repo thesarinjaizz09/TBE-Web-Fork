@@ -6,17 +6,21 @@ const imageMeta = {
 };
 
 const programs = {
-  // beFrontendMaster: {
-  //   label: 'Be Front-end Master',
-  //   slug: 'be-frontend-master',
-  // },
-  // beBackendMaster: {
-  //   label: 'Be Backend Master',
-  //   slug: 'be-backend-master',
-  // },
+  beFrontendMaster: {
+    label: 'Be Front-end Master',
+    slug: 'be-frontend-master',
+  },
+  beBackendMaster: {
+    label: 'Be Backend Master',
+    slug: 'be-backend-master',
+  },
   juniorInWebEngineering: {
     label: 'Junior in Web Engineering',
     slug: 'junior-in-web-engineering',
+  },
+  theBoringWorkshops: {
+    label: 'The Boring Workshops',
+    slug: 'the-boring-workshops',
   },
 };
 

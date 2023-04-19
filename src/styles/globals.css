@@ -96,4 +96,8 @@
   .button {
     @apply w-full text-button-text text-white font-bold rounded-1;
   }
+
+  .disabled {
+    pointer-events: none;
+  }
 }

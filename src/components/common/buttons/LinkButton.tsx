@@ -7,9 +7,10 @@ const LinkButton = ({
   className = '',
   buttonProps,
   target,
+  active,
 }: LinkButtonProps) => {
   return (
-    <Link href={href} className={className} target={target}>
+    <Link href={href} className={className} target={target} active={active}>
       <Button {...buttonProps} />
     </Link>
   );

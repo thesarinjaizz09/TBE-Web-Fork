@@ -12,6 +12,7 @@ export interface LinkProps {
   className?: string;
   href: string;
   target?: 'BLANK';
+  active?: boolean;
 }
 
 export interface TextProps {
@@ -45,6 +46,7 @@ export interface ButtonProps {
   className?: string;
   text: string;
   onClick?: MouseEventHandler<HTMLButtonElement>;
+  active?: boolean;
 }
 
 export interface ProgramCardProps {
@@ -52,7 +54,8 @@ export interface ProgramCardProps {
   imageAltText: string;
   title: string;
   content: string;
-  buttonText: string;
+  href: string;
+  active: boolean;
 }
 
 export interface PageLayoutProps {

@@ -8,7 +8,6 @@ import {
   NotAnotherTechCourse,
   ContextBasedLearning,
   MicrocampPricing,
-  Opportunities,
   WhatWeDoForYou,
   WeToughtAt,
   SEO,

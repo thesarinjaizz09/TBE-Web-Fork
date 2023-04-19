@@ -5,11 +5,12 @@ const ProgramCard = ({
   image,
   imageAltText,
   title,
+  href,
   content,
-  buttonText,
+  active,
 }: ProgramCardProps) => {
   return (
-    <CardGradientContainer className='max-w-sm border-borderColor2'>
+    <CardGradientContainer className='max-w-sm border-borderColor1'>
       <Image
         className='m-auto w-3/5 rounded-t-lg'
         src={`${image}`}
@@ -23,12 +24,15 @@ const ProgramCard = ({
           {content}
         </Text>
         <LinkButton
-          href='#'
+          href={href}
           className='mt-3 block'
           buttonProps={{
             variant: 'PRIMARY',
-            text: buttonText,
+            text: active ? 'Registration Open' : 'Coming soon',
+            active,
+            className: `${!active && 'bg-secondary'}`,
           }}
+          active={active}
         />
       </div>
     </CardGradientContainer>

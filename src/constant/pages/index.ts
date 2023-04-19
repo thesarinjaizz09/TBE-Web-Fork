@@ -35,23 +35,43 @@ const TOP_NAVIGATION = [
 const PROGRAMS = [
   {
     id: v4(),
-    image: `${SVG_BASE_PATH}/boring_workshop.svg`,
-    imageAltText: '',
-    title: 'The Boring Micro-Camp',
+    image: `${SVG_BASE_PATH}/junior-in-web-engineering-banner.svg`,
+    imageAltText: programs.juniorInWebEngineering.label,
+    title: programs.juniorInWebEngineering.label,
     content:
-      '6 Weeks Bootcamp with hands-on project-building and placement assistance.',
-    buttonText: 'Registration open',
-    href: '/micro-camps',
+      'Learn Fundamentals of Web dev with industry experts in live sessions.',
+    href: routes.microCampLanding(programs.juniorInWebEngineering.slug),
+    active: true,
   },
   {
     id: v4(),
-    image: `${SVG_BASE_PATH}/boring_workshop.svg`,
-    imageAltText: 'workshop',
-    title: 'The Boring Workshop',
+    image: `${SVG_BASE_PATH}/be-front-end-master-banner.svg`,
+    imageAltText: programs.beFrontendMaster.label,
+    title: programs.beFrontendMaster.label,
+    content:
+      'Learn Core of Front-end Engineering with Placement Assistance in 8 Weeks.',
+    href: routes.microCampLanding(programs.beFrontendMaster.slug),
+    active: false,
+  },
+  {
+    id: v4(),
+    image: `${SVG_BASE_PATH}/be-back-end-master-banner.svg`,
+    imageAltText: programs.beBackendMaster.label,
+    title: programs.beBackendMaster.label,
+    content:
+      'Learn Core of Backend Engineering with Placement Assistance in 8 Weeks.',
+    href: routes.microCampLanding(programs.beBackendMaster.slug),
+    active: false,
+  },
+  {
+    id: v4(),
+    image: `${SVG_BASE_PATH}/the-boring-workshop-banner.svg`,
+    imageAltText: programs.theBoringWorkshops.label,
+    title: programs.theBoringWorkshops.label,
     content:
       'Learn to build In-Demand Tech & Design skills over a weekend, that stays for life!',
-    buttonText: 'Registration open',
-    href: '/workshops',
+    href: programs.theBoringWorkshops.slug,
+    active: false,
   },
 ];
 

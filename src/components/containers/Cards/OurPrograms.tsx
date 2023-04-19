@@ -14,15 +14,17 @@ const OurPrograms = () => {
         <SectionHeaderContainer heading='Our' focusText='Programs' />
         <CardSectionContainer>
           {PROGRAMS.map((program) => {
-            const { image, imageAltText, title, content, buttonText } = program;
+            const { image, imageAltText, title, href, content, active } =
+              program;
             return (
               <ProgramCard
                 key={program.id}
                 image={image}
                 imageAltText={imageAltText}
                 title={title}
+                href={href}
                 content={content}
-                buttonText={buttonText}
+                active={active}
               />
             );
           })}
