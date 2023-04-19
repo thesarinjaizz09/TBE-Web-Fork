@@ -9,8 +9,10 @@ const FooterLinksContainer = ({ title, urls }: FooterLinksContainerProps) => {
       </Text>
       <ul className='pt-1'>
         {urls.map((url) => {
-          const { id, href, label } = url;
-          return <FooterLink key={id} href={href} label={label} />;
+          const { id, href, label, target } = url;
+          return (
+            <FooterLink key={id} href={href} label={label} target={target} />
+          );
         })}
       </ul>
     </div>

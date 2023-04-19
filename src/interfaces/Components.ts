@@ -122,6 +122,7 @@ export interface FooterLinkProps {
   id?: string;
   label: string;
   href: string;
+  target?: 'BLANK';
 }
 
 export interface FooterLinksContainerProps {

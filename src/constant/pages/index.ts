@@ -139,24 +139,6 @@ const [
   },
 ];
 
-const allSkills: SkillsProps[] = [
-  {
-    id: v4(),
-    title: `Front-end Engineering`,
-    details: [HTML, CSS, JavaScript, ReactJS, NextJS],
-  },
-  {
-    id: v4(),
-    title: `Back-end Engineering`,
-    details: [NodeJS, MongoDB],
-  },
-  {
-    id: v4(),
-    title: `Extra Skills`,
-    details: [Figma, TypeScript],
-  },
-];
-
 const landingPageSkills: SkillsProps[] = [
   {
     id: v4(),
@@ -295,11 +277,13 @@ const FOOTER_NAVIGATION: FooterNavigationDataProps[] = [
         id: v4(),
         label: `Discord`,
         href: `https://discord.com/invite/ypkKNsEFqU`,
+        target: 'BLANK',
       },
       {
         id: v4(),
         label: `Instagram`,
         href: `https://www.instagram.com/theboringeducation/`,
+        target: 'BLANK',
       },
     ],
   },
