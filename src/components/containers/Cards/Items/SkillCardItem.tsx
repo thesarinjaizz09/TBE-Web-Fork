@@ -1,7 +1,7 @@
 import { FlexContainer, Image, Text } from '@/components';
-import { SKILLProps } from '@/interfaces';
+import { SkillProps } from '@/interfaces';
 
-const SkillCardItem = ({ name, image, imageAltText }: SKILLProps) => {
+const SkillCardItem = ({ name, image, imageAltText }: SkillProps) => {
   return (
     <FlexContainer direction='col' itemCenter={true} className='max-h-sm'>
       <Image className='w-14' src={`${image}`} alt={imageAltText} />

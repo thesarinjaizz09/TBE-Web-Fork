@@ -2,7 +2,7 @@ import {
   FooterNavigationDataProps,
   MicroCampFeatureCardContentProps,
   OpportunityCardProps,
-  SKILLSProps,
+  SkillsProps,
   TestimonialCardProps,
   WeGuideDifferentlyCardProps,
   MicroCampFeaturePricingCardProps,
@@ -75,7 +75,7 @@ const PROGRAMS = [
   },
 ];
 
-const SKILLS: SKILLSProps[] = [
+const SKILLS: SkillsProps[] = [
   {
     id: v4(),
     title: `Front-end Engineering`,
@@ -132,7 +132,7 @@ const SKILLS: SKILLSProps[] = [
   },
 ];
 
-const SKILLS_MICROCAMP: SKILLSProps[] = [
+const SKILLS_MICROCAMP: SkillsProps[] = [
   {
     id: v4(),
     title: `Basic of Web Engineering`,

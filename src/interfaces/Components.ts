@@ -1,5 +1,5 @@
 import { MouseEventHandler } from 'react';
-import { PageSlug, SKILLProps } from '.';
+import { PageSlug, SkillProps } from '.';
 
 export interface SectionProps {
   children: React.ReactNode;
@@ -82,7 +82,7 @@ export interface CardGradientContainerProps {
 }
 
 export interface SkillCardProps {
-  skilledDetails: SKILLProps[];
+  skilledDetails: SkillProps[];
   title: string;
 }
 

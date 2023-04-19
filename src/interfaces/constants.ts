@@ -1,16 +1,16 @@
 import { FooterLinksContainerProps, MicroCampFeatureCardProps } from '.';
 
-export interface SKILLProps {
+export interface SkillProps {
   id?: string;
   name: string;
   image: string;
   imageAltText: string;
 }
 
-export interface SKILLSProps {
+export interface SkillsProps {
   id: string;
   title: string;
-  details: SKILLProps[];
+  details: SkillProps[];
 }
 
 export interface FooterNavigationDataProps extends FooterLinksContainerProps {
@@ -23,4 +23,10 @@ export interface MicroCampFeatureCardContentProps
   id: string;
 }
 
-export type PageSlug = '/' | '/junior-in-web-engineering' | '/404';
+export type PageSlug =
+  | '/'
+  | '/junior-in-web-engineering'
+  | '/be-frontend-master'
+  | '/be-backend-master'
+  | '/the-boring-workshops'
+  | '/404';
