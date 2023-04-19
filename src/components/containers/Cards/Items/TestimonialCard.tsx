@@ -13,7 +13,7 @@ const TestimonialCard = ({
       backgroundColor='gradient-bg'
     >
       <Image
-        className='w-24'
+        className='w-24 rounded-full border'
         fullWidth={false}
         src={`${image}`}
         alt={imageAltText}

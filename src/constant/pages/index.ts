@@ -13,6 +13,7 @@ import { routes } from '../routes';
 import { v4 } from 'uuid';
 
 const SVG_BASE_PATH = '/svg';
+const WEBP_BASE_PATH = '/webp';
 
 const TOP_NAVIGATION = [
   {
@@ -204,23 +205,31 @@ const USP: WeGuideDifferentlyCardProps[] = [
 const TESTIMONIALS: TestimonialCardProps[] = [
   {
     id: v4(),
-    title: `John Doe`,
-    content: `Boring workshop helps me a lot to learn UI designing in a very easy and intellectual manner and the most important thing is that each and every concept is explained easily. in workshop they explain very complex things easily.`,
-    image: `${SVG_BASE_PATH}/profile_image.svg`,
+    title: `Satish Daraboina`,
+    content: `Improved design skills by
+    attending in The Boring workshop, I
+    leant about Figma from scratch and
+    basics for designing mobile
+    applications. I learnt how figma works,
+    how to create screens and how to connect
+    two screens and learn techniques, get
+    hands on experience and I apply what I
+    learned to the projects. the workshop
+    helps me in introducing design concepts.`,
+    image: `${WEBP_BASE_PATH}/testimonial-1.webp`,
     imageAltText: `profile image`,
   },
   {
     id: v4(),
-    title: `John Doe`,
-    content: `Boring workshop helps me a lot to learn UI designing in a very easy and intellectual manner and the most important thing is that each and every concept is explained easily. in workshop they explain very complex things easily.`,
-    image: `${SVG_BASE_PATH}/profile_image.svg`,
-    imageAltText: `profile image`,
-  },
-  {
-    id: v4(),
-    title: `John Doe`,
-    content: `Boring workshop helps me a lot to learn UI designing in a very easy and intellectual manner and the most important thing is that each and every concept is explained easily. in workshop they explain very complex things easily.`,
-    image: `${SVG_BASE_PATH}/profile_image.svg`,
+    title: `Nikhil Maurya`,
+    content: `Boring workshop helps me a lot to
+    learn UI designing in a very easy and
+    intellectual manner and the most
+    important thing is that each and every
+    concept is explained easily. in workshop
+    they explain very complex things
+    easily`,
+    image: `${WEBP_BASE_PATH}/testimonial-2.webp`,
     imageAltText: `profile image`,
   },
 ];
