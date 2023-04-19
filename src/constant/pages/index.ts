@@ -6,6 +6,7 @@ import {
   TestimonialCardProps,
   WeGuideDifferentlyCardProps,
   MicroCampFeaturePricingCardProps,
+  SkillProps,
 } from '@/interfaces';
 import { programs } from '../global';
 import { routes } from '../routes';
@@ -38,8 +39,7 @@ const PROGRAMS = [
     image: `${SVG_BASE_PATH}/junior-in-web-engineering-banner.svg`,
     imageAltText: programs.juniorInWebEngineering.label,
     title: programs.juniorInWebEngineering.label,
-    content:
-      'Learn Fundamentals of Web dev with industry experts in live sessions.',
+    content: programs.juniorInWebEngineering.description,
     href: routes.microCampLanding(programs.juniorInWebEngineering.slug),
     active: true,
   },
@@ -48,8 +48,7 @@ const PROGRAMS = [
     image: `${SVG_BASE_PATH}/be-front-end-master-banner.svg`,
     imageAltText: programs.beFrontendMaster.label,
     title: programs.beFrontendMaster.label,
-    content:
-      'Learn Core of Front-end Engineering with Placement Assistance in 8 Weeks.',
+    content: programs.beFrontendMaster.description,
     href: routes.microCampLanding(programs.beFrontendMaster.slug),
     active: false,
   },
@@ -58,8 +57,7 @@ const PROGRAMS = [
     image: `${SVG_BASE_PATH}/be-back-end-master-banner.svg`,
     imageAltText: programs.beBackendMaster.label,
     title: programs.beBackendMaster.label,
-    content:
-      'Learn Core of Backend Engineering with Placement Assistance in 8 Weeks.',
+    content: programs.beBackendMaster.description,
     href: routes.microCampLanding(programs.beBackendMaster.slug),
     active: false,
   },
@@ -68,100 +66,125 @@ const PROGRAMS = [
     image: `${SVG_BASE_PATH}/the-boring-workshop-banner.svg`,
     imageAltText: programs.theBoringWorkshops.label,
     title: programs.theBoringWorkshops.label,
-    content:
-      'Learn to build In-Demand Tech & Design skills over a weekend, that stays for life!',
+    content: programs.theBoringWorkshops.description,
     href: programs.theBoringWorkshops.slug,
     active: false,
   },
 ];
 
-const SKILLS: SkillsProps[] = [
+const [
+  HTML,
+  CSS,
+  JavaScript,
+  ReactJS,
+  NextJS,
+  NodeJS,
+  MongoDB,
+  Figma,
+  TypeScript,
+]: SkillProps[] = [
+  {
+    id: v4(),
+    name: `HTML`,
+    image: `${SVG_BASE_PATH}/html.svg`,
+    imageAltText: `HTML`,
+  },
+  {
+    id: v4(),
+    name: `CSS`,
+    image: `${SVG_BASE_PATH}/css.svg`,
+    imageAltText: `CSS`,
+  },
+  {
+    id: v4(),
+    name: `JavaScript`,
+    image: `${SVG_BASE_PATH}/js.svg`,
+    imageAltText: `JavaScript`,
+  },
+  {
+    id: v4(),
+    name: `ReactJS`,
+    image: `${SVG_BASE_PATH}/reactjs.svg`,
+    imageAltText: `ReactJS`,
+  },
+  {
+    id: v4(),
+    name: `NextJs`,
+    image: `${SVG_BASE_PATH}/nextjs.svg`,
+    imageAltText: `NextJS`,
+  },
+  {
+    id: v4(),
+    name: `NodeJS`,
+    image: `${SVG_BASE_PATH}/nodejs.svg`,
+    imageAltText: `NodeJS`,
+  },
+  {
+    id: v4(),
+    name: `MongoDB`,
+    image: `${SVG_BASE_PATH}/mongodb.svg`,
+    imageAltText: `MongoDB`,
+  },
+  {
+    id: v4(),
+    name: `Figma`,
+    image: `${SVG_BASE_PATH}/figma.svg`,
+    imageAltText: `Figma`,
+  },
+  {
+    id: v4(),
+    name: `TypeScript`,
+    image: `${SVG_BASE_PATH}/typescript.svg`,
+    imageAltText: `TypeScript`,
+  },
+];
+
+const allSkills: SkillsProps[] = [
   {
     id: v4(),
     title: `Front-end Engineering`,
-    details: [
-      {
-        id: v4(),
-        name: `ReactJS`,
-        image: `${SVG_BASE_PATH}/reactjs.svg`,
-        imageAltText: `ReactJS`,
-      },
-      {
-        id: v4(),
-        name: `NextJs`,
-        image: `${SVG_BASE_PATH}/nextjs.svg`,
-        imageAltText: `NextJS`,
-      },
-    ],
+    details: [HTML, CSS, JavaScript, ReactJS, NextJS],
   },
   {
     id: v4(),
     title: `Back-end Engineering`,
-    details: [
-      {
-        id: v4(),
-        name: `NodeJS`,
-        image: `${SVG_BASE_PATH}/nodejs.svg`,
-        imageAltText: `NodeJS`,
-      },
-      {
-        id: v4(),
-        name: `MongoDB`,
-        image: `${SVG_BASE_PATH}/mongodb.svg`,
-        imageAltText: `MongoDB`,
-      },
-    ],
+    details: [NodeJS, MongoDB],
   },
   {
     id: v4(),
     title: `Extra Skills`,
-    details: [
-      {
-        id: v4(),
-        name: `Figma`,
-        image: `${SVG_BASE_PATH}/figma.svg`,
-        imageAltText: `Figma`,
-      },
-      {
-        id: v4(),
-        name: `TypeScript`,
-        image: `${SVG_BASE_PATH}/typescript.svg`,
-        imageAltText: `Typescript`,
-      },
-    ],
+    details: [Figma, TypeScript],
   },
 ];
 
-const SKILLS_MICROCAMP: SkillsProps[] = [
+const landingPageSkills: SkillsProps[] = [
+  {
+    id: v4(),
+    title: `Front-end Engineering`,
+    details: [JavaScript, ReactJS, NextJS],
+  },
+  {
+    id: v4(),
+    title: `Back-end Engineering`,
+    details: [NodeJS, MongoDB],
+  },
+  {
+    id: v4(),
+    title: `Extra Skills`,
+    details: [Figma, TypeScript],
+  },
+];
+
+const juniorInWebEngineeringSkills: SkillsProps[] = [
   {
     id: v4(),
     title: `Basic of Web Engineering`,
-    details: [
-      {
-        id: v4(),
-        name: `HTML`,
-        image: `${SVG_BASE_PATH}/html.svg`,
-        imageAltText: `HTML`,
-      },
-      {
-        id: v4(),
-        name: `CSS`,
-        image: `${SVG_BASE_PATH}/css.svg`,
-        imageAltText: `CSS`,
-      },
-    ],
+    details: [HTML, CSS],
   },
   {
     id: v4(),
     title: `Programming Language`,
-    details: [
-      {
-        id: v4(),
-        name: `JavaScript`,
-        image: `${SVG_BASE_PATH}/js.svg`,
-        imageAltText: `JavaScript`,
-      },
-    ],
+    details: [JavaScript],
   },
 ];
 
@@ -517,8 +540,8 @@ const TALK_ABOUT_OPPORTUNITIES: OpportunityCardProps[] = [
 export {
   FOOTER_NAVIGATION,
   PROGRAMS,
-  SKILLS,
-  SKILLS_MICROCAMP,
+  juniorInWebEngineeringSkills,
+  landingPageSkills,
   TESTIMONIALS,
   TOP_NAVIGATION,
   USP,

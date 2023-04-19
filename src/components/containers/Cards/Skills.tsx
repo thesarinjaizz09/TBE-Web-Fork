@@ -5,15 +5,15 @@ import {
   SectionHeaderContainer,
   SkillCard,
 } from '@/components';
-import { SKILLS } from '@/constant';
+import { SkillsContainerProps } from '@/interfaces';
 
-const Skills = () => {
+const Skills = ({ skills }: SkillsContainerProps) => {
   return (
     <Section>
       <FlexContainer direction='col' className='w-full'>
         <SectionHeaderContainer heading='Skills we teach' focusText='build' />
         <CardSectionContainer>
-          {SKILLS.map((skill) => {
+          {skills.map((skill) => {
             const { id, title, details: skilledDetails } = skill;
             return (
               <SkillCard

@@ -12,16 +12,19 @@ import {
   WeToughtAt,
   SEO,
 } from '@/components';
+import { getSkillsBySlug } from '@/constant';
+import { PageSlug } from '@/interfaces';
 
 const MicroCampLanding = () => {
+  const slug: PageSlug = '/junior-in-web-engineering';
   return (
     <React.Fragment>
-      <SEO slug='/junior-in-web-engineering' />
+      <SEO slug={slug} />
       <MicroCampLandingHeader />
       <InThisCohortContainer />
       <NotAnotherTechCourse />
       <ContextBasedLearning />
-      <Skills />
+      <Skills skills={getSkillsBySlug(slug)} />
       <WhatWeDoForYou />
       <MicrocampPricing />
       <WeToughtAt />

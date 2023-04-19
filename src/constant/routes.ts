@@ -4,7 +4,7 @@ const routes = {
   home: '/',
   microCamps: '/micro-camps',
   microCampLanding: function (microCampSlug: PageSlug | string) {
-    return this.microCamps + '/' + microCampSlug;
+    return this.microCamps + microCampSlug;
   },
   contactUs: '/contact',
   internals: {
@@ -15,6 +15,7 @@ const routes = {
       explore: 'explore',
     },
   },
+  404: '/404',
 };
 
 const generateSectionPath = ({

@@ -9,14 +9,18 @@ import {
   Footer,
   SEO,
 } from '@/components';
+import { getSkillsBySlug } from '@/constant';
+import { PageSlug } from '@/interfaces';
 
 const Home = () => {
+  const slug: PageSlug = '/';
+
   return (
     <React.Fragment>
-      <SEO slug='/' />
+      <SEO slug={slug} />
       <LandingPageHero />
       <OurPrograms />
-      <Skills />
+      <Skills skills={getSkillsBySlug(slug)} />
       <WeGuideDifferently />
       <CanYouBeAProgrammer />
       <Testimonials />

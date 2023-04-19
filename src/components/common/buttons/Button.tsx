@@ -4,7 +4,7 @@ const Button = ({
   variant,
   className = '',
   text,
-  active,
+  active = true,
   onClick,
 }: ButtonProps) => {
   let additionalClasses = ' button bg-light px-4 py-2 text-white';

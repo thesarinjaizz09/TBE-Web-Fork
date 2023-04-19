@@ -1,5 +1,5 @@
 import { MouseEventHandler } from 'react';
-import { PageSlug, SkillProps } from '.';
+import { PageSlug, SkillProps, SkillsProps } from '.';
 
 export interface SectionProps {
   children: React.ReactNode;
@@ -181,4 +181,8 @@ export type GenerateSectionPathProps = {
 
 export interface SEOProps {
   slug: PageSlug;
+}
+
+export interface SkillsContainerProps {
+  skills: SkillsProps[];
 }
