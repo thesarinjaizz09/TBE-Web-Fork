@@ -254,7 +254,7 @@ const FOOTER_NAVIGATION: FooterNavigationDataProps[] = [
     isShow: true,
     urls: [
       // { id: v4(), label: `About US`, href: `#` },
-      { id: v4(), label: `Contact Us`, href: `#` },
+      { id: v4(), label: `Contact Us`, href: routes.contactUs },
       // { id: v4(), label: `Refund Policy`, href: `#` },
     ],
   },

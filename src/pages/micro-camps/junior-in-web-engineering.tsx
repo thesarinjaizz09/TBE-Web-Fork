@@ -22,10 +22,10 @@ const MicroCampLanding = () => {
       <SEO slug={slug} />
       <MicroCampLandingHeader />
       <InThisCohortContainer />
-      <NotAnotherTechCourse />
-      <ContextBasedLearning />
       <Skills skills={getSkillsBySlug(slug)} />
       <WhatWeDoForYou />
+      <NotAnotherTechCourse />
+      <ContextBasedLearning />
       <MicrocampPricing />
       <WeToughtAt />
       <Testimonials />

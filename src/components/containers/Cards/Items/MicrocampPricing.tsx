@@ -67,7 +67,7 @@ const MicrocampPricing = () => {
             </Text>
             <FlexContainer justifyCenter={true} className='w-full pt-2'>
               <LinkButton
-                href={LINKS.freeTechConsultation}
+                href={LINKS.juniorInWebEngineeringRegistrationLink}
                 buttonProps={{
                   variant: 'PRIMARY',
                   text: 'Book FREE Tech Consultation',
