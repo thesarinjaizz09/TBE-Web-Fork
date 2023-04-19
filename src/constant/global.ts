@@ -45,6 +45,7 @@ const getSkillsBySlug = (slug: PageSlug) => {
   return skillsBySlug[slug];
 };
 
+// Global links
 const LINKS = {
   juniorInWebEngineeringRegistrationLink:
     'https://docs.google.com/forms/d/e/1FAIpQLSejDBJvhWMWeKZFkWY2PxuUa_LZYsstDvJljrn0Tbm2_2Kd7Q/viewform?usp=sf_link',
@@ -52,4 +53,23 @@ const LINKS = {
     'https://calendly.com/theboringeducation/tech-consultation',
 };
 
-export { imageMeta, programs, LINKS, getSkillsBySlug };
+// Google analytics
+const gtag = `https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`;
+
+const googleAnalyticsScript = `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}', {
+            page_path: window.location.pathname,
+            });
+          `;
+
+export {
+  imageMeta,
+  programs,
+  LINKS,
+  getSkillsBySlug,
+  gtag,
+  googleAnalyticsScript,
+};

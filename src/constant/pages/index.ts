@@ -207,15 +207,14 @@ const TESTIMONIALS: TestimonialCardProps[] = [
     id: v4(),
     title: `Satish Daraboina`,
     content: `Improved design skills by
-    attending in The Boring workshop, I
+    attending in the workshop, I
     leant about Figma from scratch and
     basics for designing mobile
     applications. I learnt how figma works,
     how to create screens and how to connect
     two screens and learn techniques, get
     hands on experience and I apply what I
-    learned to the projects. the workshop
-    helps me in introducing design concepts.`,
+    learned to the projects.`,
     image: `${WEBP_BASE_PATH}/testimonial-1.webp`,
     imageAltText: `profile image`,
   },
